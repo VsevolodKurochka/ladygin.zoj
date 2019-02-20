@@ -1,0 +1,69 @@
+=btn()
+	+r
+	display: inline-block
+	
+	max-width: 100%
+	z-index: 1
+	overflow: hidden
+
+	border: none
+	border-radius: 0
+	
+	font-weight: bold
+	text-decoration: none
+	line-height: 1.4
+	
+	-webkit-tap-highlight-color: transparent
+	outline: none
+	transform: translateZ(0)
+
+	+tr()
+
+=btn-size($btn-padding, $btn-font-size)
+  padding: $btn-padding
+  font-size: $btn-font-size
+
+=btn-static($btn-background, $btn-color)
+	background-color: $btn-background
+	color: $btn-color
+
+	&:before
+		background-color: darken($btn-background, 15%)
+
+=btn-border($btn-border-color, $btn-color)
+	border-color: $btn-border-color
+	color: $btn-color
+
+	&:before
+		background-color: $btn-border-color
+
+//-
+//- Mixin for iteration button
+//-
+=btn-static-iteration()
+	@each $name, $values in $btn-static
+		$btn-bg: nth($values, 1)
+		$btn-color: nth($values, 2)
+
+		&_#{$name}
+			+btn-static($btn-bg, $btn-color)
+
+			&-simple
+				&:hover
+					background-color: darken($btn-bg, 15%)
+
+=btn-border-iteration()
+	@at-root %btn-border
+		border-width: $btn-border-width
+		border-style: $btn-border-style
+
+	@each $name, $values in $btn-border
+		$btn-border-color: nth($values, 1)
+		$btn-color: nth($values, 2)
+
+		&_border-#{$name}
+			@extend %btn-border
+
+			background-color: transparent
+
+			+btn-border($btn-border-color, $btn-color)

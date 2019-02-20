@@ -1,0 +1,28 @@
+.modal
+	
+	&__body
+		font-size: 15px
+		color: lighten($color-black, 30%)
+	
+		&-inner
+			max-height: 60vh
+			overflow-y: auto
+			padding-left: 15px
+			padding-right: 15px
+			-webkit-overflow-scrolling: touch
+			
+			> *
+				&:not(:last-child)
+					margin-bottom: 15px
+
+			+min(sm)
+				max-height: 350px
+
+				&::-webkit-scrollbar
+					width: 7.5px
+
+					&-track
+						background-color: #ddd
+
+					&-thumb
+						background-color: darkgrey

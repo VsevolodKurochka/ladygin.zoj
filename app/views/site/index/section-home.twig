@@ -1,0 +1,35 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+  set info = [
+    "Без истощающих<br>диет",
+    "Без стандартного<br>подхода к ЗОЖ",
+    "Без насилия<br>над собой"
+  ]
+%}
+<section class="home">
+  <div class="container">
+    <h1 class="title home__title">АнтиZОЖ</h1>
+    <div class="row home__content">
+      <div class="col-12 col-sm-6 home__content-info">
+        <h2 class="title home__subtitle">Всего за 10 дней Вы улучшите<br>самочувствие, внешний вид<br>и выработаете здоровые привычки,<br>которые останутся с Вами надолго!</h2>
+        <h3 class="title home__attention">10-дневный<br>онлайн-марафон</h3>
+        <div class="home__date">
+          {{ landing.cube('25', 'февраля', 'cube_1') }}
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 home__bg">
+        {{landing.image('img/catwomenonly.png', 'catwomen', 'home__bg-image')}}
+        {{landing.button('home__bg-button btn_white', 'Программа марафона')}}
+      </div>
+    </div>
+    <div class="row home__info">
+      {% for item in info %}
+        <div class="col-12 col-sm-4">
+          <div class="home__info-block">
+            <p>{{item|raw}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

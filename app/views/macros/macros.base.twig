@@ -1,0 +1,31 @@
+{% macro js(src) %}
+  <script src="{{path}}/{{src}}"></script>
+{% endmacro %}
+
+{% macro css(href) %}
+  <link rel="stylesheet" href="{{path}}/{{href}}">
+{% endmacro %}
+
+{% macro externalCss(href) %}
+  <link rel="stylesheet" href="{{href}}">
+{% endmacro %}
+
+{% macro meta(title, description, image, url) %}
+  <title>{{title}}</title>
+  <meta property="og:title" content="{{title}}"/>
+  <meta itemprop="description" content="{{description}}"/>
+  <meta property="og:description" content="{{description}}"/>
+  <meta property="og:image" content="{{image}}"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="1000"/>
+  <meta property="og:image:height" content="330"/>
+  <meta property="og:url" content="{{url}}" />
+  <meta property="og:type" content="website" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="address=no" />
+{% endmacro %}

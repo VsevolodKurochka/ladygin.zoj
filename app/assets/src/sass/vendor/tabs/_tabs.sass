@@ -1,0 +1,40 @@
+.tabs
+	&__list
+		$self: &
+		+mb(30px)
+		+fs(0)
+		text-align: center
+
+		&-item
+			+d('inline-block')
+
+			&-link
+				+r()
+				+d('block')
+				+bgc(transparent)
+				+c('inherit')
+				+fs(18px)
+				+tr()
+				padding: 10px 15px
+				text-decoration: none
+				border-bottom: 2px solid #eaeaea
+
+				&:hover
+					+bgc(#eaeaea)
+
+			&.active #{$self}-item-link
+				+c($color-brand-1)
+
+		@at-root %effectTab
+			+c($color-brand-1)
+
+			&:after
+				+bgc(lighten($color-brand-1, 15%))
+				transform: none
+
+	&__content
+		&-inner
+			+d('none')
+
+			&.active
+				+d('block')

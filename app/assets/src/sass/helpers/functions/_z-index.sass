@@ -1,0 +1,11 @@
+/// Getting the z-index value from the layer name
+/// @access public
+/// @param {String} $layer - Name of layer
+/// @return {Number}
+/// @require $z-indexes
+/// @author Vsevolod Kurochka
+@function z($layer)
+  @if map-has-key($z-indexes, $layer)
+    @return map-get($z-indexes, $layer)
+  @else
+    @error "No layer with name " $layer " in $z-indexes. The layer must be one of the " map-keys($z-indexes) " ."

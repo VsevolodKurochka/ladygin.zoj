@@ -1,0 +1,42 @@
+.nav__menu-item
+	+d(block)
+
+	+tr()
+
+	a
+		+d(block)
+		+r()
+		+c(inherit)
+		+fw(500)
+		text-decoration: none
+		text-transform: uppercase
+		+tr()
+
+	+max(md)
+		+mb(10px)
+
+		a
+			padding: 10px 15px
+			+c($color-white)
+
+
+	+min(md)
+		+d(inline-block)
+		vertical-align: middle
+		+offset('r', 15px)
+		+c($color-white)
+
+		&-link
+			padding: 15px 25px
+			font-size: 16px
+
+			&_attention
+				+bgc($color-brand-2)
+
+			&:hover
+				+bgc($color-brand-2-lighten)
+
+		.nav_scrolled &
+			&-link
+				font-size: 14px
+				padding: 10px 15px

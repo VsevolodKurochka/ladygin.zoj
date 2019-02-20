@@ -1,0 +1,84 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% set items = [
+  {
+    'title': 'Внешний вид',
+    'items': [
+      {"text": "Вес"},
+      {"text": "Отёчность"},
+      {"text": "Синяки под глазами"},
+      {"text": "Состояние кожи","icon": "balance"},
+      {"text": "Тусклый вид"}
+    ]
+  },
+  {
+    'title': 'Самочувствие',
+    'items': [
+      {"text": "Хроническая усталость"},
+      {"text": "Силы и бодрость","icon": "up"},
+      {"text": "Полноценный сон","icon": "up"},
+      {"text": "Хорошее настроение","icon": "up"},
+      {"text": "Ощущение молодости и привлекательности","icon": "up"}
+    ]
+  },
+  {
+    'title': 'Внешний вид',
+    'items': [
+      {"text": "Вес"},
+      {"text": "Отёчность"},
+      {"text": "Синяки под глазами"},
+      {"text": "Состояние кожи","icon": "balance"},
+      {"text": "Тусклый вид"}
+    ]
+  },
+  {
+    'title': 'Внешний вид',
+    'items': [
+      {"text": "Вес"},
+      {"text": "Отёчность"},
+      {"text": "Синяки под глазами"},
+      {"text": "Состояние кожи","icon": "balance"},
+      {"text": "Тусклый вид"}
+    ]
+  }
+]
+%}
+<section class="section marafon">
+  <div class="container">
+    {{
+      landing.header(
+      'marafon__header color-white', 
+      {text: 'Это НЕ стандартный марафон:'}
+      )
+    }}
+    <div class="marafon__blockquote-outer row">
+      <div class="col-12 col-sm-10">
+        <blockquote class="marafon__blockquote color-white">
+          - Cкинь 3 кг за неделю, а через две<br>верни их назад. Плюс 2 кг сверху.
+        </blockquote>
+      </div>
+    </div>
+    {{
+      landing.header(
+      'marafon__subtitle',
+      null,
+      {text: 'Всего за 10 дней Вы улучшите:'}
+      )
+    }}
+    <div class="marafon__items row">
+      {% set i = 0 %}
+      {% for item in items %}
+        {% set i = i + 1 %}
+        <div class="marafon__item marafon__item_{{i}} col-12 col-sm-6">
+          <div class="marafon__item-inner">
+            <p class="marafon__item-title">{{item.title}}</p>
+            <ul class="marafon__item-list">
+              {% for li in item.items %}
+                <li class="marafon__item-list marafon__item-list_{{li.icon ? li.icon: 'down'}}">{{li.text}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+/// Create Pseudo (:after,:before) Element
+/// @param {String} $text [""] - Text of Pseudo (:after,:before) element
+/// @param {ArgsList} $args [null] - Position of Pseudo (:after,:before) element
+/// @author Vsevolod Kurochka
+=pseudo($text: "", $args...)
+  content: $text
+
+  +a($args...)

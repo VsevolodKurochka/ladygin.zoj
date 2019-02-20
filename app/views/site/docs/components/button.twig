@@ -1,0 +1,40 @@
+{% import "macros/macros.form.twig" as form %}
+<div class="docs__group">
+  <p class="docs__group-title">Кнопки</p>
+  <div class="docs__group-inner">
+    <p class="docs__group-subtitle">Размер кнопок</p>
+    <div class="btn-group">
+      {{form.button('button', 'btn', 'Обычная кнопка')}}
+      {{form.button('button', 'btn btn_lg', 'Большая кнопка')}}
+    </div>
+  </div>
+  
+  <div class="docs__group-inner">
+    <p class="docs__group-subtitle">Цвет кнопок</p>
+    <div class="btn-group">
+      {{form.button('button', 'btn btn_white', 'Белая кнопка')}}
+      {{form.button('button', 'btn btn_brand-1', 'Бренд-1 кнопка')}}
+      {{form.button('button', 'btn btn_brand-2', 'Бренд-2 кнопка')}}
+    </div>
+  </div>
+
+  <div class="docs__group-inner">
+    <p class="docs__group-subtitle">Кнопки с рамками</p>
+    <div class="btn-group">
+      {{form.button('button', 'btn btn_border-brand-1', 'Кнопка с рамкой Бренд-1')}}
+    </div>
+  </div>
+
+  <div class="docs__group-inner">
+    <p class="docs__group-subtitle">Эффекты для кнопок</p>
+    <div class="btn-group">
+      {{form.button('button', 'btn btn_brand-1 effect effect_line left top', 'Line')}}
+      {{form.button('button', 'btn btn_brand-1 effect effect_skew', 'Skew')}}
+      {{form.button('button', 'btn btn_brand-1 effect effect_shutter-y-out', 'Shutter Y out')}}
+      {{form.button('button', 'btn btn_brand-1 effect effect_shutter-x-out', 'Shutter X out')}}
+      {{form.button('button', 'btn btn_brand-1 effect effect_bounce-top', 'Bounce Top')}}
+      {{form.button('button', 'btn btn_brand-1 effect effect_bounce-bottom', 'Bounce Bottom')}}
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+.nav__menu	
+	-webkit-overflow-scrolling: touch
+	+tr()
+
+	+max(md)
+		
+		+f($nav-responsive-height, null, null, 0)
+		+size(270px, 100%)
+		+bgc($color-responsive-menu)
+
+		padding: 30px 0 100px 0
+		overflow-y: auto
+		transform: translateZ(0) translateY(-120%)
+		z-index: -1
+
+		&_active
+			transform: none
+
+	+min(md)
+		+ta(right)
+		margin-top: -90px
+		.nav_scrolled &
+			margin-top: 0

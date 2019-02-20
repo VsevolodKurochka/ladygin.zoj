@@ -1,0 +1,31 @@
+{% macro input(name, value, type, attributes) %}
+  <input 
+    name="{{ name }}" 
+    type="{{ type }}" 
+    {% if value %} value="{{ value }}" {% endif %}
+    {% for attr, value in attributes %} 
+      {{ attr }}="{{ value }}"
+    {% endfor %}
+    {% if not attributes.id is defined %} id="{{ name }}"{% endif %}
+  />
+{% endmacro %}
+
+{% macro button(type, class, text, attributes) %}
+  <button
+    type="{{type}}"
+    class="{{class}}"
+    {% for attr, value in attributes %} 
+      {{ attr }}="{{ value }}"
+    {% endfor %}
+  >{{text}}</button>
+{% endmacro %}
+
+{% macro control(name, value, type, attributes, text, labelClass) %}
+  {% set id = (attributes.id) ? attributes.id : name %}
+  <label class="control {{labelClass}}" for="{{id}}">
+    {% from _self import input %}
+    {{ input(name, value, type, attributes) }}
+    <div class="control__indicator"></div>
+    <p class="control__text">{{text}}</p>
+  </label>
+{% endmacro %}

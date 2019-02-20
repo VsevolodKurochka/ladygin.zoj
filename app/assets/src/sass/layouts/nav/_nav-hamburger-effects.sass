@@ -1,0 +1,58 @@
+=navHamburgerEffect1()
+	&__lines
+		span
+			&:nth-child(1)
+				top: 0
+				transform-origin: 3px 5px
+
+			&:nth-child(2)
+				top: 8px
+				opacity: 1
+
+			&:nth-child(3)
+				top: 16px
+				transform-origin: 1px -1px
+
+	&.active &__lines
+		span
+			&:nth-child(1)
+				transform: rotate(45deg)
+
+			&:nth-child(2)
+				transform: translateX(-60px)
+				opacity: 0
+
+			&:nth-child(3)
+				transform: rotate(-45deg)
+
+=navHamburgerEffect2()
+	&__lines
+		span
+			&:nth-child(1)
+				top: 0
+
+			&:nth-child(2),
+			&:nth-child(3)
+				top: 13px
+				left: -7px
+
+			&:nth-child(4)
+				top: 25px
+
+	&.active &__lines
+		span
+			&:nth-child(1)
+				top: 10.5px
+				width: 0%
+				left: 50%
+			&:nth-child(2)
+				transform: rotate(45deg)
+			&:nth-child(3)
+				transform: rotate(-45deg)
+			&:nth-child(2),
+			&:nth-child(3)
+				left: 0
+			&:nth-child(4)
+				top: 10.5px
+				width: 0%
+				left: 50%

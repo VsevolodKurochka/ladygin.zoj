@@ -1,0 +1,26 @@
+.nav
+	+tr()
+
+	&__row
+		+jc(space-between)
+		+tr()
+		+ai(center)
+		+max(md)
+			+h(100%)
+
+	+max(md)
+		+d(flex)
+		+ai(center)
+		+size(100%, $nav-responsive-height)
+		+bgc($color-responsive-menu)
+		+bs("0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)")
+
+		&__container
+			+h(100%)
+			+fb(100%)
+
+	+min(md)
+		+py(5px)
+
+		&_scrolled
+			+bgc(darken($color-brand-1, 10%))

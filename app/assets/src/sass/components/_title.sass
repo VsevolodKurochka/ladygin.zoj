@@ -1,0 +1,42 @@
+/// Define sizes for title-xs
+$title-xs: ("title-xs": ('default': 18px, 'xs': 20px))
+
+/// Define sizes for title-sm
+$title-sm: ("title-sm": ('default': 20px, 'sm': 20px, 'md': 30px, 'lg': 40px))
+
+/// Define sizes for title-md
+$title-md: ("title-md": ('default': 25px, 'sm': 30px, 'md': 40px, 'lg': 50px))
+
+/// Define sizes for title-lg
+$title-lg: ("title-lg": ('default': 30px, 'sm': 40px, 'md': 50px, 'lg': 60px))
+
+// Merge all defined maps
+$sizes: map-merge($title-xs, $title-sm)
+$sizes: map-merge($sizes, $title-md)
+$sizes: map-merge($sizes, $title-lg)
+
+%title-default
+	+my(0, 15px)
+	+lh(1.1)
+
+.title
+	@extend %title-default
+	&-xs
+		+fs-map("title-xs")
+
+		@extend %title-default
+
+	&-sm
+		+fs-map("title-sm")
+
+		@extend %title-default
+
+	&-md
+		+fs-map("title-md")
+
+		@extend %title-default
+
+	&-lg
+		+fs-map("title-lg")
+
+		@extend %title-default

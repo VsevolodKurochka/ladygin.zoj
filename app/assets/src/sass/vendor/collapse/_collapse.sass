@@ -1,0 +1,26 @@
+.collapse
+  margin-bottom: 30px
+
+  &__group
+    +offset('b', 30px)
+
+    &-header
+      padding: 10px 15px
+      border-bottom: 1px solid #eaeaea
+      cursor: pointer
+      +tr()
+
+      &:hover
+        background-color: transparentize($color-brand-1, 0.9)
+
+    &-title
+      font-weight: bold
+
+    &-body
+      padding: 15px
+      font-size: 16px
+      display: none
+
+  &__group.active &__group
+    &-header
+      border-bottom-color: $color-brand-1

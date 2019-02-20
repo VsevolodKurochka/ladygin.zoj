@@ -1,0 +1,22 @@
+.modal
+	&__title
+		+r()
+		+mb(15px)
+		+pb(7.5px)
+		+ta(center)
+		+tt(uppercase)
+		+fs(16px)
+		+ls(1.5px)
+		+lh(1.2)
+		+c($color-black)
+		+fw(bold)
+
+		&:after
+			content: ''
+			+a(100%, null, null, 50%)
+			+size(25%, 2px)
+			transform: translateX(-50%)
+			+bgc($color-brand-1)
+
+		+min(xs)
+			+fs(18px)

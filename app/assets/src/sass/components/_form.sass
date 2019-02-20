@@ -1,0 +1,66 @@
+$themeFormDesign: "new"
+
+.form
+	width: 100%
+
+	&__row
+		+r()
+
+	&_block &__row
+		+offset('b', 15px)
+
+	&_line &
+		+max(sm)
+			&__row
+				+offset(15px)
+
+		+min(sm)
+			&__content
+				+d('flex')
+				justify-content: center
+				+mx( -getComp(gutter) )
+
+			&__row
+				flex: 1
+				+px( getComp(gutter) )
+				+offset('r', 15px)
+
+			&__submit
+				+size(100%)
+
+	@if $themeFormDesign == "new"
+		&__control
+			+input-default()
+			padding: 15px
+			border: none
+
+			&:focus
+				+placeholder()
+					color: transparent
+
+		&__line
+			+a(null, null, 0, 0)
+			+size(0, 1px)
+			+tr()
+			+bgc($color-brand-1)
+
+		input:focus + &__line
+			width: 100%
+
+		&__row_line
+			&:before
+				content: ""
+				+a(null, null, 0, 0)
+				+size(100%, 1px)
+				+bgc(transparentize($color-black, 0.8))
+
+	@else
+		&__control
+			+input-default()
+			border: 1px solid #ddd
+
+			&:focus
+				border-color: $color-brand-1
+
+				+placeholder()
+					color: transparent

@@ -1,0 +1,34 @@
+/// Vertical align image
+/// @access public
+/// @param {String} $height - height of image wrapper
+/// @author Vsevolod Kurochka
+/// @example scss - Create div.foo with height 100px and vertical align image inside
+/// .foo{
+///		@include vertical-image(100px);
+/// }
+/// @example css - Output
+/// .foo{
+///		height: 100px;
+/// }
+/// .foo:before{
+///	  content: "";
+///	  display: inline-block;
+///	  height: 100%;
+///	  vertical-align: middle;
+/// }
+/// .foo img{
+///	  max-height: 100%;
+///	  vertical-align: middle;
+/// }
+=vertical-image($height)
+  height: $height
+
+  &:before
+    content: ""
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+  img
+    max-height: 100%
+    vertical-align: middle

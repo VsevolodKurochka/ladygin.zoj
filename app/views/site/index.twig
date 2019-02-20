@@ -1,0 +1,30 @@
+{% import 'macros/macros.base.twig' as macros %}
+{% extends 'layouts/base.twig' %}
+
+{% set title = 'Title' %}
+{% set description = 'description' %}
+{% set image = 'img/logo.png' %}
+{% set url = 'url' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{{ macros.externalCss("https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&amp;subset=cyrillic") }}
+{% endblock %}
+
+{% block js %}
+{{ macros.js("js/scripts.min.js") }}
+{% endblock %}
+
+{% block content %}
+{% include 'site/index/section-home.twig' %}
+{% include 'site/index/section-zoj.twig' %}
+{% include 'site/index/section-format.twig' %}
+{% include 'site/index/section-marafon.twig' %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

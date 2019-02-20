@@ -1,0 +1,10 @@
+=offset($type: 'b', $offset: 30px)
+	&:not(:last-child)
+		@if $type == 't'
+			margin-top: $offset
+		@elseif $type == 'r'
+			margin-right: $offset
+		@elseif $type == 'b'
+			margin-bottom: $offset
+		@elseif $type == 'l'
+			margin-left: $offset

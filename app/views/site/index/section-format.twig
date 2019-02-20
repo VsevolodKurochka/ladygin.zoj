@@ -1,0 +1,51 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set items = [
+    {
+      'title': '10',
+      'subtitle': 'дней'
+    },
+    {
+      'title': '52',
+      'subtitle': 'видеоурока'
+    },
+    {
+      'title': '<sub>от</sub> 20',
+      'subtitle': 'минут в день'
+    },
+    {
+      'title': '9',
+      'subtitle': 'живых встреч-<br>вебинаров'
+    },
+    {
+      'title': '<sup>Приз</sup>10 000',
+      'subtitle': 'рублей<br>за лучшие  результаты'
+    }
+  ]
+%}
+<section class="section format" id="section-format">
+  {{
+    landing.header(
+    'format__header', 
+    {text: 'Формат марафона'}
+    )
+  }}
+  <div class="container">
+    <div class="row format__row">
+      {% set i = 0 %}
+      {% set itemsLength = items|length %}
+      {% for item in items %}
+        {% set i = i + 1 %}
+        {% if i == itemsLength %}
+        <div class="col-12 format__item">
+          {{ landing.cube(item.title, item.subtitle, 'format__item-cube cube_3') }}
+        </div>
+        {% else %}
+         <div class="col-12 col-sm-3 col-md-6 format__item">
+            {{ landing.cube(item.title, item.subtitle, 'format__item-cube format__item-cube_2 cube_2') }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

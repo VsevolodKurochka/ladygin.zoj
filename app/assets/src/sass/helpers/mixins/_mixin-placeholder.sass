@@ -1,0 +1,19 @@
+/// Add placeholder for input element
+/// @author Vsevolod Kurochka
+/// @example scss
+/// .foo{
+/// 	@include placeholder{
+///			font-size: 13px;
+///		}
+=placeholder
+  &:-moz-placeholder
+    @content
+
+  &::-moz-placeholder
+    @content
+
+  &:-ms-input-placeholder
+    @content
+
+  &::-webkit-input-placeholder
+    @content

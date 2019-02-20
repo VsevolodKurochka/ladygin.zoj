@@ -1,0 +1,14 @@
+/// Background Image
+/// @param {String} $url - Image background
+/// @param {String} $pos [0, 0] - Image position
+/// @param {String} $repeat [no-repeat] - Image repeat
+/// @param {String} $size [cover] - Image size
+/// @author Vsevolod Kurochka
+=bgi($url, $position: 0 0, $repeat: no-repeat, $size: cover)
+	background: url("#{$url}") $position $repeat
+	background-size: $size
+
+/// Background Color
+/// @param {String} $color - Background color
+=bgc($color)
+	background-color: $color

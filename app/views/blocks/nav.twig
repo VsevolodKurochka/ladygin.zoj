@@ -1,0 +1,17 @@
+{% import 'blocks/nav/macros.twig' as nav %}
+<div class="fixed">
+  <div class="nav" id="js-navigation">
+    <div class="nav__container container">
+      <div class="nav__row row">
+        {{
+          nav.logo({
+            "class": 'col-12 col-md-2', 
+            "logo": "#{path}/img/logo.svg",
+            "alt": title
+          })
+        }}
+        {{nav.menu('col-12 col-md-8')}}
+      </div>
+    </div>
+  </div>
+</div>

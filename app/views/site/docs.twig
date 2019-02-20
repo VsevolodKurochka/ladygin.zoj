@@ -1,0 +1,33 @@
+{% import 'macros/macros.base.twig' as macros %}
+{% extends 'layouts/base.twig' %}
+
+{% set title = 'Документация' %}
+{% set description = 'Примеры использования компонентов' %}
+{% set image = 'img/logo.png' %}
+{% set url = 'url' %}
+
+{% block meta %}
+	{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+	{{ macros.css('css/style.min.css') }}
+	{{ macros.css('css/docs/style.min.css') }}
+{% endblock %}
+
+{% block js %}
+	{{ macros.js('js/libs.min.js') }}
+	{{ macros.js('js/vanilla.main.js') }}
+	{{ macros.js('js/jquery.main.js') }}
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+	{% include 'site/docs/intro.twig' %}
+	{% include 'site/docs/content.twig' %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

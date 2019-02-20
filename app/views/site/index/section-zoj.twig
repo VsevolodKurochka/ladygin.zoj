@@ -1,0 +1,28 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section health-life" id="section-health-life">
+  <div class="container">
+    <div class="row health-life__info">
+      <div class="col-12 col-sm-6">
+        {{landing.image('img/kid.png')}}
+      </div>
+      <div class="col-12 col-sm-6">
+        <ul class="health-life__list">
+          <li>Диеты...</li>
+          <li>Бег по утрам...</li>
+          <li>Спортзал...</li>
+          <li>Занятия до седьмого пота...</li>
+        </ul>
+      </div>
+    </div>
+    {{
+      landing.header(
+      'health-life__header text-center color-brand-2', 
+      {text: 'ЗОЖ?! Нет, не слышали!'}, 
+      {text: 'Вы улучшите свою жизнь<br><strong>без мучительных диет</strong> и <strong>без насилия над собой</strong>,<br>внедряя здоровое привычки мягко и без перенапряжений.'}
+      )
+    }}
+    <div class="health-life__footer">
+      {{landing.button('health-life__footer-button btn_brand-1', 'Эксперты и программа')}}
+    </div>
+  </div>
+</section>

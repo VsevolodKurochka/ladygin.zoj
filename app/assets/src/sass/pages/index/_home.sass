@@ -1,0 +1,81 @@
+.home
+	+r()
+	+py(60px, 45px)
+	+bgc($color-brand-1)
+	+c($color-white)
+	overflow: hidden
+	z-index: 1
+
+	&:before
+		+pseudo("", 0, null, null, 0)
+		+bgi('../img/home-bg.png')
+		+min(sm)
+			+size(80%, 31%)
+
+
+	+min(md)
+		+py(8vmax, 4vmax)
+
+	&__content
+		+mb(45px)
+		+min(sm)
+			+ai(center)
+			+mb(4vmax)
+
+		&-info
+			+r()
+			z-index: 2
+
+	&__title
+		+fw(bold)
+		+r()
+		z-index: 2
+		+min(sm)
+			+ta(right)
+			+fs(6vmax)
+
+		+min(md)
+			+fs(9vmax)
+
+	&__subtitle
+		+fw(400)
+		line-height: 1.3
+		+min(md)
+			+mb(45px)
+			+fs_vmax(30)
+
+	&__attention
+		+fw(700)
+		+fs(30px)
+
+		+min(md)
+			+fs_vmax(60)
+			+mb(60px)
+	
+	&__date
+		+min(sm)
+			+ta(center)
+
+	&__bg
+		+r()
+		font-size: 0
+		z-index: 1
+		&:before
+			+pseudo("", 0, null, null, 0)
+			+size(100%)
+			+bgi('../img/catwomen-bg.png')
+			z-index: -1
+			+min(md)
+				+size(900px)
+				top: -150px
+				left: -150px
+		&-button
+			+w(100%)
+			+mt(-15px)
+
+	&__info
+		+ta(center)
+
+		&-block
+			+min(md)
+				+fs(20px)

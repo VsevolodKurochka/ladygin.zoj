@@ -1,0 +1,81 @@
+=navAddition1()
+	.nav__addition
+		+r()
+
+		&-link
+			display: block
+			color: inherit
+			text-decoration: none
+			color: $color-black
+			font-weight: bold
+
+
+		&-toggle
+			+r()
+			+size(100%)
+				
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			
+			-webkit-tap-highlight-color: transparent
+			outline: none
+			cursor: pointer
+			z-index: 1
+			
+			font-size: 0
+
+			span
+				+r()
+				display: inline-block
+				vertical-align: middle
+
+				+size(5px)
+				margin-right: 5px
+				border-radius: 100%
+				background-color: $color-white
+
+				&:last-child
+					margin-right: 0
+
+		+max(md)
+			height: 100%
+			text-align: right
+
+			&:before
+				content: ''
+
+				+a(0, 0)
+				+size(50%, 100%)
+				background-color: darken($color-responsive-menu, 15%)
+				opacity: 0
+
+				+tr()
+
+			&.active
+				&:before
+					opacity: 1
+
+			&-links
+				+a(100%, 0)
+				min-width: 180px
+				padding: 15px
+				background-color: $color-responsive-menu
+				transform: translateZ(0) translateX(120%)
+
+				+tr()
+
+			&.active &-links
+				transform: none
+
+			&-link
+				color: $color-white
+				font-size: 14px
+
+
+		+min(md)
+			text-align: right
+
+			&-toggle,
+			&-link_hidden
+				display: none

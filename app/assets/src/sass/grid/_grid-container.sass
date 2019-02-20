@@ -1,0 +1,12 @@
+/// Container width.
+$widths: (sm: 750px, md: 970px, lg: 1170px)
+
+.container
+	+r()
+	+mx(auto)
+	+px(getComp(gutter))
+	min-height: 1px
+
+	@each $grade, $value in $widths
+		+min($grade)
+			width: $value

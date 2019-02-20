@@ -1,0 +1,8 @@
+/// Get value from any map - by default: $grid-system
+/// @access public
+/// @param {String} $comp - Component Value
+/// @param {String} $map - Map
+/// @return {String}
+/// @author Vsevolod Kurochka
+@function getComp($comp, $map: $grid-system)
+  @return map-get($map, $comp)

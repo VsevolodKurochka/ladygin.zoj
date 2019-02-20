@@ -1,0 +1,72 @@
+{% import "macros/macros.form.twig" as form %}
+{%
+  set inputs = [
+    {
+      'name': 'name',
+      'value': '',
+      'type': 'text',
+      'attributes': {
+        'placeholder': 'Имя',
+        'class': 'form__control'
+      }
+    },
+    {
+      'name': 'email',
+      'value': '',
+      'type': 'email',
+      'attributes': {
+        'placeholder': 'Email',
+        'class': 'form__control'
+      }
+    },
+    {
+      'name': 'phone',
+      'value': '',
+      'type': 'phone',
+      'attributes': {
+        'placeholder': 'Телефон',
+        'class': 'form__control'
+      }
+    }
+  ]
+%}
+<div class="docs__group">
+  <p class="docs__group-title">Формы</p>
+  <div class="docs__group-inner">
+    <p class="docs__group-subtitle">Блочная форма</p>
+    <form action="#" class="form form_block" method="POST">
+      <div class="form__content">
+        <div class="form__row">
+          {{form.control('radios', '1', 'radio', {'checked': 'checked', 'id': 'label-1'}, 'Text 1', 'control_brand-1')}}
+          {{form.control('radios', '2', 'radio', {'id': 'label-2'}, 'Text 2', 'control_brand-1')}}
+          {{form.control('radios', '3', 'radio', {'id': 'label-3'}, 'Text 3', 'control_brand-1')}}
+        </div>
+        {% for input in inputs %}
+          <div class="form__row form__row_line">
+            {{ form.input(input.name, input.value, input.type, input.attributes) }}
+            <span class="form__line"></span>
+          </div>
+        {% endfor %}
+        <div class="form__row">
+          {{ form.button('submit', 'form__submit btn btn_brand-1 effect effect_bounce-top', 'Отправить заявку') }}
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="docs__group-inner">
+    <p class="docs__group-subtitle">Линейная форма</p>
+    <form action="#" class="form form_line" method="POST">
+      <div class="form__content">
+        {% for input in inputs %}
+          <div class="form__row form__row_line">
+            {{ form.input(input.name, input.value, input.type, input.attributes) }}
+            <span class="form__line"></span>
+          </div>
+        {% endfor %}
+        <div class="form__row">
+          {{ form.button('submit', 'form__submit btn btn_brand-1 effect effect_bounce-top', 'Отправить заявку') }}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

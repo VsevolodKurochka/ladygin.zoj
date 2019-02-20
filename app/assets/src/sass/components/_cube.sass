@@ -1,0 +1,73 @@
+.cube
+	+r()
+	+d(inline-block)
+	+ta(left)
+	z-index: 1
+	&:before
+		z-index: -1
+	&_1,
+	&_2
+		&:before
+			+pseudo("", 0, null, null, 0)
+			+size(100%)
+			
+			border-width: 5px
+			border-style: solid
+			transform: skew(5deg, -15deg)
+			+min(sm)
+				top: -15px
+				left: -15px
+				+size(140px, 100px)
+			+min(md)
+				top: -35px
+				left: -20px
+				+size(175px, 160px)
+				border-width: 10px
+				
+	&_1
+		&:before
+			border-color: $color-brand-3
+
+	&_2
+		&:before
+			border-color: $color-white
+
+	&_3
+		&:before
+			+pseudo("", 0, null, null, 0)
+			+bgi('../img/star.png')
+			+min(sm)
+				top: -35px
+				left: 50%
+				transform: translateX(-50%)
+				+size(200px)
+			+min(md)
+				top: -35px
+				left: 50%
+				transform: translateX(-50%)
+				+size(350px)
+				
+
+	&__title
+		+fw(bold)
+		line-height: 1
+		sup,
+		sub
+			+fs(50%)
+			+lh(1)
+		sup
+			+d(block)
+		sub
+			vertical-align: baseline
+		+min(sm)
+			+fs_vmax(70)
+		+min(md)
+			+fs_vmax(100)
+
+	&__subtitle
+		+fw(bold)
+		line-height: 1
+		+min(sm)
+			+fs_vmax(30)
+		+min(md)
+			+fs_vmax(40)

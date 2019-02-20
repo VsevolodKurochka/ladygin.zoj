@@ -1,0 +1,26 @@
+.nav
+	&__logo
+		font-size: 0
+
+		+max(md)
+			+d('flex')
+			align-items: center
+			justify-content: space-between
+
+		&-content
+			display: inline-block
+		
+		&-img
+			vertical-align: middle
+			+tr()
+
+			+max(md)
+				max-height: 24px
+
+			+min(md)
+				height: 150px
+
+	&_scrolled &__logo
+		+min(md)
+			&-img
+				height: 50px

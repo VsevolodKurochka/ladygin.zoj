@@ -1,0 +1,26 @@
+{% macro image(src, alt, class) %}
+  <img src="{{path}}/{{src}}" alt="{{alt}}" class="{{class}}">
+{% endmacro %}
+{% macro button(class, text, attributes) %}
+  {% import "macros/macros.form.twig" as form %}
+  {% set default = "btn btn_landing effect effect_bounce-top" %}
+  {{form.button('button', "#{default} #{class}", text, attributes)}}
+{% endmacro %}
+
+{% macro header(headerClass, title, subtitle) %}
+  <div class="section__header {{headerClass}}">
+    {% if title %}
+      <h3 class="section__title {{title.class}}">{{title.text|raw}}</h3>
+    {% endif %}
+    {% if subtitle %}
+      <p class="section__subtitle {{subtitle.class}}">{{subtitle.text|raw}}</p>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% macro cube(title, subtitle, class) %}
+  <div class="cube {{class}}">
+    <p class="cube__title">{{title|raw}}</p>
+    <p class="cube__subtitle">{{subtitle|raw}}</p>
+  </div>
+{% endmacro %}

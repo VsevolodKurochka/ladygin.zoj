@@ -1,0 +1,19 @@
+%modalTransition
+  +tr
+
+%visibility
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+%showing
+  opacity: 0
+  visibility: hidden
+
+  @extend %modalTransition
+
+  &_in
+    opacity: 1
+    visibility: visible

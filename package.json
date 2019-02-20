@@ -1,0 +1,57 @@
+{
+  "name": "Ladygin ZOJ",
+  "version": "1.0.0",
+  "description": "Ladygin ZOJ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/VsevolodKurochka/repository.git"
+  },
+  "keywords": [
+    "gulp",
+    "twig",
+    "sass"
+  ],
+  "author": "Vsevolod Kurochka",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.24.5",
+    "browserify": "^14.5.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-progressive-css": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-uglify": "^3.0.1"
+  },
+  "dependencies": {
+    "del": "^3.0.0",
+    "require-dir": "^0.3.2"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}

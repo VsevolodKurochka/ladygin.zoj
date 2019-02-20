@@ -1,0 +1,41 @@
+.format
+	+ta(center)
+	+bgc($color-brand-4)
+	+c($color-brand-2)
+	z-index: 1
+
+	&:before,
+	&:after
+		+pseudo("")
+
+	&:before
+		+a(null, null, 0, 0)
+		+bgi('../img/format-bg-2.png')
+		+min(sm)
+			+size(30%, 75%)
+
+	&:after
+		+a(10%, 0)
+		+bgi('../img/format-bg-1.png')
+		+min(sm)
+			+size(20%, 55%)
+
+	+min(md)
+		+pb(vmax(150))
+
+	&__header
+		+min(sm)
+			+mb(90px)
+
+	&__item-cube
+		+ta(center)
+		+min(sm)
+			&_2
+				min-height: 150px
+				&:before
+					top: 0
+					left: 50%
+					transform: translateX(-50%) skew(5deg, -15deg)
+		+min(md)
+			&_2
+				min-height: 240px

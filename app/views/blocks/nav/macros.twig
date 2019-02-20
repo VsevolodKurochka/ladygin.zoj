@@ -1,0 +1,49 @@
+{% macro hamburger() %}
+  <button class="hamburger hamburger_effect-2" type="button" id="js-nav-hamburger">
+    <span class="hamburger__lines">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+{% endmacro %}
+
+{% macro logo(options) %}
+  {% import _self as macros %}
+  <div class="nav__logo {{options.class}}">
+    {{ macros.hamburger() }}
+    <img class="nav__logo-img" src="{{options.logo}}" alt="{{options.alt}}"/>
+  </div>
+{% endmacro %}
+
+{% macro menu(class) %}
+  <nav class="nav__menu {{class}}" id="js-navigation-menu">
+    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-1">ПРОГРАММА</a></li>
+    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-2">ЦЕЛИ</a></li>
+    <li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-3">Cтоимость</a></li>
+    <li class="nav__menu-item"><a class="nav__menu-item-link nav__menu-item-link_attention" data-scroll="data-scroll" href="#id-3">записаться</a></li>
+  </nav>
+{% endmacro %}
+
+{% macro addition(type,  class) %}
+  <div class="nav__addition {{class}}" id="js-nav-addition">
+    {% if type == '1' %}
+      <div class="addition-toggle" id="js-nav-addition-button-1">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="addition-links js-nav-links">
+        <a href="tel: +1" class="addition-link"> +99 999 999 99</a>
+        <a href="tel: +1" class="addition-link addition-link_hidden"> +99 999 999 99</a>
+      </div>
+    {% elseif type == '2' %}
+      <div class="nav__addition-links js-nav-links">
+        <a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
+        <a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
+      </div>
+    {% endif %}
+    
+  </div>
+{% endmacro %}
