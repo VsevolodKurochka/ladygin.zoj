@@ -1,0 +1,44 @@
+.main-result
+	+bgc($color-brand-1)
+	+c($color-white)
+	z-index: 1
+
+	&__bg
+		+a()
+		z-index: -1
+		&_1
+			top: 5%
+			right: 5%
+
+		&_2
+			top: 20%
+			left: 5%
+
+		&_3
+			top: 45%
+			right: 5%
+
+		&_4
+			bottom: 5%
+			right: 10%
+
+	&__content
+		+min(sm)
+			+jc(center)
+
+		+min(md)
+			+fs(20px)
+
+	&__body
+		+ta(center)
+		+fs(0)
+
+		&-image
+			+w(50%)
+			+mx(auto)
+
+		&-footer
+			&-button
+				+min(md)
+					+w(400px)
+					+fs_vmax(50)
