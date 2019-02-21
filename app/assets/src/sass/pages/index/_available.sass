@@ -1,0 +1,54 @@
+.available
+
+	&__content
+		+mb(30px)
+		+min(md)
+			+mb(vmax(60))
+			+w(80%)
+			+mx(auto)
+
+	&__group
+		+r()
+		+offset('b', 15px)
+		+min(md)
+			+offset('b', 45px)
+
+		&-header
+			+d(flex)
+			+ai(center)
+
+		&-arrow
+			+d(inline-block)
+			+size(27px, 15px)
+			+bgi('../img/available-arrow.png')
+
+		&.active &-arrow
+			transform: scaleY(-1)
+
+		&-image
+			+a(-10px, null, null, 0)
+			+h(30px)
+			max-width: 30px
+			object-fit: contain
+			+min(md)
+				+h(50px)
+
+		&-header,
+		&-body
+			+pl(45px)
+			+min(md)
+				+pl(60px)
+
+		&-title
+			+fw(900)
+			+fs(20px)
+			+mr(10px)
+			+min(md)
+				+fs(25px)
+				+mr(30px)
+
+		&-body
+			+d(none)
+			+mt(30px)
+			p
+				+offset('b', 15px)
