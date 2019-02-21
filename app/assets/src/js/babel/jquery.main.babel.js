@@ -110,8 +110,32 @@ $(document).ready(function(){
 	$(window).scroll( throttle(highlightNavigation,100) );
 	
 	// Develope
-	$('.toggle').each(()=>{
-		let unactive = $(this).attr('data-unactive');
-		console.log(unactive);
+	$('.toggle').each(function(){
+		var $this = $(this);
+		var unactive = $this.attr('data-unactive');
+		var active = $this.attr('data-active');
+		var el = $this.attr('href');
+		$this.text(active);
+		$this.click(function(e){
+			e.preventDefault();
+
+			$this.toggleClass('active');
+
+			$(el).slideToggle();
+			
+			if($this.text() == active){
+				$this.text(unactive);
+			}else{
+				$this.text(active);
+			}
+
+		});
 	});
+
+	if($(window).width() > 768){
+		$('.programm__show').addClass('row');
+		$( ".programm__item_hidden" ).wrapAll( "<div id='programm-hidden' class='programm__hidden'><div class='row'></div></div>");
+	}else{
+		$('.programm__toggle').remove();
+	}
 });	

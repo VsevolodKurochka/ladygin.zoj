@@ -49,7 +49,5 @@
 {% endmacro %}
 
 {% macro toggle(href, unactive, active) %}
-  <div class="toggle">
-    <a href="{{href}}" class="toggle__link" data-unactive="{{unactive}}" data-active="{{active}}"></a>
-  </div>
+  <a href="{{href}}" class="toggle" data-unactive="{{unactive}}" data-active="{{active}}"></a>
 {% endmacro %}

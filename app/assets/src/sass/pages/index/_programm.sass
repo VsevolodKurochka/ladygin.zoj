@@ -18,11 +18,13 @@
 			+mb(15px)
 			+min(sm)
 				+d(flex)
-				+ai(center)
+				+ai(flex-end)
 				+mb(30px)
 
 			&-info
 				font-style: italic
+				+min(sm)
+					+ml(30px)
 
 		&__list
 			li
@@ -40,3 +42,18 @@
 					+fs_vmax(20)
 					&:after
 						+t(3px)
+
+	&__toggle
+		+ta(center)
+		+my(30px)
+		+min(sm)
+			+my(vmax(90), vmax(45))
+
+	&__hidden
+		display: none
+
+
+	&__hidden &
+		&__item-cover
+			+min(sm)
+				+offset('b', vmax(60))
