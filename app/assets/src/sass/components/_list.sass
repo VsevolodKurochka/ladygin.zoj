@@ -8,11 +8,14 @@
 			content: ""
 			+a()
 
-	&_cancel
+	&_rectangle
 		li
 			+pl(30px)
+			+offset('b', 10px)
 
 			&:after
-				+t(0)
+				+t(3px)
 				+l(0)
-				+size(37px)
+				+size(7.5px)
+				+bgc($color-brand-1)
+				transform: rotate(45deg)

@@ -1,0 +1,24 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section for-who color-brand-2" id="section-for-who">
+  <div class="container">
+    <div class="row for-who__row">
+      <div class="col-12 col-sm-6">
+        {{
+          landing.header(
+          'for-who__header', 
+          {text: 'Для кого?'}
+          )
+        }}
+        <ul class="list list_rectangle for-who__list ">
+          <li>Все делаю через силу</li>
+          <li>Спортзал не для меня</li>
+          <li>Не хочу питаться листом капусты на пару</li>
+          <li>Тело ограничивает желания</li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6">
+        {{landing.image('img/for-who.png', 'for who', 'for-who__image')}}
+      </div>
+    </div>
+  </div>
+</section>

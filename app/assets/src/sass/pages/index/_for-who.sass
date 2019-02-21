@@ -1,0 +1,21 @@
+.for-who
+	+bgc($color-brand-4)
+	+pb(0)
+	+fs(0)
+	&__row
+		+min(md)
+			flex-direction: row-reverse
+			+ai(center)
+
+	&__image
+		+min(md)
+			+ml(vmax(-60))
+
+	&__list
+		+min(md)
+			+fs_vmax(25)
+
+			li
+				&:after
+					+t(7.5px)
+					+size(15px)
