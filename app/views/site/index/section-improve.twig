@@ -1,0 +1,46 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section improve color-brand-2" id="section-improve">
+  <div class="container">
+    <div class="row improve__content">
+      <div class="col-12 col-sm-6">
+        {{
+          landing.header(
+            'improve__header',
+            {text: 'Всё об искусстве улучшения своей жизни'},
+            {text: 'Больше не нужно собирать информацию по крупицам. Мы собрали <strong>всю самую достоверную</strong> информацию о:'}
+          )
+        }}
+      </div>
+      <div class="col-12 col-sm-6">
+        {{landing.image('img/improve.png', 'improve', 'improve__image')}}
+      </div>
+    </div>
+    <div class="row improve__items">
+      <div class="col-12 col-sm-4">
+        <div class="improve__item">
+          <p>здоровье</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="improve__item">
+          <p>питании</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="improve__item">
+          <p>психологии</p>
+        </div>
+      </div>
+    </div>
+    <div class="improve__footer text-center">
+        {{
+          landing.header(
+            'improve__footer-subtitle',
+            null,
+            {text: 'и не только!'}
+          )
+        }}
+      {{landing.button('improve__footer-button btn_brand-2', 'Перейти к программе')}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+.improve
+	&__header
+		+min(sm)
+			+mb(0)
+
+	&__content
+		+r()
+		z-index: 1
+		&:before
+			+pseudo("?", 0, null, null, 50%)
+			transform: translateX(-50%)
+			+c($color-brand-3)
+			opacity: 0.8
+			+lh(1)
+			+fw(900)
+			z-index: -1
+
+			+min(md)
+				+fs_vmax(800)
+
+		+min(sm)
+			+ai(center)
+
+	&__items
+		+my(45px)
+
+		+min(md)
+			+my(vmax(100))
+
+	&__item
+		+bgc($color-brand-1)
+		+fw(900)
+		+c($color-white)
+		+ta(center)
+		+fs(20px)
+		transform: rotate(-15deg)
+		+min(md)
+			+fs_vmax(40)
