@@ -1,0 +1,68 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set items = [
+    {
+      'text': 'После оплаты участия в<br> личном кабинете вас уже<br> ждут материалы для<br> подготовки к марафону'
+    },
+    {
+      'text': 'Фиксируем положение «ДО»,<br>выбираем правила питания'
+    },
+    {
+      'text': 'Стартуем'
+    },
+    {
+      'text': 'Смотрим уроки, выполняем<br>задания, ходим на живые вебинары<br>с экспертами'
+    },
+    {
+      'text': 'Общаемся каждый день<br>с дипломированным<br> психологом'
+    },
+    {
+      'text': 'Соблюдаем гибкое меню'
+    },
+    {
+      'text': '«Тусуемся» в телеграмм-группе<br>с единомышленниками'
+    },
+    {
+      'text': 'Фиксируем результаты<br>«После» и планы на будущее'
+    },
+    {
+      'text': '<strong>Наслаждаемся собой!</strong>'
+    }
+  ]
+%}
+<section class="section step" id="section-step">
+  <div class="container">
+    {{
+      landing.header(
+      'step__header text-center', 
+      {text: 'Как проходит марафон?'}
+      )
+    }}
+    <div class="row step__items">
+      {% set i = 0 %}
+      {% for item in items %}
+        {% set i = i + 1 %}
+        <div class="step-item step-item_{{i}} col-12 col-sm-6 col-md-4">
+          <div class="step-item__inner step-item__inner_{{i}}">
+            <div class="step-item__header">
+              <span class="step-item__number"><span class="step-item__number-inner">{{i}}</span></span>
+            </div>
+            <div class="step-item__body">{{item.text|raw}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="step__footer text-center">
+      {{
+        landing.button(
+          'step__footer-button btn_white', 
+          'Начать марафон',
+          {
+            "data-scroll": "data-scroll",
+            "href": "#section-form"
+          }
+        )
+      }}
+    </div>
+  </div>
+</section>
