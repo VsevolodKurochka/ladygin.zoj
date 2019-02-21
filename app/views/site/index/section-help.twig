@@ -1,0 +1,54 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set items = [
+    {
+      'image': 'img/help-1.png',
+      'title': 'Служба технической поддержки, чтобы:',
+      'list': [
+        '<span class="color-brand-1">▶</span> Личный кабинет работал исправно',
+        '<span class="color-brand-1">▶</span> Вся информация была доступна своевременно',
+        '<span class="color-brand-1">▶</span> Любые технические вопросы решались максимально оперативно',
+      ]
+    },
+    {
+      'image': 'img/help-2.png',
+      'title': 'Все эксперты марафона,',
+      'list': [
+        'которые будут отвечать на появляющиеся у Вас вопросы по материалам в течение<br>24 часов или находиться с Вами на связи в мессенджере на протяжении всего марафона.'
+      ]
+    }
+  ]
+%}
+<section class="section-margin help" id="section-help">
+  <div class="container">
+    <div class="help__items">
+      {% for item in items %}
+        <div class="help-item row">
+          <div class="col-6 col-sm-4 col-md-3 help-item__image-cover">
+            {{landing.image(item.image, item.title, 'help-item__image')}}
+          </div>
+          <div class="col-12 col-sm-8">
+            <p class="title help-item__title">{{item.title}}</p>
+            <ul class="list help-item__list">
+              {% for li in item.list %}
+                <li>{{li|raw}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="help__footer text-center">
+      {{
+        landing.button(
+          'help__footer-button btn_brand-1', 
+          'Участвовать в марафоне',
+          {
+            "data-scroll": "data-scroll",
+            "href": "#section-form"
+          }
+        )
+      }}
+    </div>
+  </div>
+</section
