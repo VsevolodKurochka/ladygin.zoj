@@ -1,0 +1,51 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set items = [
+    {
+      "image": "img/result-1.png",
+      "text": "<strong>Вы избавитесь</strong> от<br> трех-пяти лишних<br> килограмм"
+    },
+    {
+      "image": "img/result-2.png",
+      "text": "<strong>Улучшите сон</strong>"
+    },
+    {
+      "image": "img/result-3.png",
+      "text": "Получите опыт<br><strong>здорового и вкусного<br> питания</strong>"
+    },
+    {
+      "image": "img/result-4.png",
+      "text": "<strong>Станете свежее,</strong><br> привлекательнее<br>выглядеть"
+    },
+    {
+      "image": "img/result-5.png",
+      "text": "<strong>Станете энергичнее,</strong><br> за 1 день будете делать<br>то, на что раньше<br>уходила неделя"
+    },
+    {
+      "image": "img/result-6.png",
+      "text": "<strong>Продолжите<br>улучшать</strong> свою жизнь<br> и после марафона"
+    }
+  ] 
+%}
+<section class="section result" id="section-result">
+  <div class="container">
+    {{
+      landing.header(
+      'result__header text-center', 
+      {text: 'Что в результате?'}
+      )
+    }}
+    <div class="row result__items">
+      {% for item in items %}
+        <div class="col-12 col-sm-6 col-md-4 result__item">
+          <div class="result__item-header">
+            {{landing.image(item.image, item.text|striptags, 'result__item-image')}}
+          </div>
+          <div class="result__item-body">
+            <div class="result__item-body-content">{{item.text|raw}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+.result
+	+bgc($color-brand-4)
+
+	&__item
+		+offset('b', 30px)
+
+		&-header
+			+ta(center)
+			+fs(0)
+			+mb(-30px)
+
+		&-image
+			+min(md)
+				+h(225px)
+				object-fit: contain
+
+		&-body
+			+ta(center)
+			+bgc($color-brand-1)
+			+c($color-white)
+			padding: 30px 15px
+			transform: skew(-15deg) rotate(-15deg)
+			+min(md)
+				+w(90%)
+				+mx(auto)
+				+fs(18px)
+
+			&-content
+				transform: skew(15deg) rotate(15deg)
