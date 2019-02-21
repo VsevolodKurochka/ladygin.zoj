@@ -9,8 +9,10 @@
 		&-outer
 			+min(sm)
 				+mb(vmax(90))
+				+jc(flex-end)
 
 		+d(inline-block)
+		border: 2px solid $color-white
 		padding: 15px
 		+ta(left)
 		+fw(700)
@@ -21,3 +23,69 @@
 
 		+min(md)
 			+fs_vmax(36)
+
+	&__subtitle
+		+fw(bold)
+	
+	&__items
+		+mb(45px)
+		+min(md)
+			+mb(vmax(60))
+
+	&__item
+		
+		+c($color-brand-2)
+
+		+min(sm)
+			+offset('b', vmax(60))
+		
+
+		&-inner
+			+r()
+			padding: 15px
+			z-index: 1
+			+min(md)
+				+w(80%)
+				+mx(auto)
+				padding: 45px
+
+		&-image
+			+a(0, 0)
+			+size(100%)
+			z-index: -1
+
+		&-title
+			+mb(15px)
+			+lh(1)
+			+fw(bold)
+			+min(sm)
+				+fs(24px)
+			+min(md)
+				+fs(vmax(30))
+
+		&-list
+			list-style: none
+			&-li
+				+r()
+				+offset('b', 10px)
+				+pl(35px)
+				&:before
+					+pseudo("", 2px, null, null, 0)
+
+				&_down
+					&:before
+						+size(22px, 23px)
+						+bgi('../img/icon-list-down.png')
+
+				&_up
+					&:before
+						+size(22px, 23px)
+						+bgi('../img/icon-list-down.png')
+
+				&_balance
+					&:before
+						+size(27px, 22px)
+						+bgi('../img/icon-list-balance.png')
+
+			+min(md)
+				+fs(18px)

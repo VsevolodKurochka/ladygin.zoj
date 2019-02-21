@@ -21,23 +21,29 @@
     ]
   },
   {
-    'title': 'Внешний вид',
+    'title': 'Здоровье',
     'items': [
-      {"text": "Вес"},
-      {"text": "Отёчность"},
-      {"text": "Синяки под глазами"},
-      {"text": "Состояние кожи","icon": "balance"},
-      {"text": "Тусклый вид"}
+      {"text": "Иммунитет", "icon": "up" },
+      {"text": "Симптомы хронических заболеваний" },
+      {"text": "Холестерин", "icon": "balance" },
+      {"text": "Давление", "icon": "balance" },
+      {"text": "Кислотно-щелочной баланс", "icon": "balance" },
+      {"text": "Сахар в крови", "icon": "balance" },
+      {"text": "Таблетки и лекарства"},
+      {"text": "Токсины"},
+      {"text": "Походы к врачам"}
     ]
   },
   {
-    'title': 'Внешний вид',
+    'title': 'Качество жизни',
     'items': [
-      {"text": "Вес"},
-      {"text": "Отёчность"},
-      {"text": "Синяки под глазами"},
-      {"text": "Состояние кожи","icon": "balance"},
-      {"text": "Тусклый вид"}
+      {"text": "Ограничения в исполнении желаний "},
+      {"text": "Знания о красоте и здоровье", "icon": "up"},
+      {"text": "Новые ощущения и опыт", "icon": "up"},
+      {"text": "Фундамент будущих улучшений жизни", "icon": "up"},
+      {"text": "Вероятность активного долголетия", "icon": "up"},
+      {"text": "Радость при виде себя в зеркале", "icon": "up"},
+      {"text": "Затраты на врачей и салоны "},
     ]
   }
 ]
@@ -51,17 +57,18 @@
       )
     }}
     <div class="marafon__blockquote-outer row">
-      <div class="col-12 col-sm-10">
-        <blockquote class="marafon__blockquote color-white">
-          - Cкинь 3 кг за неделю, а через две<br>верни их назад. Плюс 2 кг сверху.
-        </blockquote>
-      </div>
+      <blockquote class="marafon__blockquote color-white">
+        - Cкинь 3 кг за неделю, а через две<br>верни их назад. Плюс 2 кг сверху.
+      </blockquote>
     </div>
     {{
       landing.header(
-      'marafon__subtitle',
+      'marafon__subtitle-outer text-center color-white ',
       null,
-      {text: 'Всего за 10 дней Вы улучшите:'}
+      {
+        text: 'Всего за 10 дней Вы улучшите:',
+        class: 'marafon__subtitle'
+      }
       )
     }}
     <div class="marafon__items row">
@@ -70,15 +77,19 @@
         {% set i = i + 1 %}
         <div class="marafon__item marafon__item_{{i}} col-12 col-sm-6">
           <div class="marafon__item-inner">
+            {{landing.image('img/marafon-bg.png', 'marafon', 'marafon__item-image')}}
             <p class="marafon__item-title">{{item.title}}</p>
             <ul class="marafon__item-list">
               {% for li in item.items %}
-                <li class="marafon__item-list marafon__item-list_{{li.icon ? li.icon: 'down'}}">{{li.text}}</li>
+                <li class="marafon__item-list-li marafon__item-list-li_{{li.icon ? li.icon: 'down'}}">{{li.text}}</li>
               {% endfor %}
             </ul>
           </div>
         </div>
       {% endfor %}
+    </div>
+    <div class="marafon__footer text-center">
+      {{landing.button('marafon__footer-button btn_white', 'Участвую!')}}
     </div>
   </div>
 </section>

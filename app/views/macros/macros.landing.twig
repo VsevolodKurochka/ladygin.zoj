@@ -4,7 +4,10 @@
 {% macro button(class, text, attributes) %}
   {% import "macros/macros.form.twig" as form %}
   {% set default = "btn btn_landing effect effect_bounce-top" %}
-  {{form.button('button', "#{default} #{class}", text, attributes)}}
+  {{form.button('button', "#{default} #{class}", text, {
+    "data-scroll": "data-scroll",
+    "href": "#id-1"
+  })}}
 {% endmacro %}
 
 {% macro header(headerClass, title, subtitle) %}
