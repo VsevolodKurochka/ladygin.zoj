@@ -23,3 +23,8 @@ gulp.task('concat', () =>
 		.pipe(uglify())
 		.pipe(gulp.dest(`${folders.assetsBuild}/js`))
 );
+
+// Task `concat:watch`
+gulp.task('concat:watch', () =>
+	gulp.watch(concatSrc, gulp.series('concat', reload))
+);

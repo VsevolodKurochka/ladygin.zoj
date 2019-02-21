@@ -27,13 +27,14 @@ gulp.task(
 		'babel',
 		'concat',
 		gulp.parallel(
+			'babel:watch',
+			'concat:watch',
 			'sass',
 			'sass:watch',
 			'image',
 			'fonts',
 			'image:watch',
-			'fonts:watch',
-			'babel:watch'
+			'fonts:watch'
 		)
 	)
 );

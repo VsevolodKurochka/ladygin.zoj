@@ -27,3 +27,29 @@
     <p class="cube__subtitle">{{subtitle|raw}}</p>
   </div>
 {% endmacro %}
+
+{% macro programm(cube, programm) %}
+  {% import _self as landing %}
+  <div class="programm-item">
+    <div class="programm-item__header">
+      {{landing.cube(cube.title, cube.subtitle, cube.class)}}
+      <div class="programm-item__header-info">
+        <p>загрузка</p>
+        <p>{{programm.loading}}</p>
+      </div>
+    </div>
+    <div class="programm-item__body">
+      <ul class="list programm-item__list">
+        {% for li in programm.list %}
+          <li>{{li|raw}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro toggle(href, unactive, active) %}
+  <div class="toggle">
+    <a href="{{href}}" class="toggle__link" data-unactive="{{unactive}}" data-active="{{active}}"></a>
+  </div>
+{% endmacro %}

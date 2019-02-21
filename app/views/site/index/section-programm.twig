@@ -1,0 +1,114 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% set cube = {'class': 'programm__item-cube', 'subtitle': 'день'} %}
+{%
+  set programms_show = [
+    {
+      "loading": "от 15 мин. до 1 ч. 10 мин.",
+      "list": [
+        "Питание в соответствии с меню",
+        "Видеоурок по изучению <strong>5-минутной телесной практики</strong> на каждый день марафона ",
+        "Соблюдение режима сна",
+        "Мини-задания",
+        "Встреча-вебинар с куратором марафона <strong>“Самолечение образом жизни - научные данные”</strong>",
+      ]
+    },
+    {
+      "loading": "от 10 мин. до 1 ч. 40 мин.",
+      "list": [
+        "Питание в соответствии с меню",
+        "Утренняя 5-минутная телесная практика",
+        "Соблюдение режима сна",
+        "Мини-задания",
+        "<strong>Встреча-вебинар с психологом</strong> «С чего начать движение к здоровому образу жизни? Какие здоровые привычки выбрать именно мне?»",
+        "Видеоурок по изучению базовых <strong>дыхательных техник</strong>",
+      ]
+    }
+  ]
+%}
+{%
+  set programm_hidden = [
+    {
+      "loading": "от 20 мин. до 2 ч.",
+      "list": [
+        "Питание в соответствии с меню",
+        "Видеоурок - <strong>утренняя 15-минутная практика</strong> “Пробуждение” ",
+        "Соблюдение режима сна",
+        "Мини-задания",
+        "Встреча-вебинар с тренером по фейс-фитнесу “Знакомство с фейс фитнесом”",
+        "Видеоурок <strong>“Расслабление и укрепление мышц шейно-воротниковой зоны”</strong>",
+        "Видеоурок фейс-фитнесу ",
+        "Видеоурок “Суставная разминка”"
+      ]
+    },
+    {
+      "loading": "от 20 мин. до 1 ч. 40 мин.",
+      "list": [
+        "Питание в соответствии с меню",
+        "Видеоурок  - утренняя 15 - минутная практика “Пробуждение”",
+        "Соблюдение режима сна",
+        "Мини-задания",
+        "Встреча-вебинар с доктором Хайровым “Атеросклероз как основной убийца. Концепция растительного питания.”",
+        "Видеоурок “Техники повышения эффективности и безопасности любой телесной практики” ",
+        "<strong>Видеоурок по фейс-фитнесу</strong>",
+        "Серия коротких видеоуроков по освоению техники безопасного и эффективного выполнения  планки, усложненной планки, планки с акцентом на ягодицы, планки с акцентом на нижнюю часть живота"
+      ]
+    }
+  ]
+%}
+<section class="section programm" id="section-programm">
+  <div class="container">
+    {{
+      landing.header(
+      'programm__header text-center color-brand-2', 
+      {text: 'Программа'}
+      )
+    }}
+    <div class="row programm__show">
+      {% set i = 0 %}
+      
+      {% for programm in programms_show %}
+        {% set i = i + 1 %}
+        <div class="programm__item-cover col-12 col-sm-6">
+          {{
+            landing.programm(
+              {
+                'title': i,
+                'subtitle': cube.subtitle,
+                'class': cube.class
+              },
+              {
+                "loading": programm.loading,
+                "list": programm.list
+              }
+            )
+          }}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row programm__toggle">
+      {{landing.toggle('#programm-hidden', 'Скрыть всю программу', 'Показать всю программу')}}
+    </div>
+    <div class="row programm__hidden" id="programm-hidden">
+      {% set i = 2 %}
+      
+      {% for programm in programm_hidden %}
+        {% set i = i + 1 %}
+        <div class="programm__item-cover col-12 col-sm-6">
+          {{
+            landing.programm(
+              {
+                'title': i,
+                'subtitle': cube.subtitle,
+                'class': cube.class
+              },
+              {
+                "loading": programm.loading,
+                "list": programm.list
+              }
+            )
+          }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

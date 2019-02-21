@@ -1,0 +1,42 @@
+.programm
+	+c($color-brand-2)
+	&-item
+		&__cover
+			+min(sm)
+				+mb(vmax(60))
+		&__cube
+			+ta(center)
+			+cube()
+			&:before
+				border-color: $color-brand-3
+				top: 30px
+				left: -15px
+				+size(100px)
+				border-width: 5px
+
+		&__header
+			+mb(15px)
+			+min(sm)
+				+d(flex)
+				+ai(center)
+				+mb(30px)
+
+			&-info
+				font-style: italic
+
+		&__list
+			li
+				+pl(30px)
+				+offset('b', 10px)
+				&:after
+					+t(0)
+					+l(0)
+					+size(20px)
+					+bgc($color-brand-1)
+					border: 3px solid $color-brand-3
+					border-radius: 100%
+
+				+min(md)
+					+fs_vmax(20)
+					&:after
+						+t(3px)

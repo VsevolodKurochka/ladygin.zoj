@@ -110,4 +110,8 @@ $(document).ready(function(){
 	$(window).scroll( throttle(highlightNavigation,100) );
 	
 	// Develope
+	$('.toggle').each(()=>{
+		let unactive = $(this).attr('data-unactive');
+		console.log(unactive);
+	});
 });	
