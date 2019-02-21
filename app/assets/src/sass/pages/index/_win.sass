@@ -1,0 +1,51 @@
+.win
+	+ta(center)
+	&__container
+		+r()
+		+min(md)
+			+py(100px)
+	&__bg
+		+a()
+		z-index: -1
+		max-width: 70px
+		&_1
+			top: 5%
+			left: 5%
+
+		&_2
+			top: 7.5%
+			right: 5%
+
+		&_3
+			top: 45%
+			left: 5%
+			max-width: 100px
+
+		&_4
+			top: 40%
+			right: 10%
+
+		&_5
+			bottom: 5%
+			left: 5%
+			max-width: 150px
+
+		&_6
+			bottom: 5%
+			right: 5%
+
+	&__content
+		+min(sm)
+			+jc(center)
+		
+		+min(md)
+			+fs(25px)
+		p
+			+mb(15px)
+
+		&-button
+			&-cover
+				+mt(30px)
+
+				+min(md)
+					+mt(45px)

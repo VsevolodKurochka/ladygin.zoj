@@ -1,0 +1,13 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section price" id="section-price">
+  <div class="container">
+    {{
+      landing.header(
+      'price__header text-center', 
+      {text: 'Специальная<br>стоимость марафона'}
+      )
+    }}
+    <p class="price__item price__item_old"><span>6000 руб.</span></p>
+    <p class="price__item price__item_new"><span>1000 руб.</span></p>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+.price
+	+bgc($color-brand-1)
+	+c($color-white)
+	+ta(center)
+
+	&:before
+		+pseudo("", 0, null, null, 0)
+		+size(60%, 100%)
+		+bgi('../img/bg-price.png')
+
+	&__item
+		+lh(1)
+		+fw(700)
+		span
+			+d(inline-block)
+		+min(md)
+			+fs_vmax(70)
+
+		&_old
+			+c($color-brand-3)
+			+mb(15px)
+
+			span
+				+r()
+				&:before
+					+pseudo("", 0, null, null, 0)
+					+size(110%, 4px)
+					+bgc($color-white)
+					transform: rotate(-7.5deg)
+					transform-origin: right
+
+					+min(md)
+						left: -15px
