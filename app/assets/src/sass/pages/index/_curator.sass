@@ -1,0 +1,23 @@
+.curator
+	&__content
+		+d(none)
+
+		&-greeting
+			+mb(15px)
+			+min(sm)
+				+my(vmax(45))
+
+	&__list
+		li
+			+offset('b', 10px)
+
+	&__info
+		+fs(0)
+		+min(sm)
+			+ai(flex-end)
+		&-header
+			+d(flex)
+			flex-direction: column-reverse
+			&-title + &-subtitle
+				+mt(0)
+				+mb(30px)
