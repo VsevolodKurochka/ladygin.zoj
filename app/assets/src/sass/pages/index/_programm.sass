@@ -5,12 +5,20 @@
 		+a()
 		&-1
 			right: 0
-			top: -50%
-		&-2
-			right: 15px
-			top: 5%
+			top: 0
 			+min(sm)
+				top: -50%
+
+		&-2
+			top: 1%
+			right: -30%
+			max-width: 200px
+			opacity: 0.8
+			+min(sm)
+				top: 5%
+				right: 15px
 				max-width: 400px
+				opacity: 1
 
 	&-item
 		&__cover
@@ -21,22 +29,22 @@
 			+cube()
 			&:before
 				border-color: $color-brand-3
-				top: 30px
+				top: 0
 				left: -15px
 				+size(100px)
 				border-width: 5px
+				+min(sm)
+					top: 30px
+					left: -15px
 
 		&__header
-			+mb(15px)
-			+min(sm)
-				+d(flex)
-				+ai(flex-end)
-				+mb(30px)
+			+d(flex)
+			+ai(flex-end)
+			+mb(30px)
 
 			&-info
 				font-style: italic
-				+min(sm)
-					+ml(30px)
+				+ml(30px)
 
 		&__list
 			li

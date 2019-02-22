@@ -9,9 +9,12 @@
 		z-index: -1
 		&_1
 			top: 35%
-			left: -2%
 			+w(150px)
-			+min(md)
+			+max(sm)
+				right: -5%
+				transform: scaleX(-1)
+			+min(sm)
+				left: -2%
 				top: 35%
 				+w(220px)
 
@@ -23,14 +26,15 @@
 				+w(220px)
 
 		&_3
-			bottom: 2%
+			bottom: 5%
 			right: -5%
 			+w(120px)
 			+min(md)
+				bottom: 2%
 				+w(450px)
 
 	&__items
-		+mb(45px)
+		+mb(100px)
 
 		+min(sm)
 			+mb(vmax(200))
@@ -38,12 +42,20 @@
 	&-item
 		+r()
 
+		+max(sm)
+			+offset('b', 45px)
+
+		&__header
+			+max(sm)
+				+mb(15px)
+
 		&__number
 			+r()
 			+d(inline-flex)
 			+ai(center)
 			+jc(center)
 			+bgc($color-white)
+			+size(75px)
 			transform: skew(-15deg) rotate(-15deg)
 			z-index: 1
 
@@ -72,6 +84,7 @@
 				transform: translate(-50%, -50%)
 				+bgi('../img/step-item-sun.png')
 				z-index: -1
+				+size(250px)
 				+min(md)
 					+size(400px)
 

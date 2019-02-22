@@ -9,16 +9,17 @@
 
 	&__group
 		+r()
-		+offset('b', 15px)
+		+offset('b', 30px)
 		+min(md)
 			+offset('b', 45px)
 
 		&-header
 			+d(flex)
 			+ai(center)
+			+pr(45px)
 
 		&-arrow
-			+d(inline-block)
+			+a(0, 0)
 			+size(27px, 15px)
 			+bgi('../img/available-arrow.png')
 
@@ -26,11 +27,12 @@
 			transform: scaleY(-1)
 
 		&-image
-			+a(-10px, null, null, 0)
+			+a(0, null, null, 0)
 			+h(30px)
 			max-width: 30px
 			object-fit: contain
 			+min(md)
+				+t(-10px)
 				+h(50px)
 
 		&-header,
@@ -41,7 +43,7 @@
 
 		&-title
 			+fw(900)
-			+fs(20px)
+			+fs(14px)
 			+mr(10px)
 			+min(md)
 				+fs(25px)
@@ -49,6 +51,10 @@
 
 		&-body
 			+d(none)
-			+mt(30px)
+			+mt(15px)
+			+max(sm)
+				+fs(14px)
+			+min(sm)
+				+mt(30px)
 			p
 				+offset('b', 15px)

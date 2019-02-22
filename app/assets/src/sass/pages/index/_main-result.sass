@@ -6,6 +6,8 @@
 	&__bg
 		+a()
 		z-index: -1
+		+max(sm)
+			max-width: 100px
 		&_1
 			top: 5%
 			right: 5%
@@ -34,11 +36,15 @@
 		+fs(0)
 
 		&-image
-			+w(50%)
+			+w(200px)
 			+mx(auto)
+			+min(sm)
+				+w(50%)
 
 		&-footer
 			&-button
+				+w(250px)
+				
 				+min(md)
 					+w(400px)
 					+fs_vmax(50)

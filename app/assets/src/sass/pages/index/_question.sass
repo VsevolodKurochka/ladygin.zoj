@@ -24,6 +24,10 @@
 		+r()
 		z-index: 1
 
+		&-column
+			+max(sm)
+				+offset('b', 30px)
+
 	&__group
 		+r()
 		+offset('b', 15px)
@@ -35,7 +39,7 @@
 			+r()
 			+d(flex)
 			+ai(center)
-			padding: 15px
+			padding: 15px 45px 15px 15px
 			cursor: pointer
 			+tr()
 			+min(md)
@@ -67,6 +71,8 @@
 
 		&-title
 			+fw(900)
+			+max(sm)
+				+fs(12px)
 
 		&-body
 			+d(none)

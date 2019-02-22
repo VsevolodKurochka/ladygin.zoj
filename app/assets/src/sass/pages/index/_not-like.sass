@@ -12,6 +12,14 @@
 		+min(md)
 			+size(400px)
 
+	&__image
+		+max(sm)
+			max-width: 250px
+		&-cover
+			+max(sm)
+				+mt(15px)
+				+ta(center)
+
 	&__content
 		+min(sm)
 			flex-direction: row-reverse
@@ -21,6 +29,8 @@
 			+ta(right)
 
 		&-image
-			max-width: 120px
+			max-width: 75px
+			+min(sm)
+				max-width: 120px
 			&-holder
 				+mb(15px)
