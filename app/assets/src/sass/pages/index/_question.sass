@@ -1,5 +1,28 @@
 .question
 	+bgc(#ffbe96)
+	z-index: 1
+
+	&:before,
+	&:after
+		content: ""
+		+a(null, null, 0)
+		+bgi('../img/question-hand.png')
+		z-index: -1
+
+	&:before
+		+l(5%)
+		+min(md)
+			+size(350px, 90%)
+
+	&:after
+		right: 5%
+		+h(25%)
+		+min(md)
+			+size(150px, 500px)
+
+	&__content
+		+r()
+		z-index: 1
 
 	&__group
 		+r()

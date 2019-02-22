@@ -1,0 +1,36 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section bonuses" id="section-bonuses">
+  <div class="container">
+    <div class="row bonuses__row">
+      <div class="col-12 col-sm-6 col-md-7">
+        {{
+          landing.header(
+            'bonuses__header',
+            {text: 'И, конечно, БОНУСЫ!'}
+          )
+        }}
+        <ul class="list bonuses__list">
+          <li>◆ Видеоурок “Висцеральный массаж внутренних органов”</li>
+          <li>◆ Видеоурок  “Расслабляющая экспресс-тренировка на рабочем месте” </li>
+          <li>◆ Видеоурок “Экспресс-тренировка по расслаблению тела во время долгого сидения”</li>
+          <li>◆ 3 Видеоурока “Наиболее эффективных упражнений на проработку мышц нижней части тела/верхней части тела/мышц кора” </li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-md-5">
+        {{landing.image('img/bonuses.png', 'И, конечно, БОНУСЫ!', 'bonuses__image')}}
+      </div>
+    </div>
+    <div class="bonuses__footer text-center">
+      {{
+        landing.button(
+          'bonuses__footer-button btn_brand-1', 
+          'Участвую за 1000 руб.',
+          {
+            "data-scroll": "data-scroll",
+            "href": "#section-form"
+          }
+        )
+      }}
+    </div>
+  </div>
+</section>
