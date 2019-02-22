@@ -1,0 +1,59 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set items = [
+    {
+      "image": "img/des-1.png",
+      "number": "7",
+      "text": "чашек кофе <br>в кафе"
+    },
+    {
+      "image": "img/des-2.png",
+      "number": "6",
+      "text": "бургеров <br>в макдоналдс"
+    },
+    {
+      "image": "img/des-3.png",
+      "number": "1",
+      "text": "поход <br>в кинотеатр"
+    }
+  ]
+%}
+<section class="section description" id="section-description">
+  <div class="container">
+    {{
+      landing.header(
+        'description__header text-center',
+        {text: '1000 руб. - это'}
+      )
+    }}
+    <div class="row description__items">
+      {% for item in items %}
+        <div class="col-12 col-sm-4 description__item">
+          <div class="description__item-header">
+            {{landing.image(item.image, item.text|striptags, 'description__item-image')}}
+          </div>
+          <div class="description__item-body">
+            <p class="description__item-number">{{item.number}}</p>
+            <p class="description__item-text">{{item.text|raw}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="description__footer text-center">
+        <div class="description__footer-info">
+          <p>Специальная цена доступна только<br>для первых <strong>50 участников.</strong></p>
+          <p>На данный момент <strong>37 мест уже занято.</strong></p>
+        </div>
+        {{
+          landing.button(
+            'description__footer-button btn_brand-1', 
+            'Участвовать по спеццене',
+            {
+              "data-scroll": "data-scroll",
+              "href": "#section-form"
+            }
+          )
+        }}
+      </div>
+  </div>
+</section>
