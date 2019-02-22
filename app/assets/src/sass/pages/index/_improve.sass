@@ -8,18 +8,18 @@
 		z-index: 1
 		&:before
 			+pseudo("?", 0, null, null, 50%)
-			transform: translateX(-50%)
+			transform: translateX(-50%) skew(15deg) rotate(5deg)
 			+c($color-brand-3)
 			opacity: 0.8
 			+lh(1)
-			+fw(900)
+			+fw(700)
 			z-index: -1
 
 			+min(md)
-				+fs_vmax(800)
+				+fs_vmax(700)
 
 		+min(sm)
-			+ai(center)
+			+ai(flex-end)
 
 	&__items
 		+my(45px)

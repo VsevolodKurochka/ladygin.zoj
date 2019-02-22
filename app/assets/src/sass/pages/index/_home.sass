@@ -41,20 +41,29 @@
 		+fw(400)
 		line-height: 1.3
 		+min(md)
-			+mb(45px)
+			+mb(60px)
 			+fs_vmax(30)
 
 	&__attention
-		+fw(700)
+		+fw(900)
 		+fs(30px)
 
 		+min(md)
-			+fs_vmax(60)
-			+mb(60px)
+			+fs_vmax(65)
+			+mb(90px)
 	
 	&__date
+		+r()
 		+min(sm)
 			+ta(center)
+		&:before
+			+pseudo("", 50%, null, null, -50px)
+			transform: translateY(-50%)
+			+size(100px)
+			+bgi('../img/rabbit.png')
+			+min(sm)
+				left: -150px
+				+size(260px, 200px)
 
 	&__bg
 		+r()
