@@ -1,0 +1,38 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section payment" id="section-payment">
+  <div class="container">
+    {{
+      landing.header(
+      'payment__header text-center', 
+      {text: 'Итого, оплачивая, Вы получаете:'}
+      )
+    }}
+    <div class="row payment__content">
+      <div class="col-12 col-sm-10 col-md-8">
+        <ul class="list payment__list">
+          <li>Доступ к <strong>Личному кабинету</strong> для участия в 10-дневном онлайн-марафоне</li>
+          <li><strong>Задания</strong> и материалы на каждый день марафона</li>
+          <li><strong>52 видеоурока</strong> с заданиями и упражнениями</li>
+          <li><strong>9 живых встреч</strong>-вебинаров с экспертами</li>
+          <li>План питания и <strong>меню</strong> на каждый день под разный бюджет</li>
+          <li><strong>Бонусные уроки</strong> по фитнесу и телесным практикам</li>
+          <li>Поддержку <strong>куратора и психолога</strong> каждый день</li>
+          <li>Доступ в группу <strong>Telegram</strong> для общения с участниками</li>
+          <li><strong>Доступ</strong> к материалам марафона на протяжении <strong>30 дней</strong> после окончания марафона</li>
+        </ul>
+      </div>
+    </div>
+    <div class="payment__footer text-center">
+      {{
+        landing.button(
+          'payment__footer-button btn_brand-1', 
+          'Забрать одно из последних<br>мест по 1000 руб.',
+          {
+            "data-scroll": "data-scroll",
+            "href": "#section-form"
+          }
+        )
+      }}
+    </div>
+  </div>
+</section>

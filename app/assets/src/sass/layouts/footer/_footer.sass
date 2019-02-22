@@ -1,2 +1,54 @@
 .footer
-	+fs(12px)
+	+py(30px)
+	+min(md)
+		+py(45px, 60px)
+
+	&__content,
+	&__copy
+		+min(sm)
+			+ai(center)
+
+	&__content
+		border-bottom: 1px solid #dfdfdf
+		+pb(15px)
+		+mb(15px)
+		+min(md)
+			+pb(30px)
+
+		&-info
+			+min(sm)
+				+ta(right)
+
+	&__menu
+		+mb(20px)
+		li
+			+d(inline-block)
+			+offset('r', 10px)
+			+max(sm)
+				+offset('b', 10px)
+			+min(md)
+				+offset('r', 20px)
+	
+		a
+			text-decoration: none
+			+c($color-brand-2)
+			+tr()
+			&:hover
+				+c($color-brand-1)
+
+	&__social
+
+		&-item
+			+d(inline-block)
+			vertical-align: middle
+			+offset('r', 10px)
+
+			&-image
+				+size(25px)
+				object-fit: contain
+
+	&__copy
+		+c(#7c7c7c)
+		+fs(14px)
+		+min(sm)
+			+jc(space-between)

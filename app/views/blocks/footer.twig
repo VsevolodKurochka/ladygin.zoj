@@ -1,3 +1,53 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set social = [
+    {
+      "href": "#",
+      "icon": "img/icon-vk.svg"
+    },
+    {
+      "href": "#",
+      "icon": "img/icon-fb.svg"
+    },
+    {
+      "href": "#",
+      "icon": "img/icon-twitter.svg"
+    },
+    {
+      "href": "#",
+      "icon": "img/icon-youtube.svg"
+    },
+    {
+      "href": "#",
+      "icon": "img/icon-instagram.svg"
+    }
+  ]
+%}
 <footer class="footer">
-  Footer
+  <div class="container">
+    <div class="row footer__content">
+      <div class="col-12 col-sm-2">
+        {{landing.image('img/footer-logo.png', 'footer', 'footer__logo')}}
+      </div>
+      <div class="col-12 col-sm-10 footer__content-info">
+        <ul class="footer__menu">
+          <li><a data-scroll="data-scroll" href="#section-programm">Программа</a></li>
+          <li><a data-scroll="data-scroll" href="#section-target">Цели</a></li>
+          <li><a data-scroll="data-scroll" href="#section-price">Cтоимость</a></li>
+          <li><a data-scroll="data-scroll" href="#section-form">Записаться</a></li>
+        </ul>
+        <ul class="footer__social">
+          {% for item in social %}
+            <li class="footer__social-item">
+              <a class="footer__social-item-link" href="{{item.href}}">{{landing.image(item.icon, "Social", 'footer__social-item-image')}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="row footer__copy">
+      <p>Copyright © Zoжигалка, 2019</p>
+      <p>ИП Часовских Д. С., ИНН 1057746840095</p>
+    </div>
+  </div>
 </footer>

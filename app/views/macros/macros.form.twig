@@ -17,7 +17,7 @@
     {% for attr, value in attributes %} 
       {{ attr }}="{{ value }}"
     {% endfor %}
-  >{{text}}</button>
+  >{{text|raw}}</button>
 {% endmacro %}
 
 {% macro control(name, value, type, attributes, text, labelClass) %}
