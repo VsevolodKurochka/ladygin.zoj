@@ -11,6 +11,8 @@ $(document).ready(function(){
 		scroll($( $(this).attr('href') ), 1500);
 	});
 
+
+
 	// Collapse
 
 		$(".collapse__group.active").find(".collapse__group-body").slideDown();
@@ -138,4 +140,9 @@ $(document).ready(function(){
 	}else{
 		$('.programm__toggle').remove();
 	}
+
+	$('[data-scroll-to]').click(function(){
+		var href = $(this).attr('data-scroll-to');
+		scroll($(href), 1500);
+	});
 });	

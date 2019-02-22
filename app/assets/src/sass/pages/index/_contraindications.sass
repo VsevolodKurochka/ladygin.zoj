@@ -14,11 +14,14 @@
 		+c($color-brand-2)
 
 		+min(sm)
-			+fs(vmax(22))
+			+fs_vmax(20)
 			+mt(-50px)
 
 		+min(md)
 			+mt(-150px)
+			padding: 110px 45px 90px 90px
+
+		+min(xlg)
 			padding: 110px 45px 90px 90px
 
 		&-image
@@ -31,8 +34,10 @@
 			+fw(900)
 			+mb(15px)
 			+min(sm)
-				+fs(vmax(30))
+				+fs_vmax(30)
 				+mb(30px)
+			+min(xlg)
+				+fs_vmax(25)
 
 	&__image
 		&-cover

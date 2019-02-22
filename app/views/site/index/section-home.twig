@@ -19,7 +19,15 @@
       </div>
       <div class="col-12 col-sm-6 home__bg">
         {{landing.image('img/catwomenonly.png', 'catwomen', 'home__bg-image')}}
-        {{landing.button('home__bg-button btn_white', 'Программа марафона')}}
+        {{
+          landing.button(
+            'home__bg-button btn_white',
+            'Программа марафона',
+            {
+              "data-scroll-to": "#section-programm"
+            }
+          )
+        }}
       </div>
     </div>
     <div class="row home__info">
