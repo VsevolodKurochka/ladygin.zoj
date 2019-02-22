@@ -93,7 +93,15 @@
       </div>
     </div>
     <div class="marafon__footer text-center">
-      {{landing.button('marafon__footer-button btn_white', 'Участвую!')}}
+      {{
+        landing.button(
+          'marafon__footer-button btn_white', 
+          'Участвую!',
+          {
+            "data-scroll-to": "#section-participation"
+          }
+        )
+      }}
     </div>
   </div>
 </section>

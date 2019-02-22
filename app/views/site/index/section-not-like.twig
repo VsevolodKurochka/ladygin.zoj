@@ -19,7 +19,15 @@
             {text: 'А если результат<br>не оправдает ожидания?<br><strong>Вернем деньги полностью!</strong>'}
           )
         }}
-        {{landing.button('not-like__content-button btn_brand-1', 'Участвовать<br>за 1000 руб.')}}
+        {{
+          landing.button(
+            'not-like__content-button btn_brand-1', 
+            'Участвовать<br>за 1000 руб.',
+            {
+              "data-scroll-to": "#section-participation"
+            }
+          )
+        }}
       </div>
       <div class="col-12 col-sm-7 col-md-6 not-like__image-cover">
         {{landing.image('img/not-like-dog.png', 'not-like-dog', 'not-like__image')}}

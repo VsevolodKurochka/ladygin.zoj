@@ -22,7 +22,15 @@
       )
     }}
     <div class="health-life__footer">
-      {{landing.button('health-life__footer-button btn_brand-1', 'Эксперты и программа')}}
+      {{
+        landing.button(
+          'health-life__footer-button btn_brand-1', 
+          'Эксперты и программа',
+          {
+            "data-scroll-to": "#section-experts"
+          }
+        )
+      }}
     </div>
   </div>
 </section>
