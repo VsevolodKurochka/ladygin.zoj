@@ -1,0 +1,54 @@
+.question
+	+bgc(#ffbe96)
+
+	&__group
+		+r()
+		+offset('b', 15px)
+		+bgc($color-white)
+		+min(md)
+			+offset('b', 30px)
+
+		&-header
+			+r()
+			+d(flex)
+			+ai(center)
+			padding: 15px
+			cursor: pointer
+			+tr()
+			+min(md)
+				padding: 25px 45px 25px 25px
+
+		&:not(.active) &-header:hover
+			+bgc($color-brand-2)
+			+c($color-white)
+
+		&-arrow
+			+a(50%, 15px)
+			+size(27px, 15px)
+			+mt(-7.5px)
+			+bgi('../img/question-icon.png')
+
+		&-header:hover &-arrow
+			+bgi('../img/available-arrow.png')
+
+		&.active &-arrow
+			transform: scaleY(-1)
+
+		&-image
+			+a(-10px, null, null, 0)
+			+h(30px)
+			max-width: 30px
+			object-fit: contain
+			+min(md)
+				+h(50px)
+
+		&-title
+			+fw(900)
+
+		&-body
+			+d(none)
+			padding: 15px
+			+min(md)
+				padding: 10px 25px
+			p
+				+offset('b', 15px)
