@@ -29,13 +29,19 @@
 
 	&__item-cube
 		+ta(center)
-		+min(sm)
-			&_2
-				min-height: 150px
+		
+		&_2
+			min-height: 150px
+			+min(sm)
 				&:before
-					top: 0
+					top: -20px
 					left: 50%
+					+size(140px, 100px)
 					transform: translateX(-50%) skew(5deg, -15deg)
+			+min(md)
+				&:before
+					+size(160px)
+					border-width: 10px
 		+min(md)
 			&_2
 				min-height: 240px

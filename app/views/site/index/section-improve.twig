@@ -33,14 +33,22 @@
       </div>
     </div>
     <div class="improve__footer text-center">
-        {{
-          landing.header(
-            'improve__footer-subtitle',
-            null,
-            {text: 'и не только!'}
-          )
-        }}
-      {{landing.button('improve__footer-button btn_brand-2', 'Перейти к программе')}}
+      {{
+        landing.header(
+          'improve__footer-subtitle',
+          null,
+          {text: 'и не только!'}
+        )
+      }}
+      {{
+        landing.button(
+          'improve__footer-button btn_brand-2',
+          'Перейти к программе',
+          {
+            "data-scroll-to": "#section-programm"
+          }
+        )
+      }}
     </div>
   </div>
 </section>

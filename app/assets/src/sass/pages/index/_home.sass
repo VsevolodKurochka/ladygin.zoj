@@ -12,7 +12,6 @@
 		+min(sm)
 			+size(80%, 31%)
 
-
 	+min(md)
 		+py(8vmax, 4vmax)
 
@@ -72,6 +71,19 @@
 			+min(sm)
 				left: -150px
 				+size(260px, 200px)
+
+	&__cube
+		&:before
+			border-color: $color-brand-3
+			+min(sm)
+				top: -15px
+				left: -15px
+				+size(140px, 100px)
+			+min(md)
+				top: -20px
+				left: -25px
+				+size(160px)
+				border-width: 10px
 
 	&__bg
 		+r()
