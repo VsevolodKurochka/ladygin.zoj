@@ -1,5 +1,17 @@
 .programm
 	+c($color-brand-2)
+	overflow: hidden
+	&__bg
+		+a()
+		&-1
+			right: 0
+			top: -50%
+		&-2
+			right: 15px
+			top: 5%
+			+min(sm)
+				max-width: 400px
+
 	&-item
 		&__cover
 			+min(sm)

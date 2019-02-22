@@ -1,5 +1,9 @@
 .marafon
 	+bgc($color-brand-1)
+	z-index: 1
+	&__man
+		z-index: -1
+		+a(5%, null, null, 0)
 
 	&__header
 		+min(sm)
@@ -10,25 +14,56 @@
 			+min(sm)
 				+mb(vmax(90))
 				+jc(flex-end)
-
+		
+		+r()
 		+d(inline-block)
 		border: 2px solid $color-white
 		padding: 15px
 		+ta(left)
 		+fw(700)
 
+		&:before,
+		&:after
+			+pseudo("", 50%, 100%)
+			+size(0)
+			border: solid transparent
+			pointer-events: none
+
+		&:after
+			border-color: rgba(0, 0, 0, 0)
+			border-right-color: $color-brand-1
+			border-width: 0 75px 45px 0
+			margin-top: -23px
+
+		&:before
+			border-color: rgba(245, 222, 211, 0)
+			border-right-color: $color-white
+			border-width: 0px 90px 45px 0px
+			margin-top: -26px
+
 		+min(sm)
 			padding: 25px
 			+fs(30px)
 
 		+min(md)
-			+fs_vmax(36)
+			+fs_vmax(33)
 
 	&__subtitle
 		+fw(bold)
 	
 	&__items
+		+r()
 		+mb(45px)
+		z-index: 1
+		&-image
+			+a(0, null, null, 50%)
+			transform: translateX(-50%)
+			+size(50%, 100%)
+			object-fit: contain
+			z-index: -1
+			+min(md)
+				+w(400px)
+
 		+min(md)
 			+mb(vmax(60))
 

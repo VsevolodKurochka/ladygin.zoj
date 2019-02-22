@@ -49,6 +49,7 @@
 ]
 %}
 <section class="section marafon">
+  {{landing.image('img/marafon-man.png', 'marafon', 'marafon__man')}}
   <div class="container">
     {{
       landing.header(
@@ -71,22 +72,25 @@
       }
       )
     }}
-    <div class="marafon__items row">
-      {% set i = 0 %}
-      {% for item in items %}
-        {% set i = i + 1 %}
-        <div class="marafon__item marafon__item_{{i}} col-12 col-sm-6">
-          <div class="marafon__item-inner">
-            {{landing.image('img/marafon-bg.png', 'marafon', 'marafon__item-image')}}
-            <p class="marafon__item-title">{{item.title}}</p>
-            <ul class="marafon__item-list">
-              {% for li in item.items %}
-                <li class="marafon__item-list-li marafon__item-list-li_{{li.icon ? li.icon: 'down'}}">{{li.text}}</li>
-              {% endfor %}
-            </ul>
+    <div class="marafon__items">
+      {{landing.image('img/marafon-row-before.png', 'marafon', 'marafon__items-image')}}
+      <div class="row">
+        {% set i = 0 %}
+        {% for item in items %}
+          {% set i = i + 1 %}
+          <div class="marafon__item marafon__item_{{i}} col-12 col-sm-6">
+            <div class="marafon__item-inner">
+              {{landing.image('img/marafon-bg.png', 'marafon', 'marafon__item-image')}}
+              <p class="marafon__item-title">{{item.title}}</p>
+              <ul class="marafon__item-list">
+                {% for li in item.items %}
+                  <li class="marafon__item-list-li marafon__item-list-li_{{li.icon ? li.icon: 'down'}}">{{li.text}}</li>
+                {% endfor %}
+              </ul>
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
     <div class="marafon__footer text-center">
       {{landing.button('marafon__footer-button btn_white', 'Участвую!')}}
