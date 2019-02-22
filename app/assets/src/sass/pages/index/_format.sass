@@ -24,6 +24,7 @@
 		+pb(vmax(150))
 
 	&__header
+		+mb(60px)
 		+min(sm)
 			+mb(90px)
 
@@ -31,17 +32,43 @@
 		+ta(center)
 		
 		&_2
-			min-height: 150px
-			+min(sm)
+			min-height: 125px
+			+max(sm)
 				&:before
 					top: -20px
-					left: 50%
-					+size(140px, 100px)
-					transform: translateX(-50%) skew(5deg, -15deg)
+			+min(sm)
+				min-height: 150px
 			+min(md)
-				&:before
+				min-height: 240px
+			&:before
+				+size(100px)
+				left: 50%
+				transform: translateX(-50%) skew(5deg, -15deg)
+				border-color: $color-white
+				+min(sm)
+					top: -20px
+					+size(140px, 100px)
+				+min(md)
 					+size(160px)
 					border-width: 10px
-		+min(md)
-			&_2
-				min-height: 240px
+		&_3
+			&:before
+				+pseudo("", 0, null, null, 0)
+				+bgi('../img/star.png')
+				top: -35px
+				left: 50%
+				transform: translateX(-50%)
+				+size(175px)
+				+min(md)
+					top: -35px
+					left: 50%
+					transform: translateX(-50%)
+					+size(350px)
+		
+		.cube
+			&__title
+				+max(sm)
+					+fs(40px)
+			&__subtitle
+				+max(sm)
+					+fs(15px)

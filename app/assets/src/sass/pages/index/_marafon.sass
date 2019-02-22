@@ -4,6 +4,9 @@
 	&__man
 		z-index: -1
 		+a(5%, null, null, 0)
+		+max(sm)
+			max-width: 100px
+			top: 140px
 
 	&__header
 		+min(sm)
@@ -11,6 +14,7 @@
 
 	&__blockquote
 		&-outer
+			+mb(45px)
 			+min(sm)
 				+mb(vmax(90))
 				+jc(flex-end)
@@ -22,6 +26,13 @@
 		+ta(left)
 		+fw(700)
 
+		+max(sm)
+			+fs(12px)
+			+ml(140px)
+			+mr(15px)
+			br
+				+d(none)
+
 		&:before,
 		&:after
 			+pseudo("", 50%, 100%)
@@ -32,18 +43,26 @@
 		&:after
 			border-color: rgba(0, 0, 0, 0)
 			border-right-color: $color-brand-1
-			border-width: 0 75px 45px 0
-			margin-top: -23px
+			border-width: 0px 22px 12px 0
+			margin-top: -24px
 
 		&:before
 			border-color: rgba(245, 222, 211, 0)
 			border-right-color: $color-white
-			border-width: 0px 90px 45px 0px
+			border-width: 0 30px 15px 0
 			margin-top: -26px
 
 		+min(sm)
 			padding: 25px
 			+fs(30px)
+
+			&:after
+				border-width: 0 79px 39px 0
+				margin-top: -23px
+
+			&:before
+				border-width: 0px 90px 45px 0px
+				margin-top: -26px
 
 		+min(md)
 			+fs_vmax(33)
@@ -77,7 +96,7 @@
 
 		&-inner
 			+r()
-			padding: 15px
+			padding: 45px 30px
 			z-index: 1
 			+min(md)
 				+w(80%)
@@ -100,27 +119,40 @@
 
 		&-list
 			list-style: none
+			+max(sm)
+				+fs(12px)
 			&-li
 				+r()
 				+offset('b', 10px)
-				+pl(35px)
+				+pl(20px)
 				&:before
 					+pseudo("", 2px, null, null, 0)
+				
+				&_down:before,
+				&_up:before
+					+size(12px)
 
 				&_down
 					&:before
-						+size(22px, 23px)
 						+bgi('../img/icon-list-down.png')
 
 				&_up
 					&:before
-						+size(22px, 23px)
 						+bgi('../img/icon-list-down.png')
 
 				&_balance
 					&:before
-						+size(27px, 22px)
+						+size(14px, 12px)
 						+bgi('../img/icon-list-balance.png')
+
+				+min(sm)
+					+pl(35px)
+					&_down:before,
+					&_up:before
+						+size(22px, 23px)
+					&_balance
+						&:before
+							+size(27px, 22px)
 
 			+min(md)
 				+fs(18px)

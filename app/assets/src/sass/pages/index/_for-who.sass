@@ -8,16 +8,23 @@
 			+ai(center)
 
 	&__image
+		max-width: 150px
 		+min(md)
+			max-width: 100%
 			+ml(vmax(-60))
 
 	&__list
+		+fs(16px)
+		+max(sm)
+			+mb(30px)
+		li
+			&:after
+				+t(7.5px)
 		+min(md)
 			+fs_vmax(25)
 
 			li
 				&:after
-					+t(7.5px)
 					+size(15px)
 
 		+min(xlg)

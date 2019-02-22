@@ -26,10 +26,13 @@
 			z-index: 2
 
 	&__title
-		+fw(bold)
 		+r()
 		z-index: 2
+		+fs(45px)
+		+fw(900)
+		
 		+min(sm)
+			+fw(bold)
 			+ta(right)
 			+fs(6vmax)
 
@@ -42,6 +45,10 @@
 	&__subtitle
 		+fw(400)
 		line-height: 1.3
+		+fs(20px)
+		+max(sm)
+			br
+				+d(none)
 		+min(md)
 			+mb(60px)
 			+fs_vmax(30)
@@ -51,6 +58,7 @@
 	&__attention
 		+fw(900)
 		+fs(30px)
+		+mb(45px)
 
 		+min(md)
 			+fs_vmax(60)
@@ -61,18 +69,22 @@
 	
 	&__date
 		+r()
+		+max(sm)
+			+mb(45px)
 		+min(sm)
 			+ta(center)
 		&:before
 			+pseudo("", 50%, null, null, -50px)
 			transform: translateY(-50%)
-			+size(100px)
+			+size(130px, 100px)
 			+bgi('../img/rabbit.png')
 			+min(sm)
 				left: -150px
 				+size(260px, 200px)
 
 	&__cube
+		+max(sm)
+			+ml(90px)
 		&:before
 			border-color: $color-brand-3
 			+min(sm)
@@ -89,6 +101,7 @@
 		+r()
 		font-size: 0
 		z-index: 1
+		+ta(center)
 		&:before
 			+pseudo("", 0, null, null, 0)
 			+size(100%)
@@ -98,6 +111,9 @@
 				+size(900px)
 				top: -150px
 				left: -150px
+		&-image
+			+max(sm)
+				max-height: 200px
 		&-button
 			+w(100%)
 			+mt(-15px)
@@ -106,5 +122,6 @@
 		+ta(center)
 
 		&-block
-			+min(md)
+			+fs(11px)
+			+min(sm)
 				+fs(20px)

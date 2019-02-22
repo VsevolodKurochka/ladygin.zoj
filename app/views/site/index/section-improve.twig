@@ -1,4 +1,11 @@
 {% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set items = [
+    "здоровье",
+    "питании",
+    "психологии",
+  ]
+%}
 <section class="section improve color-brand-2" id="section-improve">
   <div class="container">
     <div class="row improve__content">
@@ -11,26 +18,18 @@
           )
         }}
       </div>
-      <div class="col-12 col-sm-6">
+      <div class="col-12 col-sm-6 improve__image-cover">
         {{landing.image('img/improve.png', 'improve', 'improve__image')}}
       </div>
     </div>
     <div class="row improve__items">
-      <div class="col-12 col-sm-4">
-        <div class="improve__item">
-          <p>здоровье</p>
+      {% for item in items %}
+        <div class="col-12 col-sm-4 improve__item">
+          <div class="improve__item-inner">
+            <p>{{item}}</p>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-4">
-        <div class="improve__item">
-          <p>питании</p>
-        </div>
-      </div>
-      <div class="col-12 col-sm-4">
-        <div class="improve__item">
-          <p>психологии</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <div class="improve__footer text-center">
       {{
