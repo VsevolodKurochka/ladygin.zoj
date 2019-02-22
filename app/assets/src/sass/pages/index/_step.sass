@@ -1,6 +1,33 @@
 .step
 	+bgc($color-brand-1)
 	+c($color-white)
+	overflow: hidden
+	z-index: 1
+
+	&__bg
+		+a()
+		z-index: -1
+		&_1
+			top: 35%
+			left: -10%
+			+w(150px)
+			+min(md)
+				top: 35%
+				+w(220px)
+
+		&_2
+			top: 10%
+			right: 5%
+			+w(120px)
+			+min(md)
+				+w(220px)
+
+		&_3
+			bottom: 2%
+			right: -5%
+			+w(120px)
+			+min(md)
+				+w(450px)
 
 	&__items
 		+mb(45px)
@@ -9,6 +36,7 @@
 			+mb(vmax(200))
 
 	&-item
+		+r()
 
 		&__number
 			+r()
@@ -17,51 +45,112 @@
 			+jc(center)
 			+bgc($color-white)
 			transform: skew(-15deg) rotate(-15deg)
+			z-index: 1
 
 			+min(md)
 				+size(100px)
 
 			&-inner
+				+r()
 				+d(inline-block)
 				+fw(900)
 				+c($color-brand-2)
 				line-height: 1
+				z-index: 1
 				+min(md)
-					+fs(50px)			
+					+fs(80px)	
+
+		&_1 &__number,
+		&_9 &__number
+			&:after
+				+pseudo("", 50%, null, null, 50%)
+				transform: translate(-50%, -50%)
+				+size(90%)
+				border: 5px solid $color-brand-1		
+			&:before
+				+pseudo("", 50%, null, null, 50%)
+				transform: translate(-50%, -50%)
+				+bgi('../img/step-item-sun.png')
+				z-index: -1
+				+min(md)
+					+size(400px)
+
+		&__body
+			+r()
+			z-index: 1
 
 		+min(md)
 
+			&:before
+				+pseudo()
+				+bgi('../img/line.png')
+				+size(5px, 360px)
+
 			&_1
 				order: 1
-				+mb(150px)
+				&:before
+					top: 45px
+					right: 120px
+					transform: rotate(100deg)
 
 			&_2
 				order: 2
-				
+				+my(90px, 180px)
+				&:before
+					top: -75px
+					right: 120px
+					transform: rotate(75deg)
 
 			&_3
 				order: 3
+				&:before
+					top: 165px
+					left: 90px
+					transform: rotate(-5deg)
 
 			&_4
 				order: 6
+				&:before
+					top: -160px
+					left: -90px
+					transform: rotate(100deg)
 
 			&_5
 				order: 5
 				+mt(-50px)
+				&:before
+					top: -60px
+					left: -110px
+					transform: rotate(70deg)
 
 			&_6
 				order: 4
-				+mb(250px)
+				+mb(175px)
+				&:before
+					top: 110px
+					left: 60px
+					transform: rotate(-1deg)
 
 			&_7
 				order: 7
+				&:before
+					top: -170px
+					right: 120px
+					transform: rotate(80deg)
 
 			&_8
 				order: 8
 				+mt(-60px)
+				&:before
+					top: -95px
+					left: 265px
+					transform: rotate(-75deg)
 
 			&_9
 				order: 9
+				+mt(-90px)
+				&:before
+					+d(none)
 
 			&__inner_4,
 			&__inner_5
