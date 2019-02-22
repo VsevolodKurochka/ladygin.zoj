@@ -1,0 +1,26 @@
+.not-like
+	+bgc(#ffbe96)
+	+pb(0)
+	+fs(0)
+
+	&:before
+		content: ""
+		+a(null, null, 0, 0)
+		+bgi('../img/not-like-bg.png')
+		+size(150px)
+
+		+min(md)
+			+size(400px)
+
+	&__content
+		+min(sm)
+			flex-direction: row-reverse
+
+	&__body
+		+min(sm)
+			+ta(right)
+
+		&-image
+			max-width: 120px
+			&-holder
+				+mb(15px)

@@ -1,0 +1,29 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section not-like" id="section-not-like">
+  <div class="container">
+    {{
+      landing.header(
+        'not-like__header text-center',
+        {text: 'А вдруг мне не понравится?'}
+      )
+    }}
+    <div class="row not-like__content">
+      <div class="col-12 col-sm-5 not-like__body">
+        <div class="not-like__body-image-holder">
+          {{landing.image('img/smile.png', 'smile', 'not-like__body-image')}}
+        </div>
+        {{
+          landing.header(
+            'not-like__content-title',
+            null,
+            {text: 'А если результат<br>не оправдает ожидания?<br><strong>Вернем деньги полностью!</strong>'}
+          )
+        }}
+        {{landing.button('not-like__content-button btn_brand-1', 'Участвовать<br>за 1000 руб.')}}
+      </div>
+      <div class="col-12 col-sm-7 col-md-6">
+        {{landing.image('img/not-like-dog.png', 'not-like-dog', 'not-like__image')}}
+      </div>
+    </div>
+  </div>
+</section>
