@@ -4,6 +4,10 @@
 	overflow: hidden
 	z-index: 1
 
+	&__header
+		+r()
+		z-index: 2
+
 	&__bg
 		+a()
 		z-index: -1
@@ -41,12 +45,9 @@
 
 	&-item
 		+r()
-
+		+ta(center)
 		+max(sm)
 			+offset('b', 45px)
-
-		+min(md)
-			+ta(center)
 
 		&__header
 			+max(sm)
