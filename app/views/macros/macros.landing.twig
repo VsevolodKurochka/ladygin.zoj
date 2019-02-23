@@ -53,6 +53,31 @@
   <span class="triangle triangle_{{type}}">&nbsp;</span>
 {% endmacro %}
 
-{% macro timer() %}
-  <div class="timer"></div>
+{% macro timer(id, title, class) %}
+ <div class="timer {{class}}">
+  <p class="timer__title">{{title}}</p>
+  <div id="{{id}}">
+    <div class='hour timer_item'>
+      <div class="inner">
+        <p class='hour0'></p>
+        <p class='hour1'></p>
+      </div>
+    </div>
+    <div class='timer_divider'>:</div>
+    <div class='min timer_item'>
+      <div class="inner">
+        <p class='min0'></p>
+        <p class='min1'></p>
+      </div>
+    </div>
+    <div class='timer_divider'>:</div>
+    <div class='sec timer_item'>
+      <div class="inner">
+        <p class='sec0'></p>
+        <p class='sec1'></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endmacro %}

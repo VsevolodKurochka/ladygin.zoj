@@ -40,9 +40,7 @@
       {% endfor %}
     </div>
     <div class="description__footer text-center">
-        <div class="description__footer-info">
-          <p>Спецпредложение действительно еще:</p>
-        </div>
+        {{landing.timer('clock2','Спецпредложение действительно еще:', 'description__clock')}}
         {{
           landing.button(
             'description__footer-button btn_brand-1', 
