@@ -39,15 +39,18 @@
           {text: 'и не только!'}
         )
       }}
-      {{
-        landing.button(
-          'improve__footer-button btn_brand-2',
-          'Перейти к программе',
-          {
-            "data-scroll-to": "#section-programm"
-          }
-        )
-      }}
+      <div class="improve__footer-holder">
+        {{landing.timer()}}
+        {{
+          landing.button(
+            'improve__footer-button btn_brand-2',
+            'Перейти к программе',
+            {
+              "data-scroll-to": "#section-programm"
+            }
+          )
+        }}
+      </div>
     </div>
   </div>
 </section>

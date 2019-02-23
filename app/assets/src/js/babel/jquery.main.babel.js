@@ -177,4 +177,10 @@ $(document).ready(function(){
 			.not($(item))
 			.slideUp(0); 
 	});
+
+	console.log(new Date().getTime());
+	var fiveSeconds = new Date().getTime() + 86400;
+	$('.timer').countdown(fiveSeconds, function(event) {
+    $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
+  });
 });	
