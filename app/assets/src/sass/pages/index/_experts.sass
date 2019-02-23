@@ -58,8 +58,12 @@
         +mb(15px)
 
       &-blockquote
+        +r()
+        +pt(15px)
         font-style: italic
         +fs(12px)
+        border-top: 1px solid $color-brand-2
+
 
   .center-slide
     -webkit-user-select: none
@@ -80,6 +84,7 @@
             +fs(22px)
           &-subtitle
             +fs(16px)
+            +mb(30px)
           &-blockquote
             +fs(14px)
 
@@ -126,7 +131,20 @@
     &-item
       +d(none)
       &-gallery
+        +d(flex)
+        +jc(center)
         +mt(45px)
+        &-image
+          +offset('r', 15px)
+          object-fit: cover
+          +min(sm)
+            flex-grow: 1
+            +h(220px)
       &-title
         +fw(900)
         +mb(15px)
+
+#expert-vladiko
+  img
+    +min(sm)
+      +h(600px)

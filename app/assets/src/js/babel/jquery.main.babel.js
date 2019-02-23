@@ -131,6 +131,12 @@ $(document).ready(function(){
 				$this.text(active);
 			}
 
+
+			$('html, body').animate({
+				scrollTop: $(el).offset().top - $('.fixed').height()
+			}, 500);
+			return false;
+
 		});
 	});
 
