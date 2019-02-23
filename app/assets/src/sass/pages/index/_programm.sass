@@ -27,12 +27,11 @@
 		&__cube
 			+ta(center)
 			&:before
+				left: -15px
 				border: none
 				+bgi('../img/programm-cube.png')
 				+size(101px, 118px)
 				top: -5px
-				+min(sm)
-					left: -15px
 
 		&__header
 			+d(flex)
@@ -47,6 +46,7 @@
 			li
 				+pl(30px)
 				+offset('b', 10px)
+				+fs(14px)
 				&:after
 					+t(0)
 					+l(0)
@@ -68,6 +68,11 @@
 
 	&__hidden
 		display: none
+
+	&__show &
+		&__item-cover
+			+max(sm)
+				+offset('b', 30px)
 
 	&__hidden &
 		&__item-cover
