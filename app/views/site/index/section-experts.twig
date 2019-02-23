@@ -204,14 +204,15 @@
         {% for item in items %}
         <div class="experts__slider-item slide">
           <div class="row experts__slider-item-row">
+            <div class="col-12 col-sm-6 experts__slider-item-image-cover">
+              {{landing.image(item.image, '1', 'experts__slider-item-image')}}
+            </div>
             <div class="col-12 col-sm-6">
               <p class="experts__slider-item-title">{{item.name|raw}}</p>
               <p class="experts__slider-item-subtitle">{{item.position|raw}}</p>
               <blockquote class="experts__slider-item-blockquote">{{item.quote}}</blockquote>
             </div>
-            <div class="col-12 col-sm-6">
-              {{landing.image(item.image, '1', 'experts__slider-item-image')}}
-            </div>
+            
           </div>
           <div class="experts__slider-item-footer">
             {{landing.toggle("#" ~ item.toggle, 'Свернуть информацию', 'Узнать больше о тренере', 'experts__slider-item-toggle')}}
