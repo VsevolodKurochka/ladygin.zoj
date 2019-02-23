@@ -28,47 +28,51 @@
 		+min(sm)
 			+mb(90px)
 
-	&__item-cube
-		+ta(center)
-		
-		&_2
-			min-height: 125px
-			+max(sm)
-				&:before
-					top: -20px
+	&__item
+		&_fluid
 			+min(sm)
-				min-height: 150px
-			+min(md)
-				min-height: 240px
-			&:before
-				+size(100px)
-				left: 50%
-				transform: translateX(-50%) skew(5deg, -15deg)
-				border-color: $color-white
+				+mt(-30px)
+		&-cube
+			+ta(center)
+			
+			&_2
+				min-height: 125px
 				+min(sm)
-					top: -20px
-					+size(140px, 100px)
+					min-height: 150px
 				+min(md)
-					+size(160px)
-					border-width: 10px
-		&_3
-			&:before
-				+pseudo("", 0, null, null, 0)
-				+bgi('../img/star.png')
-				top: -35px
-				left: 50%
-				transform: translateX(-50%)
-				+size(175px)
-				+min(md)
+					min-height: 170px
+				&:before
+					+size(100px)
+					left: 50%
+					transform: translateX(-50%) skew(5deg, -15deg)
+					border-color: $color-white
+					+max(sm)
+						top: -20px
+					+min(sm)
+						top: -20px
+						+size(140px, 100px)
+					+min(md)
+						+size(130px)
+			&_3
+				&:before
+					+pseudo("", 0, null, null, 0)
+					+bgi('../img/star.png')
 					top: -35px
 					left: 50%
 					transform: translateX(-50%)
-					+size(350px)
+					+size(175px)
+					+min(md)
+						top: -35px
+						left: 50%
+						transform: translateX(-50%)
+						+size(250px)
 		
 		.cube
 			&__title
-				+max(sm)
-					+fs(40px)
+				+fs(40px)
+				+min(sm)
+					+fs(60px)
 			&__subtitle
-				+max(sm)
-					+fs(15px)
+				+fs(15px)
+				+min(sm)
+					+fs(20px)

@@ -54,12 +54,13 @@
 			+size(27px, 15px)
 			+mt(-7.5px)
 			+bgi('../img/question-icon.png')
+			transform: scaleY(-1)
 
 		&-header:hover &-arrow
 			+bgi('../img/available-arrow.png')
 
 		&.active &-arrow
-			transform: scaleY(-1)
+			transform: scaleY(1)
 
 		&-image
 			+a(-10px, null, null, 0)
