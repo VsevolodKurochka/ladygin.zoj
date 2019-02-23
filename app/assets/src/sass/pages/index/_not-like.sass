@@ -2,19 +2,26 @@
 	+bgc(#ffbe96)
 	+pb(0)
 	+fs(0)
+	z-index: 1
+
+	+max(sm)
+		+pb(45px)
 
 	&:before
-		content: ""
-		+a(null, null, 0, 0)
-		+bgi('../img/not-like-bg.png')
-		+size(150px)
+		+min(sm)
+			content: ""
+			+a(null, null, 0, 0)
+			+bgi('../img/not-like-bg.png')
+			+size(150px)
 
-		+min(md)
-			+size(400px)
+			+min(md)
+				+size(400px)
 
 	&__image
 		+max(sm)
+			+a(null, 0, -45px)
 			max-width: 250px
+			opacity: 0.2
 		&-cover
 			+max(sm)
 				+mt(15px)

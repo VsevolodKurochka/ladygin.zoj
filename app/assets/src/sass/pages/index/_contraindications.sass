@@ -18,11 +18,13 @@
 		+r()
 		+d(inline-block)
 		+c($color-brand-2)
+		+fs(18px)
+		+mb(30px)
 
 		+min(sm)
 			+fs_vmax(20)
 			+mt(-50px)
-			+mb(30px)
+			
 
 		+min(md)
 			+mt(-200px)
@@ -34,7 +36,8 @@
 		&-image
 			+a(0, 0)
 			+size(100%)
-
+			+max(sm)
+				+d(none)
 
 		&-title
 			line-height: 1.2
@@ -48,5 +51,7 @@
 
 	&__image
 		&-cover
+			+max(sm)
+				+mt(45px)
 			+min(sm)
 				+ta(right)

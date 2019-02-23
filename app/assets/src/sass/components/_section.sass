@@ -15,8 +15,6 @@
 		margin-bottom: 30px
 		+min(sm)
 			+mb(vmax(45))
-		+min(xlg)
-			+mb(vmax(45))
 
 	&__title
 		+mb(0)
@@ -26,20 +24,16 @@
 		font-size: 25px
 
 		+min(sm)
-			+fs_vmax(50)
-
-		+min(xlg)
-			+fs_vmax(45)
-
-		&.bold
-			+ff('b')
+			+fs_vmax(40)
 
 	&__subtitle
 		+fw(400)
 		+lh(1.1)
 		font-size: 16px
 		+min(sm)
-			+fs_vmax(25)
+			+fs_vmax(20)
+		+min(md)
+			+fs_vmax(22)
 
 	&__title + &__subtitle
 		margin-top: 20px

@@ -140,14 +140,8 @@ $(document).ready(function(){
 		});
 	});
 
-	
-
-	if($(window).width() > 768){
-		$('.programm__show').addClass('row');
-		$( ".programm__item_hidden" ).wrapAll( "<div id='programm-hidden' class='programm__hidden'><div class='row'></div></div>");
-	}else{
-		$('.programm__toggle').remove();
-	}
+	$('.programm__show').addClass('row');
+	$( ".programm__item_hidden" ).wrapAll( "<div id='programm-hidden' class='programm__hidden'><div class='flex'></div></div>");
 
 	$('[data-scroll-to]').click(function(){
 		var href = $(this).attr('data-scroll-to');

@@ -8,6 +8,7 @@
 		+a()
 		z-index: -1
 		max-width: 70px
+		opacity: 0.5
 		&_1
 			top: 5%
 			left: 5%
@@ -17,7 +18,7 @@
 			right: 5%
 
 		&_3
-			top: 45%
+			top: 40%
 			left: 5%
 			max-width: 100px
 
@@ -42,6 +43,9 @@
 				max-width: 30px
 			&_5
 				max-width: 75px
+
+		+min(sm)
+			opacity: 1
 
 	&__content
 		+min(sm)
