@@ -155,6 +155,9 @@ $(document).ready(function(){
 
 	function hideExpertsContent() {
 		$('.experts__content-item').hide();
+		var currentSlide = $(expertsSlider.getCurrentSlide());
+		var currentSlideToggle = currentSlide.find('.experts__slider-item-toggle');
+		currentSlideToggle.text(currentSlideToggle.attr('data-active'));
 	}
 
 	$('.experts__slider-button_prev').click(function(){
