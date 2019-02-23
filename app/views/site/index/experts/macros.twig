@@ -1,0 +1,13 @@
+{% macro contentItem(content, title) %}
+  {% import 'macros/macros.landing.twig' as landing %}
+  {% if content %}
+    <div class="experts__content-item-block">
+      <p class="experts__content-item-title">{{title}}</p>
+      <ul class="list">
+        {% for li in content %}
+          <li>{{landing.triangle('right')}} {{li|raw}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endmacro %}

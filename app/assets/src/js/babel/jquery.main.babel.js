@@ -134,6 +134,8 @@ $(document).ready(function(){
 		});
 	});
 
+	
+
 	if($(window).width() > 768){
 		$('.programm__show').addClass('row');
 		$( ".programm__item_hidden" ).wrapAll( "<div id='programm-hidden' class='programm__hidden'><div class='row'></div></div>");
@@ -144,5 +146,32 @@ $(document).ready(function(){
 	$('[data-scroll-to]').click(function(){
 		var href = $(this).attr('data-scroll-to');
 		scroll($(href), 1500);
+	});
+
+	var expertsSlider = $('#experts-slider').cardSlider({
+	  slideTag: 'div', 
+	  slideClass: 'slide'
+	});
+
+	function hideExpertsContent() {
+		$('.experts__content-item').hide();
+	}
+
+	$('.experts__slider-button_prev').click(function(){
+		expertsSlider.prev();
+		hideExpertsContent();
+	});
+	$('.experts__slider-button_next').click(function(){
+		expertsSlider.next();
+		hideExpertsContent();
+	});
+	$('.experts__slider-item-toggle').click(function(){
+		var item = $(this).attr('href');
+
+
+		$('.experts__content')
+			.children('.experts__content-item')
+			.not($(item))
+			.slideUp(0); 
 	});
 });	

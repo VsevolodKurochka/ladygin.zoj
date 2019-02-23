@@ -1,2 +1,132 @@
 .experts
-	+bgc($color-brand-4)
+  +bgc($color-brand-4)
+
+  &__slider
+    +mx(auto)
+    +min(md)
+      +h(450px)
+
+    &-wrapper
+      +r()
+
+    &-button
+      +a(50%, null, null)
+      +size(50px)
+      border-radius: 100%
+      border: none
+      +bgc(#ffbe96)
+      +tr()
+      transform: translateY(-50%)
+      z-index: 50
+      &:hover
+        +bgc($color-brand-1)
+      &:before
+        +pseudo("", 50%, null, null, null, 50%)
+        transform: translate(-50%, -50%)
+        +size(25px, 20px)
+        +bgi('../img/button-arrow.png')
+      &_prev
+        left: 0
+        &:before
+          transform: translate(-50%, -50%) scaleX(-1)
+
+      &_next
+        right: 0
+
+    &-item
+      +bgc($color-white)
+      padding: 15px
+      box-shadow: 0px 8px 11px 0px rgba(54, 54, 54, 0.29)
+      cursor: pointer
+      &-row
+        +mb(15px)
+        +min(sm)
+          flex-direction: row-reverse
+      &-footer
+        +d(none)
+        +ta(center)
+      &-title
+        +fw(700)
+        +fs(18px)
+        +lh(1.1)
+        +mb(7.5px)
+        +min(md)
+          +fs(20px)
+      &-subtitle
+        +fw(700)
+        +fs(14px)
+        +mb(15px)
+
+      &-blockquote
+        font-style: italic
+        +fs(12px)
+
+  .center-slide
+    -webkit-user-select: none
+    z-index: 30
+    top: 0
+    padding: 30px
+    +min(md)
+      left: 320px
+      +size(500px, 400px)
+
+  .center-slide .experts
+    &__slider
+      &-item
+        &-footer
+          +d(block)
+        +min(md)
+          &-title
+            +fs(22px)
+          &-subtitle
+            +fs(16px)
+          &-blockquote
+            +fs(14px)
+
+  .left-slide,
+  .right-slide
+    user-select: none
+    z-index: 20
+    +size(400px, 350px)
+    top: 25px
+  .left-slide
+    left: 0
+    +min(md)
+      left: 150px
+  .right-slide
+    +min(md)
+      left: 580px
+
+  .left-hidden-slide,
+  .right-hidden-slide
+    z-index: 10
+    top: 45px
+    +size(330px, 280px)
+
+  .left-hidden-slide .experts,
+  .right-hidden-slide .experts
+    &__slider
+      &-item
+        +min(md)
+          &-title
+            +fs(14px)
+          &-subtitle
+            +fs(10px)
+          &-blockquote
+            +fs(9px)
+
+  .left-hidden-slide
+    left: 0
+  .right-hidden-slide
+    +min(md)
+      left: 810px
+
+
+  &__content
+    &-item
+      +d(none)
+      &-gallery
+        +mt(45px)
+      &-title
+        +fw(900)
+        +mb(15px)
