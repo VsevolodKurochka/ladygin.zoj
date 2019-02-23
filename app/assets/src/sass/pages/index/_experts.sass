@@ -3,9 +3,10 @@
 
   &__slider
     +mx(auto)
+    +min(sm)
+      +h(350px)
     +min(md)
       +h(450px)
-
     &-wrapper
       +r()
 
@@ -66,11 +67,15 @@
 
 
   .center-slide
+    +d(block)
     -webkit-user-select: none
     z-index: 30
     top: 0
     padding: 30px
-    +min(md)
+    +min(sm)
+      left: 170px
+      +size(400px, 340px)
+    +min(lg)
       left: 320px
       +size(500px, 400px)
 
@@ -90,23 +95,38 @@
 
   .left-slide,
   .right-slide
+    +d(none)
     user-select: none
     z-index: 20
     +size(400px, 350px)
     top: 25px
+    +min(md)
+      +d(block)
+      +size(340px, 300px)
+    +min(lg)
+      +size(400px, 350px)
   .left-slide
     left: 0
     +min(md)
+      left: 100px
+    +min(lg)
       left: 150px
   .right-slide
     +min(md)
+      left: 450px
+    +min(lg)
       left: 580px
 
   .left-hidden-slide,
   .right-hidden-slide
+    +d(none)
     z-index: 10
     top: 45px
-    +size(330px, 280px)
+    +min(md)
+      +d(block)
+      +size(290px, 260px)
+    +min(lg)
+      +size(330px, 280px)
 
   .left-hidden-slide .experts,
   .right-hidden-slide .experts
@@ -124,6 +144,8 @@
     left: 0
   .right-hidden-slide
     +min(md)
+      left: 580px
+    +min(lg)
       left: 810px
 
 

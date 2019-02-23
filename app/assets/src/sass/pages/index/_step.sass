@@ -46,8 +46,11 @@
 	&-item
 		+r()
 		+ta(center)
-		+max(sm)
+		+max(md)
 			+offset('b', 45px)
+			&:last-child
+				flex-basis: 100%
+				max-width: 100%
 
 		&__header
 			+max(sm)
