@@ -14,7 +14,7 @@
           landing.header(
             'improve__header',
             {text: 'Всё об искусстве улучшения своей жизни'},
-            {text: 'Больше не нужно собирать информацию по крупицам. Мы собрали <strong>всю самую достоверную</strong> информацию о:'}
+            {text: 'Больше не нужно собирать информацию по крупицам. Мы собрали <strong>всю самую достоверную</strong> информацию о:', class: 'improve__subtitle'}
           )
         }}
       </div>
@@ -23,13 +23,20 @@
       </div>
     </div>
     <div class="row improve__items">
-      {% for item in items %}
-        <div class="col-12 col-sm-4 improve__item">
-          <div class="improve__item-inner">
-            <p>{{item}}</p>
-          </div>
+      <div class="col-6 col-sm-12">
+        <div class="row">
+          {% for item in items %}
+            <div class="col-12 col-sm-4 improve__item">
+              <div class="improve__item-inner">
+                <p>{{item}}</p>
+              </div>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
+      <div class="col-6 improve__items-image-cover">
+        {{landing.image('img/improve.png', 'improve', 'improve__items-image')}}
+      </div>
     </div>
     <div class="improve__footer text-center">
       {{

@@ -1,20 +1,23 @@
 .improve
 	&__header
+		+mb(10px)
 		+min(sm)
 			+mb(0)
 
 	&__content
 		+r()
 		z-index: 1
+
 		&:before
-			+pseudo("?", 0, null, null, 50%)
-			transform: translateX(-50%) skew(15deg) rotate(5deg)
-			+c($color-brand-3)
-			opacity: 0.8
-			+lh(1)
-			+fw(700)
-			+fs(200px)
-			z-index: -1
+			+min(sm)
+				+pseudo("?", 0, null, null, 50%)
+				transform: translateX(-50%) skew(15deg) rotate(5deg)
+				+c($color-brand-3)
+				opacity: 0.8
+				+lh(1)
+				+fw(700)
+				+fs(200px)
+				z-index: -1
 
 			+min(md)
 				+fs_vmax(700)
@@ -22,10 +25,14 @@
 		+min(sm)
 			+ai(flex-end)
 
+	&__subtitle
+		+max(sm)
+			max-width: 170px
+
 	&__items
 		+r()
 		z-index: 1
-		+my(15px, 45px)
+		+mb(30px)
 
 		+min(sm)
 			+mt(45px)
@@ -33,24 +40,37 @@
 		+min(md)
 			+my(vmax(100))
 
+		&-image
+			&-cover
+				+mt(-45px)
+				+min(sm)
+					+d(none)
+
 	&__image
 		&-cover
 			+max(sm)
 				+d(none)
 
 	&__item
-		+max(sm)
-			+offset('b', 15px)
 		&-inner
-			+bgc($color-brand-1)
-			+fw(900)
-			+c($color-white)
-			+ta(center)
-			+fs(20px)
+			+max(sm)
+				+fs(18px)
+				+c($color-brand-1)
+				+fw(900)
 			+min(sm)
+				+bgc($color-brand-1)
+				+fw(900)
+				+c($color-white)
+				+ta(center)
+				+fs(20px)
 				transform: rotate(-15deg)
 			+min(md)
 				+fs_vmax(40)
 
 			+min(xlg)
 				+fs_vmax(30)
+
+	&__footer
+		&-subtitle
+			+max(sm)
+				+d(none)
