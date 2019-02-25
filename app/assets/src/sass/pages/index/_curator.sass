@@ -25,9 +25,19 @@
 		&-toggle
 			+max(sm)
 				max-width: 200px
+				+mx(auto)
+				+ta(center)
 		&-header
 			+d(flex)
 			flex-direction: column-reverse
+			+max(sm)
+				+ta(center)
 			&-title + &-subtitle
 				+mt(0)
-				+mb(30px)
+				+mb(15px)
+				+min(sm)
+					+mb(30px)
+
+			&-title
+				+max(sm)
+					+fs(18px)
