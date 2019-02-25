@@ -10,15 +10,17 @@
             Беременность, лактация, <br>послеоперационные<br> состояния, стадии обострения<br> хронических заболеваний. 
           </div>
         </blockquote>
-        {{
-          landing.button(
-            'contraindications__button btn_white',
-            'Участвовать в марафоне',
-            {
-              "data-scroll-to": "#section-participation"
-            }
-          )
-        }}
+        <div class="contraindications__button-cover">
+          {{
+            landing.button(
+              'contraindications__button btn_white',
+              'Участвовать в марафоне',
+              {
+                "data-scroll-to": "#section-participation"
+              }
+            )
+          }}
+        </div>
       </div>
       <div class="col-12 col-sm-6 col-md-5 contraindications__image-cover">
         {{landing.image('img/owl-woman.png', 'owlwomen', 'contraindications__image')}}

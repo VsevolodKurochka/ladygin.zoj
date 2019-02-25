@@ -2,6 +2,8 @@
 	+fs(0)
 	+r()
 	background-image: linear-gradient( 0deg, $color-brand-3 0%, $color-white 86%)
+	+max(sm)
+		+ta(center)
 	+min(md)
 		+mt(75px)
 
@@ -16,10 +18,13 @@
 
 	&__blockquote
 		+r()
-		+d(inline-block)
+		
 		+c($color-brand-2)
-		+fs(18px)
+		+fs(12px)
 		+mb(30px)
+
+		+min(sm)
+			+d(inline-block)
 
 		+min(md)
 			+fs_vmax(20)
@@ -50,6 +55,8 @@
 				+fs_vmax(25)
 
 	&__image
+		+max(sm)
+			max-height: 200px
 		&-cover
 			+max(sm)
 				+mt(45px)

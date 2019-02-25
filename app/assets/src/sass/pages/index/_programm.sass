@@ -6,14 +6,15 @@
 		&-1
 			right: 0
 			top: 0
+			max-width: 50%
 			+min(sm)
 				top: -50%
 				max-width: 50%
 
 		&-2
-			top: 1%
-			right: -30%
-			max-width: 200px
+			top: 10%
+			right: -10%
+			max-width: 100px
 			opacity: 0.8
 			+min(sm)
 				top: 5%
@@ -30,11 +31,15 @@
 		&__cube
 			+ta(center)
 			&:before
-				left: -15px
+				top: 30px
+				left: -10px
 				border: none
 				+bgi('../img/programm-cube.png')
-				+size(101px, 118px)
-				top: -5px
+				+size(54px, 63px)
+				+min(sm)
+					top: -5px
+					left: -15px
+					+size(101px, 118px)
 
 		&__header
 			+d(flex)
@@ -47,16 +52,23 @@
 
 		&__list
 			li
-				+pl(30px)
-				+offset('b', 10px)
-				+fs(14px)
+				+pl(20px)
+				+offset('b', 5px)
+				
 				&:after
-					+t(0)
+					+t(3px)
 					+l(0)
-					+size(15px)
+					+size(10px)
 					+bgc($color-brand-1)
 					border: 3px solid $color-brand-3
 					border-radius: 100%
+					+min(sm)
+						+t(0)
+						+size(15px)
+
+				+min(sm)
+					+offset('b', 10px)
+					+fs(14px)
 
 				+min(md)
 					+fs_vmax(18)
