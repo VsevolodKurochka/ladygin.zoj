@@ -3,7 +3,7 @@
 {%
   set inputs = [
     {
-      'name': 'name',
+      'name': 'formParams[full_name]',
       'value': '',
       'type': 'text',
       'attributes': {
@@ -12,7 +12,7 @@
       }
     },
     {
-      'name': 'email',
+      'name': 'formParams[email]',
       'value': '',
       'type': 'email',
       'attributes': {
@@ -21,13 +21,31 @@
       }
     },
     {
-      'name': 'phone',
+      'name': 'formParams[phone]',
       'value': '',
       'type': 'phone',
       'attributes': {
         'placeholder': 'Введите ваш телефон',
         'class': 'form__control'
       }
+    },
+    {
+      'name': 'formParams[userCustomFields][133909]',
+      'value': '',
+      'type': 'hidden',
+      'attributes': {
+        'id': 'gcid_field'
+      }
+    },
+    {
+      'name': '__gc__internal__form__helper',
+      'value': '',
+      'type': 'hidden'
+    },
+    {
+      'name': 'requestSimpleSign',
+      'value': '282475a232d5660431c66f2fb88390a1',
+      'type': 'hidden'
     }
   ]
 %}
@@ -42,7 +60,7 @@
     <div class="row participation__content">
       <div class="col-12 col-sm-10 col-md-6 col-lg-5">
         {{landing.timer('clock3', 'До повышение цены осталось:', 'participation__timer')}}
-        <form action="#" class="form form_block participation__form" method="POST">
+        <form action="https://zozh-i-galka.com/pl/lite/block-public/process-html?id=137358199" class="form form_block participation__form" method="POST">
           <div class="form__content">
             {% for input in inputs %}
               <div class="form__row">
