@@ -28,6 +28,11 @@ $themeFormDesign: "new"
 			&__submit
 				+size(100%)
 
+	&__submit
+		+w(100%)
+		+min(md)
+			+fs(25px)
+
 	@if $themeFormDesign == "new"
 		&__control
 			+input-default()
@@ -64,3 +69,4 @@ $themeFormDesign: "new"
 
 				+placeholder()
 					color: transparent
+

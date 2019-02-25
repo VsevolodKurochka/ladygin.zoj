@@ -1,4 +1,36 @@
 {% import 'macros/macros.landing.twig' as landing %}
+{% import 'macros/macros.form.twig' as form %}
+{%
+  set inputs = [
+    {
+      'name': 'name',
+      'value': '',
+      'type': 'text',
+      'attributes': {
+        'placeholder': 'Введите ваше имя',
+        'class': 'form__control'
+      }
+    },
+    {
+      'name': 'email',
+      'value': '',
+      'type': 'email',
+      'attributes': {
+        'placeholder': 'Введите вашу почту',
+        'class': 'form__control'
+      }
+    },
+    {
+      'name': 'phone',
+      'value': '',
+      'type': 'phone',
+      'attributes': {
+        'placeholder': 'Введите ваш телефон',
+        'class': 'form__control'
+      }
+    }
+  ]
+%}
 <section class="section participation" id="section-participation">
   <div class="container">
     {{
@@ -8,9 +40,20 @@
       )
     }}
     <div class="row participation__content">
-      <div class="col-12 col-sm-10 col-md-6">
+      <div class="col-12 col-sm-10 col-md-6 col-lg-5">
         {{landing.timer('clock3', 'До повышение цены осталось:', 'participation__timer')}}
-        <script id="47572ac86c1a8c5fe4ac39c3d14ea8e790eef3d7" src="https://zozh-i-galka.com/pl/lite/widget/script?id=71149"></script>
+        <form action="#" class="form form_block participation__form" method="POST">
+          <div class="form__content">
+            {% for input in inputs %}
+              <div class="form__row">
+                {{ form.input(input.name, input.value, input.type, input.attributes) }}
+              </div>
+            {% endfor %}
+            <div class="form__row text-center">
+              {{ form.button('submit', 'form__submit btn btn_brand-2 effect effect_bounce-top', 'Зарегистрироваться') }}
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
