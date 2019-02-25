@@ -2,25 +2,30 @@
 	&__info
 		+max(sm)
 			+ta(center)
-			+mb(45px)
+			+mb(20px)
 		+min(sm)
 			+jc(center)
 			+ai(center)
 			+mb(vmax(70))
 
-	&__header
-		+max(sm)
-			br
-				+d(none)
-
 	&__list
 		list-style: none
+		+fs(12px)
 
-		li
-			+offset('b', 10px)
+		+max(sm)
+			+mb(15px)
 
-		+min(lg)
+		+min(sm)
+			li
+				+offset('b', 10px)
+
+		+min(sm)
 			+fs_vmax(20)
 
 	&__footer
 		+ta(center)
+	
+	&__subtitle
+		+max(sm)
+			max-width: 180px
+			+mx(auto)

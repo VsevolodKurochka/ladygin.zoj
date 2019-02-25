@@ -1,24 +1,24 @@
 {% import 'macros/macros.landing.twig' as landing %}
+{% set list = ["Диеты", "Бег по утрам", "Спортзал", "Занятия до седьмого пота"] %}
 <section class="section health-life" id="section-health-life">
   <div class="container">
     <div class="row health-life__info">
-      <div class="col-12 col-sm-6">
-        {{landing.image('img/kid.png')}}
-      </div>
       <div class="col-12 col-sm-6 col-md-4">
         <ul class="health-life__list">
-          <li>Диеты...</li>
-          <li>Бег по утрам...</li>
-          <li>Спортзал...</li>
-          <li>Занятия до седьмого пота...</li>
+          {% for li in list %}
+            <li>{{li}}...</li>
+          {% endfor %}
         </ul>
+      </div>
+      <div class="col-12 col-sm-6">
+        {{landing.image('img/kid.png')}}
       </div>
     </div>
     {{
       landing.header(
       'health-life__header text-center color-brand-2', 
       {text: 'ЗОЖ?! Нет, не слышали!'}, 
-      {text: 'Вы улучшите свою жизнь <br><strong>без мучительных диет</strong> и <strong>без насилия над собой</strong>, <br>внедряя здоровое привычки мягко и без перенапряжений.'}
+      {text: 'Вы улучшите свою жизнь <br><strong>без мучительных диет</strong> и <strong>без насилия над собой</strong>, <br>внедряя здоровое привычки мягко и без перенапряжений.', class: 'health-life__subtitle'}
       )
     }}
     <div class="health-life__footer">
