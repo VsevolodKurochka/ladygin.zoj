@@ -1,15 +1,16 @@
 .home
 	+r()
-	+py(60px, 45px)
+	+py(30px, 45px)
 	+bgc($color-brand-1)
 	+c($color-white)
 	overflow: hidden
 	z-index: 1
 
 	&:before
-		+pseudo("", 0, null, null, 0)
-		+bgi('../img/home-bg.png')
-		+size(80%, 31%)
+		+min(sm)
+			+pseudo("", 0, null, null, 0)
+			+bgi('../img/home-bg.png')
+			+size(80%, 31%)
 
 	+min(md)
 		+py(8vmax, 4vmax)
@@ -23,14 +24,17 @@
 			+r()
 			z-index: 2
 
+			&-flex
+				+min(sm)
+					flex-direction: column-reverse
+
 	&__title
 		+r()
 		z-index: 2
-		+fs(45px)
-		+fw(900)
+		+fs(28px)
+		+fw(bold)
 		
 		+min(sm)
-			+fw(bold)
 			+ta(right)
 			+fs_vmax(150)
 
@@ -40,10 +44,23 @@
 		+min(xlg)
 			+fs_vmax(100)
 
+		
+		&_general
+			+d(none)
+			+min(sm)
+				+d(block)
+		
+		&_bg
+			+d(block)
+			+max(sm)
+				+mr(15px)
+			+min(sm)
+				+d(none)
+
 	&__subtitle
 		+fw(400)
 		line-height: 1.3
-		+fs(20px)
+		+fs(14px)
 		+max(sm)
 			br
 				+d(none)
@@ -55,8 +72,8 @@
 
 	&__attention
 		+fw(900)
-		+fs(30px)
-		+mb(45px)
+		+fs(28px)
+		+mb(15px)
 
 		+min(md)
 			+fs_vmax(60)
@@ -67,43 +84,51 @@
 	
 	&__date
 		+r()
-		+max(sm)
-			+mb(45px)
 		+min(sm)
 			+ta(center)
 		&:before
-			+pseudo("", 50%, null, null, -50px)
-			transform: translateY(-50%)
-			+size(130px, 100px)
+			+pseudo("", -75px, null, null, -15px)
+			+size(89px, 75px)
 			+bgi('../img/rabbit.png')
 			+min(sm)
+				top: 50%
+				transform: translateY(-50%)
 				left: -150px
 				+size(260px, 200px)
 
+		&_general
+			+max(sm)
+				+d(none)
+
+		&_bg
+			+a(null, null, 75px, 15px)
+			+min(sm)
+				+d(none)
+
 	&__cube
 		+max(sm)
-			+ml(90px)
+			+ta(center)
 		&:before
-			border-color: $color-brand-3
-			+min(sm)
-				top: -15px
-				left: -15px
-				+size(140px, 100px)
+			top: 11px
+			left: -7px
+			border: none
+			+bgi('../img/home-cube.png')
+			+size(73px, 84px)
+			
 			+min(md)
-				top: -20px
-				left: -25px
-				+size(160px)
-				border-width: 10px
+				top: -5px
+				left: -15px
+				+size(150px, 180px)
 
 		.cube
 			&__title
-				+fs(70px)
+				+fs(60px)
 				+min(lg)
 					+fs_vmax(100)
 				+min(xlg)
 					+fs_vmax(80)
 			&__subtitle
-				+fs(30px)
+				+fs(18px)
 				+min(md)
 					+fs_vmax(40)
 				+min(xlg)
@@ -114,18 +139,31 @@
 		font-size: 0
 		z-index: 1
 		+ta(center)
+		+max(sm)
+			+ta(right)
+			&-inner
+				+r()
+				max-width: 270px
+				+mx(auto)
 		&:before
-			+pseudo("", 0, null, null, 0)
-			+size(100%)
-			+bgi('../img/catwomen-bg.png')
-			z-index: -1
+			+min(sm)
+				+pseudo("", 0, null, null, 0)
+				+size(100%)
+				+bgi('../img/catwomen-bg.png')
+				z-index: -1
 			+min(md)
 				+size(900px)
 				top: -150px
 				left: -150px
 		&-image
 			+max(sm)
-				max-height: 200px
+				max-width: 175px
+			&_mobile
+				+min(sm)
+					+d(none)
+			&_desktop
+				+max(sm)
+					+d(none)
 		&-button
 			+w(100%)
 			+mt(-15px)
