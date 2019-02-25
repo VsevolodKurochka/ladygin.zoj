@@ -19,24 +19,25 @@
 
 	&__image
 		+max(sm)
-			+a(null, 0, -45px)
-			max-width: 250px
-			opacity: 0.2
+			+h(180px)
+			+ml(-45px)
+			max-width: none
 		&-cover
 			+max(sm)
 				+mt(15px)
 				+ta(center)
 
 	&__content
+		+max(sm)
+			+ai(flex-end)
 		+min(sm)
 			flex-direction: row-reverse
 
 	&__body
-		+min(sm)
-			+ta(right)
+		+ta(right)
 
 		&-image
-			max-width: 75px
+			max-width: 30px
 			+min(sm)
 				max-width: 120px
 			&-holder

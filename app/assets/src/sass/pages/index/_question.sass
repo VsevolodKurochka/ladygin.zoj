@@ -29,7 +29,7 @@
 
 		&-column
 			+max(sm)
-				+offset('b', 30px)
+				+offset('b', 15px)
 
 	&__group
 		+r()
@@ -54,10 +54,13 @@
 
 		&-arrow
 			+a(50%, 15px)
-			+size(27px, 15px)
-			+mt(-7.5px)
+			+size(15px, 8px)
+			+mt(-4px)
 			+bgi('../img/question-icon.png')
 			transform: scaleY(-1)
+			+min(sm)
+				+size(27px, 15px)
+				+mt(-7.5px)
 
 		&-header:hover &-arrow
 			+bgi('../img/available-arrow.png')
@@ -74,10 +77,11 @@
 				+h(50px)
 
 		&-title
-			+fw(900)
-			+fs(12px)
+			+fw(700)
+			+fs(10px)
 			
 			+min(sm)
+				+fw(900)
 				+fs(14px)
 
 		&-body

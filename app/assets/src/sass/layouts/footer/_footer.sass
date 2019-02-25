@@ -62,7 +62,10 @@
 			+jc(space-between)
 
 	&__fondy
-		max-width: 230px
+		max-width: 150px
+		object-fit: contain
+		+min(sm)
+			max-width: 230px
 
 	a
 		+c($color-brand-1)
