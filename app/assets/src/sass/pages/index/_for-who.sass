@@ -2,25 +2,32 @@
 	+bgc($color-brand-4)
 	+pb(0)
 	+fs(0)
+	&__header
+		+max(sm)
+			+ta(center)
 	&__row
 		+min(md)
 			flex-direction: row-reverse
 			+ai(center)
 
 	&__image
+		&-column
+			+max(sm)
+				+ta(center)
 		+max(sm)
-			max-width: 150px
+			max-width: 80%
 		+min(md)
 			max-width: 100%
 			+ml(vmax(-60))
 
 	&__list
-		+fs(16px)
+		+fs(12px)
 		+max(sm)
 			+mb(30px)
 		li
 			&:after
-				+t(7.5px)
+				+min(sm)
+					+t(7.5px)
 		+min(md)
 			+fs_vmax(25)
 

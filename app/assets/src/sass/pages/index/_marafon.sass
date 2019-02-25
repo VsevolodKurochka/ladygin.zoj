@@ -5,36 +5,52 @@
 		z-index: -1
 		+a(5%, null, null, 0)
 		+max(sm)
-			max-width: 100px
-			top: 140px
+			max-width: 180px
+			top: 60px
+			left: -50px
 		+min(sm)
 			+max(md)
 				max-width: 250px
 
 	&__header
-		+min(sm)
-			+ta(right)
+		+ta(right)
 
 	&__blockquote
 		&-outer
 			+mb(45px)
+			+jc(flex-end)
 			+min(sm)
 				+mb(vmax(90))
-				+jc(flex-end)
+				
+		&-content
+			+r()
+			+py(20px)
+			&:before,
+			&:after
+				+a()
+			&:before
+				top: 0
+				left: 0
+				content: "“"
+			&:after
+				content: "“"
+				bottom: 0
+				right: 0
 		
 		+r()
 		+d(inline-block)
 		border: 2px solid $color-white
-		padding: 15px
+		padding: 5px
 		+ta(left)
-		+fw(700)
+		
 
 		+max(sm)
-			+fs(12px)
-			+ml(140px)
-			+mr(15px)
+			max-width: 155px
 			br
 				+d(none)
+
+		+min(sm)
+			padding: 15px
 
 		&:before,
 		&:after
@@ -72,17 +88,22 @@
 
 	&__subtitle
 		+fw(bold)
+		+max(sm)
+			+fs(18px)
 	
 	&__items
 		+r()
 		+mb(45px)
 		z-index: 1
 		&-image
-			+a(0, null, null, 50%)
-			transform: translateX(-50%)
-			+size(50%, 100%)
-			object-fit: contain
-			z-index: -1
+			+d(none)
+			+min(sm)
+				+d(inline-block)
+				+a(0, null, null, 50%)
+				transform: translateX(-50%)
+				+size(50%, 100%)
+				object-fit: contain
+				z-index: -1
 			+min(md)
 				+w(400px)
 
@@ -90,31 +111,39 @@
 			+mb(vmax(60))
 
 	&__item
-		
-		+c($color-brand-2)
-
+		+c($color-white)
+		+max(sm)
+			+row()
+			flex-basis: 100%
+			+offset('b', 30px)
+			&:nth-child(even)
+				+jc(flex-end)
 		+min(sm)
+			+c($color-brand-2)
 			+offset('b', vmax(60))
-		
 
 		&-inner
 			+r()
-			padding: 45px 30px
 			z-index: 1
+			max-width: 160px
 			+min(md)
 				+w(80%)
 				+mx(auto)
 				padding: 45px
 
 		&-image
-			+a(0, 0)
-			+size(100%)
-			z-index: -1
+			+max(sm)
+				+d(none)
+			+min(sm)
+				+a(0, 0)
+				+size(100%)
+				z-index: -1
 
 		&-title
 			+mb(15px)
 			+lh(1)
 			+fw(bold)
+			+fs(18px)
 			+min(sm)
 				+fs(20px)
 			+min(md)
@@ -140,16 +169,22 @@
 
 				&_down
 					&:before
-						+bgi('../img/icon-list-down.png')
+						+bgi('../img/icon-list-down-white.png')
+						+min(sm)
+							+bgi('../img/icon-list-down.png')
 
 				&_up
 					&:before
-						+bgi('../img/icon-list-down.png')
+						+bgi('../img/icon-list-up-white.png')
+						+min(sm)
+							+bgi('../img/icon-list-up.png')
 
 				&_balance
 					&:before
 						+size(14px, 12px)
-						+bgi('../img/icon-list-balance.png')
+						+bgi('../img/icon-list-balance-white.png')
+						+min(sm)
+							+bgi('../img/icon-list-balance.png')
 
 				+min(sm)
 					+pl(35px)

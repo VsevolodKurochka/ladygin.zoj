@@ -54,12 +54,14 @@
     {{
       landing.header(
       'marafon__header color-white', 
-      {text: 'Это НЕ стандартный марафон:'}
+      {text: 'Это НЕ стандартный марафон:', class: 'marafon__title'}
       )
     }}
-    <div class="marafon__blockquote-outer row">
+    <div class="marafon__blockquote-outer flex">
       <blockquote class="marafon__blockquote color-white">
-        - Cкинь 3 кг за неделю, а через две<br>верни их назад. Плюс 2 кг сверху.
+        <div class="marafon__blockquote-content">
+          <p>- Cкинь 3 кг за неделю, а через две<br>верни их назад. Плюс 2 кг сверху.</p>
+        </div>
       </blockquote>
     </div>
     {{
