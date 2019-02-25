@@ -13,24 +13,25 @@
 		z-index: -1
 		&_1
 			top: 35%
-			+w(150px)
 			+max(sm)
-				right: -5%
-				transform: scaleX(-1)
+				left: -5%
+				max-width: 100px
 			+min(sm)
 				left: -2%
 				top: 35%
 				+w(220px)
 
 		&_2
-			top: 10%
-			right: 5%
+			top: 24%
+			right: -10%
 			+w(120px)
-			+min(md)
+			+min(sm)
+				top: 10%
+				right: 5%
 				+w(220px)
 
 		&_3
-			bottom: 5%
+			bottom: 7%
 			right: -5%
 			+w(120px)
 			+min(md)
@@ -40,21 +41,54 @@
 	&__items
 		+mb(100px)
 
+		+max(sm)
+			max-width: 270px
+			+mx(auto)
+
 		+min(sm)
 			+mb(vmax(200))
 
 	&-item
 		+r()
-		+ta(center)
 		+max(md)
 			+offset('b', 45px)
-			&:last-child
-				flex-basis: 100%
-				max-width: 100%
+
+		+min(md)
+			+ta(center)
+
+		+max(sm)
+			+row()
+			flex-basis: 100%
+			max-width: 100%
+
+		&__inner
+			+max(sm)
+				+row()
+				+ai(center)
+
+		&:nth-child(even) &
+			&__inner
+				+max(sm)
+					flex-direction: row-reverse
+			&__header
+				+max(sm)
+					+mr(0)
+			&__body
+				+max(sm)
+					+ta(right)
+					+mr(15px)
 
 		&__header
 			+max(sm)
-				+mb(15px)
+				+mr(15px)
+
+		&__body
+			+r()
+			z-index: 1
+			+max(sm)
+				max-width: 150px
+				br
+					display: none
 
 		&__number
 			+r()
@@ -66,13 +100,6 @@
 			transform: skew(-15deg) rotate(-15deg)
 			z-index: 1
 
-			+max(sm)
-				&:after
-					+pseudo("", 50%, null, null, 50%)
-					transform: translate(-50%, -50%)
-					+size(90%)
-					border: 5px solid $color-brand-1
-
 			+min(md)
 				+size(100px)
 
@@ -80,7 +107,7 @@
 				+r()
 				+d(inline-block)
 				+fw(900)
-				+fs(40px)
+				+fs(55px)
 				+c($color-brand-2)
 				line-height: 1
 				z-index: 1
@@ -89,12 +116,11 @@
 
 		&_1 &__number,
 		&_9 &__number
-			+min(sm)
-				&:after
-					+pseudo("", 50%, null, null, 50%)
-					transform: translate(-50%, -50%)
-					+size(90%)
-					border: 5px solid $color-brand-1		
+			&:after
+				+pseudo("", 50%, null, null, 50%)
+				transform: translate(-50%, -50%)
+				+size(90%)
+				border: 5px solid $color-brand-1		
 			&:before
 				+pseudo("", 50%, null, null, 50%)
 				transform: translate(-50%, -50%)
@@ -103,10 +129,6 @@
 				+size(250px)
 				+min(md)
 					+size(400px)
-
-		&__body
-			+r()
-			z-index: 1
 
 		+min(md)
 

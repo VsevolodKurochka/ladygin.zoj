@@ -24,10 +24,10 @@
     <div class="help__items">
       {% for item in items %}
         <div class="help-item row">
-          <div class="col-6 col-sm-4 col-md-3 help-item__image-cover">
+          <div class="col-5 col-sm-4 col-md-3 help-item__image-cover">
             {{landing.image(item.image, item.title, 'help-item__image')}}
           </div>
-          <div class="col-12 col-sm-8">
+          <div class="col-7 col-sm-8">
             <p class="title help-item__title">{{item.title}}</p>
             <ul class="list help-item__list">
               {% for li in item.list %}
