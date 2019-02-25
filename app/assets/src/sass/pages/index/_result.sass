@@ -19,12 +19,20 @@
 			+ta(center)
 			+bgc($color-brand-1)
 			+c($color-white)
-			padding: 30px 15px
+			padding: 15px
 			transform: skew(-15deg) rotate(-15deg)
+			
 			+max(md)
+				padding: 30px 15px
 				max-width: 200px
 				+mx(auto)
 				+fs(14px)
+			+max(sm)
+				max-width: 130px
+				+mx(auto)
+				+fs(10px)
+				br
+					+d(none)
 			+min(md)
 				+w(90%)
 				+mx(auto)

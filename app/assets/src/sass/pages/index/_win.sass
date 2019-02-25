@@ -1,51 +1,67 @@
 .win
 	+ta(center)
 	&__container
-		+r()
 		+min(md)
 			+py(100px)
 	&__bg
 		+a()
 		z-index: -1
-		max-width: 70px
-		opacity: 0.5
-		&_1
-			top: 5%
-			left: 5%
+		
+		+max(sm)
+			max-width: 30px
+			&_1
+				top: -10%
+				left: 5%
 
-		&_2
-			top: 7.5%
-			right: 5%
+			&_2
+				top: -15%
+				right: 5%
+				max-width: 20px
 
-		&_3
-			top: 40%
-			left: 5%
-			max-width: 100px
+			&_3
+				top: 30%
+				left: 0%
+				max-width: 30px
 
-		&_4
-			top: 40%
-			right: 10%
+			&_4
+				top: 40%
+				right: 0%
 
-		&_5
-			bottom: 5%
-			left: 5%
-			max-width: 150px
-			+min(sm)
+			&_5
+				bottom: 5%
+				left: 5%
+
+			&_6
+				+d(none)
+
+		+min(sm)
+			&_1
+				top: 5%
+				left: 5%
+
+			&_2
+				top: 7.5%
+				right: 5%
+
+			&_3
+				top: 40%
+				left: 5%
+				max-width: 100px
+
+			&_4
+				top: 40%
+				right: 10%
+
+			&_5
+				bottom: 5%
+				left: 5%
+				max-width: 150px
 				+max(md)
 					max-width: 50px
 
-		&_6
-			bottom: 5%
-			right: 5%
-
-		+max(sm)
-			max-width: 50px
-			&_1
-				max-width: 10px
-			&_4
-				max-width: 30px
-			&_5
-				max-width: 75px
+			&_6
+				bottom: 5%
+				right: 5%
 
 		+min(sm)
 			opacity: 1
@@ -57,7 +73,9 @@
 		+min(md)
 			+fs(25px)
 		p
-			+mb(15px)
+			+mb(5px)
+			+min(sm)
+				+mb(15px)
 
 		&-button
 			&-cover

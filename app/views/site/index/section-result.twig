@@ -11,19 +11,19 @@
     },
     {
       "image": "img/result-3.png",
-      "text": "Получите опыт<br><strong>здорового и вкусного<br> питания</strong>"
+      "text": "Получите опыт <br><strong>здорового и вкусного<br> питания</strong>"
     },
     {
       "image": "img/result-4.png",
-      "text": "<strong>Станете свежее,</strong><br> привлекательнее<br>выглядеть"
+      "text": "<strong>Станете свежее,</strong><br> привлекательнее<br> выглядеть"
     },
     {
       "image": "img/result-5.png",
-      "text": "<strong>Станете энергичнее,</strong><br> за 1 день будете делать<br>то, на что раньше<br>уходила неделя"
+      "text": "<strong>Станете энергичнее,</strong><br> за 1 день будете делать<br> то, на что раньше<br> уходила неделя"
     },
     {
       "image": "img/result-6.png",
-      "text": "<strong>Продолжите<br>улучшать</strong> свою жизнь<br> и после марафона"
+      "text": "<strong>Продолжите<br> улучшать</strong> свою жизнь<br> и после марафона"
     }
   ] 
 %}
@@ -37,7 +37,7 @@
     }}
     <div class="row result__items">
       {% for item in items %}
-        <div class="col-12 col-sm-6 col-md-4 result__item">
+        <div class="col-6 col-md-4 result__item">
           <div class="result__item-header">
             {{landing.image(item.image, item.text|striptags, 'result__item-image')}}
           </div>
