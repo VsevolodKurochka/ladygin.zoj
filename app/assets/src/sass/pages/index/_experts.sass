@@ -12,8 +12,8 @@
       +r()
 
     &-button
-      +a(45px, null, null)
-      +size(50px)
+      +a(200px, null, null)
+      +size(40px)
       border-radius: 100%
       border: none
       +bgc(#ffbe96)
@@ -27,24 +27,28 @@
         +size(25px, 20px)
         +bgi('../img/button-arrow.png')
       &_prev
-        left: 0
+        left: -10px
         &:before
           transform: translate(-50%, -50%) scaleX(-1)
 
       &_next
-        right: 0
+        right: -10px
 
       +min(sm)
+        +size(50px)
         top: 50%
         transform: translateY(-50%)
+        &_prev
+          left: 0
+        &_next
+          right: 0
 
     &-item
       +bgc($color-white)
       padding: 15px
       box-shadow: 0px 8px 11px 0px rgba(54, 54, 54, 0.29)
       cursor: pointer
-      +max(sm)
-        +ta(center)
+      
       &-row
         +mb(15px)
         +min(sm)
@@ -54,7 +58,7 @@
         +ta(center)
       &-title
         +fw(700)
-        +fs(18px)
+        +fs(16px)
         +lh(1.1)
         +mb(7.5px)
         +min(md)
@@ -62,10 +66,15 @@
       &-image
         +max(sm)
           max-height: 200px
+          &-cover
+            +mb(10px)
+            +ta(center)
       &-subtitle
         +fw(700)
-        +fs(14px)
+        +fs(10px)
         +mb(15px)
+        +min(sm)
+          +fs(14px)
 
       &-blockquote
         +r()
@@ -73,6 +82,13 @@
         font-style: italic
         +fs(12px)
         border-top: 1px solid $color-brand-2
+        +max(sm)
+          height: 100px
+          overflow: hidden
+
+      &-toggle
+        +max(sm)
+          +fs(10px)
 
 
   .center-slide
@@ -81,7 +97,7 @@
     z-index: 30
     left: 50px
     top: 0
-    +size(270px, 500px)
+    +size(200px, 480px)
     +max(sm)
       left: 50%
       transform: translateX(-50%)
