@@ -36,41 +36,39 @@
 			+ta(center)
 			
 			&_2
-				min-height: 125px
+				min-height: 100px
 				+min(sm)
 					min-height: 150px
 				+min(md)
 					min-height: 170px
 				&:before
-					+size(100px, 116px)
-					top: -30px
+					+size(67px, 78px)
+					top: -15px
 					left: 50%
+					transform: translateX(-50%)
 					border: none
 					+bgi('../img/format-cube.png')
-					transform: translateX(-50%)
 					+min(sm)
 						top: -45px
+						
 						+size(150px, 175px)
 			&_3
 				&:before
 					+pseudo("", 0, null, null, 0)
 					+bgi('../img/star.png')
-					top: -35px
+					top: -45px
 					left: 50%
 					transform: translateX(-50%)
 					+size(175px)
 					+min(md)
 						top: -35px
-						left: 50%
-						transform: translateX(-50%)
 						+size(250px)
 		
 		.cube
 			&__title
-				+fs(40px)
+				+fs(48px)
 				+min(md)
 					+fs(60px)
 			&__subtitle
-				+fs(15px)
 				+min(md)
 					+fs(20px)
