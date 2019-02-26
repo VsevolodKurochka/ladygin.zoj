@@ -209,7 +209,9 @@
 			new SmoothScroll(this.links, {
 				header: '.fixed',
 				before: () => {
-					removeClass(this.hamburger, 'active');
+					if(exists(this.hamburger)){
+						removeClass(this.hamburger, 'active');
+					}
 					removeClass(this.menu, `nav__menu_active`);
 				}
 			});
