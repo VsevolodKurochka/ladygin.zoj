@@ -1,0 +1,48 @@
+.quality
+	&__header
+		+min(sm)
+			+ta(center)
+	&__subtitle
+		+min(sm)
+			max-width: 500px
+			+mx(auto)
+	&__item
+		+fs(0)
+		+offset('b', 30px)
+		&-inner
+			+r()
+		&-image
+			+w(100%)
+			+max(sm)
+				height: 180px
+				object-fit: cover
+		&-btn
+			+a(0,0)
+			+size(100%)
+			background-color: transparent
+			border: none
+			+tr()
+			&:hover
+				+bgc(transparentize($color-brand-1, 0.5))
+		&-title
+			+fs(10px)
+			+mb(10px)
+			+min(sm)
+				+d(none)
+		&-video
+			+a(50%, null, null, 50%)
+			transform: translate(-50%, -50%)
+			+size(50px)
+			background-color: #ed806f
+			border: none
+			line-height: 1
+			border-radius: 50%
+			+tr()
+			&:hover
+				background-color: darken(#ed806f, 15%)
+			&:before
+				content: "\25B6 \FE0E"
+				+a(50%, null, null, 51%)
+				transform: translate(-50%, -50%)
+				color: #fff
+				font-size: 20px

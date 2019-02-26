@@ -1,0 +1,85 @@
+{% import 'macros/macros.landing.twig' as landing %}
+<section class="section quality" id="section-quality">
+  <div class="container">
+    {{
+      landing.header(
+      'quality__header', 
+      {text: 'Хотите убедиться<br> в качестве материалов марафона?', class: 'quality__title'},
+      {text: 'Ознакомьтесь с примерами видео-уроков от нашего фитнес-тренера, учителя по телесным практикам и тремя рецептами из меню марафона:', class: 'quality__subtitle'}
+      )
+    }}
+    <div class="row quality__content">
+      <div class="col-12 col-xs-6 col-md-4 quality__item">
+        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <div class="quality__item-inner">
+          {{landing.image('img/q-1.png', 'q-1', 'quality__item-image')}}
+          <button class="quality__item-btn" data-action="modal" data-open="#modal-1"></button>
+        </div>
+      </div>
+      <div class="col-12 col-xs-6 col-md-4 quality__item">
+        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <div class="quality__item-inner">
+          {{landing.image('img/q-2.png', 'q-2', 'quality__item-image')}}
+          <button class="quality__item-btn" data-action="modal" data-open="#modal-2"></button>
+        </div>
+      </div>
+      <div class="col-12 col-xs-6 col-md-4 quality__item">
+        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <div class="quality__item-inner">
+          {{landing.image('img/q-3.png', 'q-3', 'quality__item-image')}}
+          <button class="quality__item-btn" data-action="modal" data-open="#modal-3"></button>
+        </div>
+      </div>
+      <div class="col-12 col-xs-6 col-md-6 quality__item">
+        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <div class="quality__item-inner">
+          {{landing.image('img/q-4.png', 'q-4', 'quality__item-image')}}
+          <button class="quality__item-video" data-action="modal" data-open="#modal-4" data-video="https://www.youtube.com/embed/J1STTwhGm9M"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="modal" id="modal-1">
+  <div class="modal__box modal__box_default">
+    <div class="modal__header">
+      <p class="modal__title">Вишневый льняной йогурт</p>
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <p>Lorem!</p>
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal-2">
+  <div class="modal__box modal__box_default">
+    <div class="modal__header">
+      <p class="modal__title">Вишневый льняной йогурт</p>
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <p>Lorem!</p>
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal-3">
+  <div class="modal__box modal__box_default">
+    <div class="modal__header">
+      <p class="modal__title">Вишневый льняной йогурт</p>
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <p>Lorem!</p>
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal-4">
+  <div class="modal__box modal__box_medium modal__box_transparent">
+    <div class="modal__header">
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <div class="modal__video"></div>
+    </div>
+  </div>
+</div>

@@ -218,7 +218,7 @@
 	}
 
 	document.addEventListener("DOMContentLoaded", function(){
-		//new Modal();
+		new Modal();
 		new Navigation();
 	});
 }());

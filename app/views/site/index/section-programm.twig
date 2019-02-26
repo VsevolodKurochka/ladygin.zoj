@@ -145,7 +145,7 @@
         {% if i > 2 %}
           {% set hiddenClass = 'programm__item_hidden' %}
         {% endif %}
-        <div class="programm__item-cover {{hiddenClass}} col-12 col-sm-6">
+        <div class="programm__item-cover {{hiddenClass}} col-12 col-sm-6" id="programm-item-{{i}}">
           {{
             landing.programm(
               {

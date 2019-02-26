@@ -97,10 +97,13 @@
     z-index: 30
     left: 50px
     top: 0
-    +size(200px, 480px)
+
     +max(sm)
+      +w(320px)
       left: 50%
       transform: translateX(-50%)
+    +max(xs)
+      +size(200px, 480px)
     +min(sm)
       padding: 30px
       left: 170px
@@ -183,6 +186,8 @@
     &-item
       +d(none)
       &-gallery
+        +max(sm)
+          +mt(30px)
         +min(sm)
           +d(flex)
           +jc(center)
