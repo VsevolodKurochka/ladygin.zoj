@@ -49,8 +49,8 @@
   <a href="{{href}}" class="toggle {{customClass}}" data-unactive="{{unactive}}" data-active="{{active}}"></a>
 {% endmacro %}
 
-{% macro triangle(type = 'left') %}
-  <span class="triangle triangle_{{type}}">&nbsp;</span>
+{% macro triangle(type = 'left', class) %}
+  <span class="triangle triangle_{{type}} {{class}}">&nbsp;</span>
 {% endmacro %}
 
 {% macro timer(id, title, class) %}

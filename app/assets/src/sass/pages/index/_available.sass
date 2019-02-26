@@ -19,33 +19,45 @@
 			+pr(45px)
 
 		&-arrow
-			+a(0, 0)
-			+size(27px, 15px)
+			+a(3px, 0)
+			+size(15px, 8px)
 			+bgi('../img/available-arrow.png')
 			transform: scaleY(-1)
+			+min(sm)
+				+t(0)
+				+size(27px, 15px)
 
 		&.active &-arrow
 			transform: none
 
 		&-image
 			+a(0, null, null, 0)
-			+h(30px)
-			max-width: 30px
+			+h(20px)
+			max-width: 20px
 			object-fit: contain
+			+min(sm)
+				+h(30px)
+				max-width: 30px
 			+min(md)
 				+t(-10px)
 				+h(50px)
 
 		&-header,
 		&-body
-			+pl(45px)
+			+pl(30px)
+			+min(sm)
+				+pl(45px)
 			+min(md)
 				+pl(60px)
 
 		&-title
-			+fw(900)
+			+fw(700)
+
+			+max(sm)
+				+fs(11px)
 			
 			+min(sm)
+				+fw(900)
 				+fs(14px)
 
 			+min(md)

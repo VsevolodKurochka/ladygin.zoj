@@ -12,34 +12,35 @@
 		+a()
 		z-index: -1
 		&_1
-			top: 35%
 			+max(sm)
-				left: -5%
-				max-width: 100px
+				top: 7%
+				left: -2%
+				max-width: 80px
+				z-index: 2
 			+min(sm)
 				left: -2%
 				top: 35%
 				+w(220px)
 
 		&_2
-			top: 24%
-			right: -10%
-			+w(120px)
+			top: 23%
+			right: -5%
+			+w(90px)
 			+min(sm)
 				top: 10%
 				right: 5%
 				+w(220px)
 
 		&_3
-			bottom: 7%
+			bottom: 9%
 			right: -5%
-			+w(120px)
+			+w(170px)
 			+min(md)
 				bottom: 2%
 				+w(450px)
 
 	&__items
-		+mb(100px)
+		+mb(160px)
 
 		+max(sm)
 			max-width: 270px
@@ -80,12 +81,13 @@
 
 		&__header
 			+max(sm)
-				+mr(15px)
+				+mr(20px)
 
 		&__body
 			+r()
 			z-index: 1
 			+max(sm)
+				+fs(10px)
 				max-width: 150px
 				br
 					display: none
@@ -96,7 +98,7 @@
 			+ai(center)
 			+jc(center)
 			+bgc($color-white)
-			+size(75px)
+			+size(65px)
 			transform: skew(-15deg) rotate(-15deg)
 			z-index: 1
 
@@ -127,8 +129,69 @@
 				+bgi('../img/step-item-sun.png')
 				z-index: -1
 				+size(250px)
+				+max(sm)
+					opacity: 0.7
 				+min(md)
 					+size(400px)
+
+		+max(sm)
+
+			&:before
+				+pseudo()
+				+bgi('../img/line.png')
+				+size(2px, 180px)
+
+			&_1
+				&:before
+					top: 0px
+					left: 140px
+					transform: rotate(125deg)
+
+			&_2
+				&:before
+					top: 0
+					left: 125px
+					transform: rotate(60deg)
+
+			&_3
+				&:before
+					top: 0
+					left: 150px
+					transform: rotate(-55deg)
+
+			&_4
+				&:before
+					top: 0
+					left: 135px
+					transform: rotate(55deg)
+
+			&_5
+				&:before
+					top: 0
+					left: 130px
+					transform: rotate(-50deg)
+
+			&_6
+				&:before
+					top: 20px
+					left: 95px
+					transform: rotate(45deg)
+
+			&_7
+				&:before
+					top: 8px
+					left: 145px
+					transform: rotate(-56deg)
+
+			&_8
+				&:before
+					top: 10px
+					left: 115px
+					transform: rotate(66deg)
+
+			&_9
+				&:before
+					+d(none)
 
 		+min(md)
 
@@ -225,3 +288,9 @@
 
 			&__body
 				+my(45px, 0)
+
+	&__footer
+		&-button
+			+max(sm)
+				+w(100%)
+				max-width: 270px

@@ -10,6 +10,8 @@
 
 	&__logo
 		max-height: 60px
+		+max(sm)
+			+mb(15px)
 
 	&__content
 		border-bottom: 1px solid #dfdfdf
@@ -23,7 +25,7 @@
 				+ta(right)
 
 	&__menu
-		+mb(20px)
+		+mb(15px)
 		li
 			+d(inline-block)
 			+offset('r', 10px)
@@ -69,3 +71,4 @@
 
 	a
 		+c($color-brand-1)
+		text-decoration: none

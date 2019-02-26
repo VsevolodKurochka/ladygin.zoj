@@ -5,9 +5,9 @@
       'image': 'img/help-1.png',
       'title': 'Служба технической поддержки, чтобы:',
       'list': [
-        '<span class="color-brand-1">▶</span> Личный кабинет работал исправно',
-        '<span class="color-brand-1">▶</span> Вся информация была доступна своевременно',
-        '<span class="color-brand-1">▶</span> Любые технические вопросы решались максимально оперативно',
+        'Личный кабинет работал исправно',
+        'Вся информация была доступна своевременно',
+        'Любые технические вопросы решались максимально оперативно',
       ]
     },
     {
@@ -31,7 +31,7 @@
             <p class="title help-item__title">{{item.title}}</p>
             <ul class="list help-item__list">
               {% for li in item.list %}
-                <li>{{li|raw}}</li>
+                <li>{{landing.triangle('right', 'color-brand-1')}} {{li|raw}}</li>
               {% endfor %}
             </ul>
           </div>
