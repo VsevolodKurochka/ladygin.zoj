@@ -80,6 +80,13 @@ $(document).ready(function(){
 		};
 	}
 
+	function pushToDataLayer(id){
+		dataLayer.push({
+		 'event': 'view-landing-section',
+		 'section' : id
+	 	});
+	}
+
 	function highlightNavigation() {
 		// get the current vertical position of the scroll bar
 		var scrollPosition = $(window).scrollTop();
@@ -94,6 +101,7 @@ $(document).ready(function(){
 				if (scrollPosition >= sectionTop - 200) {
 					// get the section id
 					var id = currentSection.attr('id');
+				 	pushToDataLayer(id);
 					// get the corresponding navigation link
 					var $navigationLink = sectionIdTonavigationLink[id];
 					// if the link is not active
