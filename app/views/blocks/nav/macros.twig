@@ -9,11 +9,13 @@
   </button>
 {% endmacro %}
 
-{% macro logo(options) %}
+{% macro logo(options, burger) %}
   {% import _self as macros %}
   <div class="nav__logo {{options.class}}">    
     <img class="nav__logo-img" src="{{options.logo}}" alt="{{options.alt}}"/>
-    {{ macros.hamburger() }}
+    {% if burger %}
+      {{ macros.hamburger() }}
+    {% endif %}
   </div>
 {% endmacro %}
 
@@ -26,24 +28,8 @@
   </nav>
 {% endmacro %}
 
-{% macro addition(type,  class) %}
+{% macro addition(class) %}
   <div class="nav__addition {{class}}" id="js-nav-addition">
-    {% if type == '1' %}
-      <div class="addition-toggle" id="js-nav-addition-button-1">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="addition-links js-nav-links">
-        <a href="tel: +1" class="addition-link"> +99 999 999 99</a>
-        <a href="tel: +1" class="addition-link addition-link_hidden"> +99 999 999 99</a>
-      </div>
-    {% elseif type == '2' %}
-      <div class="nav__addition-links js-nav-links">
-        <a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
-        <a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
-      </div>
-    {% endif %}
-    
+    <button class="btn nav__addition-button" data-scroll="data-scroll" href="#section-participation">записаться</button>
   </div>
 {% endmacro %}

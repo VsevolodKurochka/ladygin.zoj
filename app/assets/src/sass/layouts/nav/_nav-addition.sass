@@ -1,1 +1,15 @@
-+navAddition2()
+.nav
+	&__addition
+		opacity: 0
+		visibility: hidden
+		+h(100%)
+		+pr(0)
+		+tr()
+		&-button
+			+size(100%)
+			+bgc(darken($color-responsive-menu, 15%))
+			+c($color-white)
+			text-transform: uppercase
+	&_scrolled &__addition
+		opacity: 1
+		visibility: visible

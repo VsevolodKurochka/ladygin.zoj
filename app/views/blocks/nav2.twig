@@ -5,12 +5,13 @@
       <div class="nav__row row">
         {{
           nav.logo({
-            "class": 'col-12 col-md-2', 
+            "class": 'col-5 col-md-2', 
             "logo": "#{path}/img/logo.svg",
             "alt": title
-          }, true)
+          }, false)
         }}
         {{nav.menu('col-12 col-md-8')}}
+        {{nav.addition('col-7 hidden-md hidden-lg')}}
       </div>
     </div>
   </div>

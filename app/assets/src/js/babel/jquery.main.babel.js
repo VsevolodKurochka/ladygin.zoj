@@ -178,13 +178,13 @@ $(document).ready(function(){
 	});
 	$('.experts__slider-item-toggle').click(function(){
 		var item = $(this).attr('href');
-
-
 		$('.experts__content')
 			.children('.experts__content-item')
 			.not($(item))
 			.slideUp(0); 
 	});
+
+	// Timer
 
 	var now = moment(),
 	    tomorrow = moment().add(1, 'day').startOf('day'),
