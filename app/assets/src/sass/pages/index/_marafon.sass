@@ -5,15 +5,32 @@
 		z-index: -1
 		+a(5%, null, null, 0)
 		+max(sm)
-			max-width: 180px
-			top: 60px
-			left: -50px
+			max-width: 	40%
+			top: 5%
+			left: 0
+		+max(xs)
+			max-width: 160px
+			left: -35px
 		+min(sm)
 			+max(md)
 				max-width: 250px
 
 	&__header
 		+ta(right)
+		+max(sm)
+			+row()
+			+jc(flex-end)
+
+	&__subtitle
+		+fw(bold)
+		+max(sm)
+			max-width: 190px
+			+mx(auto)
+			+fs(18px)
+
+	&__title
+		+max(sm)
+			max-width: 250px
 
 	&__blockquote
 		&-outer
@@ -24,7 +41,9 @@
 				
 		&-content
 			+r()
-			+py(20px)
+			+py(10px)
+			+min(sm)
+				+py(20px)
 			&:before,
 			&:after
 				+a()
@@ -42,10 +61,9 @@
 		border: 2px solid $color-white
 		padding: 5px
 		+ta(left)
-		
 
 		+max(sm)
-			max-width: 155px
+			max-width: 60%
 			br
 				+d(none)
 
@@ -85,11 +103,6 @@
 
 		+min(md)
 			+fs_vmax(33)
-
-	&__subtitle
-		+fw(bold)
-		+max(sm)
-			+fs(18px)
 	
 	&__items
 		+r()
@@ -111,7 +124,9 @@
 			+mb(vmax(60))
 
 	&__item
+		+r()
 		+c($color-white)
+		z-index: 1
 		+max(sm)
 			+row()
 			flex-basis: 100%
@@ -131,6 +146,33 @@
 				+w(80%)
 				+mx(auto)
 				padding: 45px
+
+		&_1,
+		&_3
+			+max(sm)
+				&:before
+					+pseudo("", 50%, 15px)
+					transform: translateY(-50%)
+
+		&_1
+			+max(sm)
+				&:before
+					+size(135px)
+					+bgi('../img/marafon-item-before-1.png')
+
+
+		&_3
+			+max(sm)
+				&:before
+					+size(143px, 243px)
+					+bgi('../img/marafon-item-before-3.png')
+
+		&_4 &,
+		&_2 &
+			&-inner
+				+max(sm)
+					max-width: 200px
+
 
 		&-image
 			+max(sm)
@@ -195,3 +237,8 @@
 					&_balance
 						&:before
 							+size(27px, 22px)
+
+	&__footer
+		&-button
+			+max(sm)
+				+w(250px)
