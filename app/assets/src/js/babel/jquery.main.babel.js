@@ -11,8 +11,6 @@ $(document).ready(function(){
 		scroll($( $(this).attr('href') ), 1500);
 	});
 
-
-
 	// Collapse
 
 		$(".collapse__group.active").find(".collapse__group-body").slideDown();
@@ -117,7 +115,7 @@ $(document).ready(function(){
 		});
 	}
 
-	$(window).scroll( throttle(highlightNavigation,100) );
+	//$(window).scroll( throttle(highlightNavigation,100) );
 	
 	// Develope
 	$('.toggle').each(function(){
@@ -138,7 +136,6 @@ $(document).ready(function(){
 			}else{
 				$this.text(active);
 			}
-
 
 			$('html, body').animate({
 				scrollTop: $(el).offset().top - $('.fixed').height()
@@ -419,5 +416,24 @@ $(document).ready(function(){
 	}
 	//Вызываем функцию на исполнение
 	get_timer();
+
+	function extractClientId(cookieName) {
+		cookieName = cookieName || '_ga';
+		var regex = new RegExp(cookieName + '=[^;]*')
+		var gaCookie = document.cookie.match(regex);
+		if (gaCookie) {
+			return gaCookie[0].match(/\d+?\.\d+$/)[0];
+		}
+	}
+
+	function clientId() {
+		var gcid = extractClientId();
+		console.log(gcid);
+		$('#gcid_field').val('"' + gcid + '"');
+		$('#cid_field').val('"' + gcid + '"');
+	}
+
+	setTimeout(clientId, 3000);
+	document.getElementsByClassName("__gc__internal__form__helper")[0].value = window.location.href;
 
 });	

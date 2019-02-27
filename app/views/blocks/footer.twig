@@ -2,24 +2,16 @@
 {% 
   set social = [
     {
-      "href": "#",
-      "icon": "img/icon-vk.svg"
-    },
-    {
-      "href": "#",
+      "href": "https://facebook.com/zozhigalka",
       "icon": "img/icon-fb.svg"
     },
     {
-      "href": "#",
-      "icon": "img/icon-twitter.svg"
-    },
-    {
-      "href": "#",
-      "icon": "img/icon-youtube.svg"
-    },
-    {
-      "href": "#",
+      "href": "https://www.instagram.com/zozhigalka/",
       "icon": "img/icon-instagram.svg"
+    },
+        {
+      "href": "https://vk.com/zozh_i_galka",
+      "icon": "img/icon-vk.svg"
     }
   ]
 %}
@@ -39,14 +31,14 @@
         <ul class="footer__social">
           {% for item in social %}
             <li class="footer__social-item">
-              <a class="footer__social-item-link" href="{{item.href}}">{{landing.image(item.icon, "Social", 'footer__social-item-image')}}</a>
+              <a class="footer__social-item-link" href="{{item.href}}" target="_blank">{{landing.image(item.icon, "Social", 'footer__social-item-image')}}</a>
             </li>
           {% endfor %}
         </ul>
       </div>
     </div>
     <div class="flex footer__copy">
-      <p>Copyright © Zoжигалка, 2019<br><a href="https://docs.google.com/document/d/12qj3YSAyO6PkHQsMSCSRQ39fExXdx2iWl97QURZpgZA/edit?usp=sharing" target="_blank">Политика конфиденциальности, возврата и условия предоставления услуг</a></p>
+      <p>Copyright © Zoжигалка, 2019<br><a href="https://l.zozh-i-galka.com/terms/" target="_blank">Политика конфиденциальности, возврата и условия предоставления услуг</a></p>
       {{landing.image('img/master_visa_fondy.png', 'footer', 'footer__fondy')}}
       <p> ИП Часовских Д.С.,ИНН 1057746840095<br><a href="mailto:info@zozh-i-galka.com?subject=Вопрос с сайта">info@zozh-i-galka.com</a> | <a href="tel:+79859727337">+79859727337</a></p>
     </div>
