@@ -18,10 +18,13 @@
   </div>
 {% endmacro %}
 
-{% macro cube(title, subtitle, class) %}
+{% macro cube(title, subtitle, class, text) %}
   <div class="cube {{class}}">
     <p class="cube__title">{{title|raw}}</p>
     <p class="cube__subtitle">{{subtitle|raw}}</p>
+    {% if text %}
+    <p class="cube__text">{{text|raw}}</p>
+    {% endif %}
   </div>
 {% endmacro %}
 

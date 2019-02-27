@@ -1,5 +1,11 @@
 .description
 	+bgc(#fff5ef)
+	z-index: 1
+	+max(sm)
+		&:before
+			+pseudo("", 0, null, null, 0)
+			+size(60%, 100%)
+			+bgi('../img/bg-price.png')
 	&__item
 		&-header
 			+ta(center)
