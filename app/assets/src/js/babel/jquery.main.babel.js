@@ -184,6 +184,12 @@ $(document).ready(function(){
 			.slideUp(0); 
 	});
 
+	// button
+	$('.btn_landing').each(function(){
+		var section = $(this).closest('section').attr('id');
+		$(this).attr('id',section + '-button');
+	});
+
 	// Timer
 
 	var now = moment(),
