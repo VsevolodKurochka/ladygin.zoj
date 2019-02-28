@@ -4,10 +4,11 @@
 {% set title = 'АнтиZОЖ' %}
 {% set description = '10-дневный онлайн-марафон. Всего за 10 дней Вы улучшите самочувствие, внешний вид и выработаете здоровые привычки, которые останутся с Вами надолго!' %}
 {% set image = 'img/footer-logo.png' %}
+{% set favicon = 'assets/build/img/favicon.png' %}
 {% set url = 'url' %}
 
 {% block meta %}
-{{ macros.meta(title, description, image, url) }}
+{{ macros.meta(title, description, image, url, favicon) }}
 {% endblock %}
 
 {% block css %}
