@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{{href}}">
 {% endmacro %}
 
-{% macro meta(title, description, image, url) %}
+{% macro meta(title, description, image, url, favicon) %}
   <!-- Google Tag Manager -->
   <script> (function (w, d, s, l, i) {
       w[l] = w[l] || [];
@@ -41,4 +41,5 @@
   <meta name="MobileOptimized" content="width" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="format-detection" content="address=no" />
+  <link rel="icon" type="image/png" sizes="96x96" href="{{favicon}}">
 {% endmacro %}
