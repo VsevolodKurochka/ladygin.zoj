@@ -5,43 +5,43 @@
       landing.header(
       'quality__header', 
       {text: 'Хотите убедиться<br> в качестве материалов марафона?', class: 'quality__title'},
-      {text: 'Ознакомьтесь с примерами видео-уроков от нашего фитнес-тренера, учителя по телесным практикам и тремя рецептами из меню марафона:', class: 'quality__subtitle'}
+      {text: 'Вот некоторые фрагменты:', class: 'quality__subtitle'}
       )
     }}
     <div class="row quality__content">
       <div class="col-12 col-xs-6 col-md-4 quality__item">
-        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <p class="quality__item-title">Рецепт 1</p>
         <div class="quality__item-inner">
-          {{landing.image('img/q-1.png', 'q-1', 'quality__item-image')}}
+          {{landing.image('img/q-1.jpg', 'q-1', 'quality__item-image')}}
           <button class="quality__item-btn" data-action="modal" data-open="#modal-1"></button>
         </div>
       </div>
       <div class="col-12 col-xs-6 col-md-4 quality__item">
-        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <p class="quality__item-title">Рецепт 2</p>
         <div class="quality__item-inner">
-          {{landing.image('img/q-2.png', 'q-2', 'quality__item-image')}}
+          {{landing.image('img/q-2.jpg', 'q-2', 'quality__item-image')}}
           <button class="quality__item-btn" data-action="modal" data-open="#modal-2"></button>
         </div>
       </div>
       <div class="col-12 col-xs-6 col-md-4 quality__item">
-        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <p class="quality__item-title">Рецепт 3</p>
         <div class="quality__item-inner">
-          {{landing.image('img/q-3.png', 'q-3', 'quality__item-image')}}
+          {{landing.image('img/q-3.jpg', 'q-3', 'quality__item-image')}}
           <button class="quality__item-btn" data-action="modal" data-open="#modal-3"></button>
         </div>
       </div>
       <div class="col-12 col-xs-6 col-md-6 quality__item">
-        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <p class="quality__item-title">Перед Стартом</p>
         <div class="quality__item-inner">
-          {{landing.image('img/q-4.png', 'q-4', 'quality__item-image')}}
-          <button class="quality__item-video" data-action="modal" data-open="#modal-4" data-video="https://www.youtube.com/embed/J1STTwhGm9M"></button>
+          {{landing.image('img/v1.jpg', 'q-5', 'quality__item-image')}}
+          <button class="quality__item-video" data-action="modal" data-open="#modal-4" data-video="https://www.youtube.com/embed/12H4o7mwC2g"></button>
         </div>
       </div>
       <div class="col-12 col-xs-6 col-md-6 quality__item">
-        <p class="quality__item-title">Вишневый льняной йогурт</p>
+        <p class="quality__item-title">Екатерина Шестак</p>
         <div class="quality__item-inner">
-          {{landing.image('img/q-5.png', 'q-5', 'quality__item-image')}}
-          <button class="quality__item-video" data-action="modal" data-open="#modal-5" data-video="https://www.youtube.com/embed/J1STTwhGm9M"></button>
+          {{landing.image('img/v2.jpg', 'q-4', 'quality__item-image')}}
+          <button class="quality__item-video" data-action="modal" data-open="#modal-5" data-video="https://www.youtube.com/embed/BbLj_YnbgOk"></button>
         </div>
       </div>
     </div>
@@ -50,33 +50,33 @@
 <div class="modal" id="modal-1">
   <div class="modal__box modal__box_default">
     <div class="modal__header">
-      <p class="modal__title">Вишневый льняной йогурт</p>
+      <p class="modal__title">Рецепт 1</p>
       <button class="modal__close" data-close="modal">&times;</button>
     </div>
     <div class="modal__body">
-      <p>Lorem!</p>
+      {{landing.image('img/q-1.jpg', 'q-1', 'quality__item-image')}}
     </div>
   </div>
 </div>
 <div class="modal" id="modal-2">
   <div class="modal__box modal__box_default">
     <div class="modal__header">
-      <p class="modal__title">Вишневый льняной йогурт</p>
+      <p class="modal__title">Рецепт 2</p>
       <button class="modal__close" data-close="modal">&times;</button>
     </div>
     <div class="modal__body">
-      <p>Lorem!</p>
+      {{landing.image('img/q-2.jpg', 'q-2', 'quality__item-image')}}
     </div>
   </div>
 </div>
 <div class="modal" id="modal-3">
   <div class="modal__box modal__box_default">
     <div class="modal__header">
-      <p class="modal__title">Вишневый льняной йогурт</p>
+      <p class="modal__title">Рецепт 3</p>
       <button class="modal__close" data-close="modal">&times;</button>
     </div>
     <div class="modal__body">
-      <p>Lorem!</p>
+      {{landing.image('img/q-3.jpg', 'q-3', 'quality__item-image')}}
     </div>
   </div>
 </div>
