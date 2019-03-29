@@ -3,18 +3,18 @@
   set items = [
     {
       "image": "img/des-1.png",
-      "number": "7",
+      "number": "15",
       "text": "чашек кофе <br>в кафе"
     },
     {
       "image": "img/des-2.png",
-      "number": "6",
+      "number": "12",
       "text": "бургеров <br>в макдоналдс"
     },
     {
       "image": "img/des-3.png",
-      "number": "1",
-      "text": "поход <br>в кинотеатр"
+      "number": "2",
+      "text": "похода <br>в кинотеатр"
     }
   ]
 %}
@@ -23,7 +23,7 @@
     {{
       landing.header(
         'description__header text-center',
-        {text: '1000 руб. - это'}
+        {text: '2000 руб. - это'}
       )
     }}
     <div class="row description__items">
@@ -40,7 +40,7 @@
       {% endfor %}
     </div>
     <div class="description__footer text-center">
-        {{landing.timer('clock2','Спецпредложение действительно еще:', 'description__clock')}}
+        {# {{landing.timer('clock2','Спецпредложение действительно еще:', 'description__clock')}} #}
         {{
           landing.button(
             'description__footer-button btn_brand-1', 

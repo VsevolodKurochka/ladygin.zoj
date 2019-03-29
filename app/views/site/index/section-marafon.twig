@@ -24,26 +24,26 @@
     'title': 'Здоровье',
     'items': [
       {"text": "Иммунитет", "icon": "up" },
-      {"text": "Симптомы хронических заболеваний" },
       {"text": "Холестерин", "icon": "balance" },
       {"text": "Давление", "icon": "balance" },
       {"text": "Кислотно-щелочной баланс", "icon": "balance" },
       {"text": "Сахар в крови", "icon": "balance" },
       {"text": "Таблетки и лекарства"},
       {"text": "Токсины"},
-      {"text": "Походы к врачам"}
+      {"text": "Симптомы хронических заболеваний" }
     ]
   },
   {
     'title': 'Качество жизни',
     'items': [
-      {"text": "Ограничения в исполнении желаний "},
       {"text": "Знания о красоте и здоровье", "icon": "up"},
       {"text": "Новые ощущения и опыт", "icon": "up"},
       {"text": "Фундамент будущих улучшений жизни", "icon": "up"},
       {"text": "Вероятность активного долголетия", "icon": "up"},
       {"text": "Радость при виде себя в зеркале", "icon": "up"},
       {"text": "Затраты на врачей и салоны "},
+      {"text": "Ограничения в исполнении желаний "}
+
     ]
   }
 ]
@@ -51,16 +51,16 @@
 <section class="section marafon" id="section-marafon">
   {{landing.image('img/marafon-man.png', 'marafon', 'marafon__man')}}
   <div class="container">
-    {{
+    {# {{
       landing.header(
       'marafon__header color-white', 
       {text: 'Это НЕ стандартный марафон:', class: 'marafon__title'}
       )
-    }}
+    }} #}
     <div class="marafon__blockquote-outer flex">
       <blockquote class="marafon__blockquote color-white">
         <div class="marafon__blockquote-content">
-          <p>- Cкинь 3 кг за неделю, а через две<br>верни их назад. Плюс 2 кг сверху.</p>
+          <p>Мы не дадим сброшенным кг вернуться назад!</p>
         </div>
       </blockquote>
     </div>
@@ -69,7 +69,7 @@
       'marafon__subtitle-outer text-center color-white ',
       null,
       {
-        text: 'Всего за 10 дней Вы улучшите:',
+        text: 'Всего за 10 дней вы улучшите:',
         class: 'marafon__subtitle'
       }
       )
