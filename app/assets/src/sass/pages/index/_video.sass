@@ -1,0 +1,61 @@
+$video-bg: $color-white
+$video-color: $color-brand-1
+
+.video
+	&__content
+		+ta(center)
+		+mb(45px)
+
+	&__item
+		+d(inline-block)
+		+r()
+		z-index: 1
+		+fs(0)
+
+		&:before
+			content: ""
+			+a(0, 0)
+			+size(100%)
+			background-color: transparentize($color-black, 0.5)
+
+		+min(sm)
+			+w(80%)
+
+		&-inner
+			+a(50%, null, null, 50%)
+			transform: translate(-50%, -50%)
+
+		&-title
+			+c($color-white)
+			+fw(bold)
+			+mb(10px)
+			+fs(16px)
+			+min(sm)
+				+fs(20px)
+
+		&-btn
+			+r()
+			+size(50px)
+			background-color: $video-bg
+			border: none
+			line-height: 1
+			border-radius: 50%
+			+tr()
+
+			+min(sm)
+				+size(65px)
+
+			&:before
+				content: "\25B6 \FE0E"
+				+a(50%, null, null, 51%)
+				transform: translate(-50%, -50%)
+				color: $video-color
+				+fs(20px)
+				+tr()
+				+min(sm)
+					+fs(24px)
+
+			&:hover
+				background-color: darken($video-color, 15%)
+				&:before
+					color: $video-bg
