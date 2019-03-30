@@ -222,9 +222,10 @@
 	document.addEventListener("DOMContentLoaded", function(){
 		new Modal();
 		new Navigation();
-		var input = document.querySelectorAll("input[type='phone']");
+		var input = document.querySelectorAll("input[type='tel']");
 		for (var i = 0; i < input.length; i++) {
 			window.intlTelInput(input[i], {
+				separateDialCode: true,
 			  initialCountry: "auto",
 			  geoIpLookup: function(callback) {
 			    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
@@ -232,7 +233,7 @@
 			      callback(countryCode);
 			    });
 			  },
-			  utilsScript: "utils.js" // just for formatting/placeholders etc
+			  utilsScript: "assets/build/js/utils.js" // just for formatting/placeholders etc
 			});
 		}
 		
