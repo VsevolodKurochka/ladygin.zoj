@@ -3,7 +3,7 @@
 
   &__slider
     +mx(auto)
-    +h(300px)
+    +h(390px)
     +min(sm)
       +h(450px)
     +min(md)
@@ -44,6 +44,8 @@
           right: 0
 
     &-item
+      +max(md)
+        +w(170px)
       +min(md)
         +w(290px)
       &-image
@@ -60,11 +62,8 @@
 
   .left-slide,
   .right-slide
-    +d(none)
     user-select: none
     z-index: 20
-    +min(md)
-      +d(block)
   .left-slide
     left: 0
     +min(md)
@@ -72,6 +71,8 @@
     +min(lg)
       left: 150px
   .right-slide
+    +max(md)
+      right: 0
     +min(md)
       left: 450px
     +min(lg)
