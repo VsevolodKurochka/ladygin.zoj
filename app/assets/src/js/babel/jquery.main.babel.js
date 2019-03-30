@@ -115,7 +115,7 @@ $(document).ready(function(){
 		});
 	}
 
-	//$(window).scroll( throttle(highlightNavigation,100) );
+	$(window).scroll( throttle(highlightNavigation,100) );
 	
 	// Develope
 	$('[data-scroll-to]').click(function(){

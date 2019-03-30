@@ -3,7 +3,16 @@
 
 	+tr()
 
-	a
+	+max(md)
+		+mb(10px)
+
+	+min(md)
+		+d(inline-block)
+		vertical-align: middle
+		+offset('r', 15px)
+		+c($color-white)
+
+	&-link
 		+d(block)
 		+r()
 		+c(inherit)
@@ -12,31 +21,31 @@
 		text-transform: uppercase
 		+tr()
 
-	+max(md)
-		+mb(10px)
-
-		a
-			padding: 10px 15px
-			+c($color-white)
-
-	&-link
-
 		&_attention
 			+bgc($color-brand-2)
 
-	+min(md)
-		+d(inline-block)
-		vertical-align: middle
-		+offset('r', 15px)
-		+c($color-white)
+		&.active
+			+bgc(lighten($color-brand-1, 5%))
+			user-select: none
+			&:hover
+				+bgc(lighten($color-brand-1, 5%))
 
-		&-link
-			padding: 15px 25px
-			font-size: 16px
+		+max(md)
+			padding: 10px 15px
+			+c($color-white)
+
+		+min(md)
+			padding: 10px 15px
+			font-size: 12px
 
 			&:hover
 				+bgc($color-brand-2-lighten)
 
+		+min(lg)
+			padding: 15px 25px
+			font-size: 16px
+
+	+min(lg)
 		.nav_scrolled &
 			&-link
 				font-size: 14px
