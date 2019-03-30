@@ -2,9 +2,15 @@ $video-bg: $color-white
 $video-color: $color-brand-1
 
 .video
+	&__title
+		+max(sm)
+			+fs(25px)
+
 	&__content
 		+ta(center)
-		+mb(45px)
+		+mb(30px)
+		+min(sm)
+			+mb(45px)
 
 	&__item
 		+d(inline-block)
