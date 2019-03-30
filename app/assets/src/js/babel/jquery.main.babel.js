@@ -118,6 +118,10 @@ $(document).ready(function(){
 	//$(window).scroll( throttle(highlightNavigation,100) );
 	
 	// Develope
+	$('[data-scroll-to]').click(function(){
+		var href = $(this).attr('data-scroll-to');
+		scroll($(href), 1500);
+	});
 	$('.toggle').each(function(){
 		var $this = $(this);
 		var unactive = $this.attr('data-unactive');
@@ -148,11 +152,10 @@ $(document).ready(function(){
 	$('.programm__show').addClass('row');
 	$( ".programm__item_hidden" ).wrapAll( "<div id='programm-hidden' class='programm__hidden'><div class='flex'></div></div>");
 
-	$('[data-scroll-to]').click(function(){
-		var href = $(this).attr('data-scroll-to');
-		scroll($(href), 1500);
-	});
 
+	$( ".reviews-item_hidden" ).wrapAll( "<div id='reviews-hidden' class='reviews__hidden'><div class='flex'></div></div>");
+
+	
 	var expertsSlider = $('#experts-slider').cardSlider({
 		slideTag: 'div', 
 		slideClass: 'slide'

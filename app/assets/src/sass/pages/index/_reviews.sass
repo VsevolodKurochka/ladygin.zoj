@@ -1,0 +1,68 @@
+.reviews
+	+bgc(#fff5ef)
+
+	&__hidden
+		display: none
+
+	&__toggle
+		+ta(center)
+		+my(30px)
+		+min(sm)
+			+my(vmax(45))
+
+	&-item
+		+min(sm)
+			&_3
+				+mt(-100px)
+
+			&_7,
+			&_9
+				+mt(-350px)
+
+		&__cover
+			+offset('b', 30px)
+			+min(sm)
+				+offset('b', 45px)
+
+		&__header
+			+d(flex)
+			+ai(center)
+			+mb(15px)
+
+		&__image
+			+d(inline-block)
+			+size(45px)
+			border-radius: 100%
+			object-fit: cover
+			+mr(10px)
+			+min(sm)
+				+mr(15px)
+				+size(70px)
+
+		&__title
+			+r()
+			+fs(20px)
+			+fw(bold)
+			+lh(1)
+			&:before
+				content: ""
+				+a(null, null, -20px, 0)
+				+size(160px, 10px)
+				+bgi('../img/review-divider.png')
+				+min(md)
+					+size(250px, 18px)
+
+			+min(lg)
+				+fs(26px)
+
+		&__body
+			+fs(12px)
+			+min(md)
+				+fs(14px)
+			p
+				+offset('b', 10px)
+
+	&__hidden &
+		&-item__cover
+			+min(sm)
+				+offset('b', vmax(45))
