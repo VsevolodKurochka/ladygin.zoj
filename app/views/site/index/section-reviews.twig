@@ -1,4 +1,5 @@
 {% import 'macros/macros.landing.twig' as landing %}
+{% set showImage = true %}
 {%
   set reviews = [
     {
@@ -116,7 +117,9 @@
         <div class="reviews-item__cover reviews-item_{{i}} {{hiddenClass}} col-12 col-sm-6">
           <div class="reviews-item">
             <div class="reviews-item__header">
-              {{landing.image(review.image, review.name|striptags, 'reviews-item__image')}}
+              {% if showImage %}
+              {{ landing.image(review.image, review.name|striptags, 'reviews-item__image') }}
+              {% endif %}
               <p class="reviews-item__title">{{review.name|raw}}</p>
             </div>
             <div class="reviews-item__body">{{review.content|raw}}</div>
