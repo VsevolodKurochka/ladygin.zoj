@@ -195,6 +195,7 @@ $(document).ready(function(){
 	$('.chat__slider-button_next').click(function(){
 		chatSlider.next();
 	});
+	$('[data-fancybox="chat"]').fancybox();
 
 
 	// button

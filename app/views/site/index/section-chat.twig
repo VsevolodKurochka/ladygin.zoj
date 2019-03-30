@@ -51,11 +51,8 @@
         {% set i = 0 %}
         {% for item in items %}
           {% set i = i + 1 %}
-          <div class="chat__slider-item slide">
-            <a
-              class="chat__slider-item-link"
-              data-fancybox="gallery"
-              href="{{path}}/{{item.image}}">{{landing.image(item.image, "chat-#{i}", 'chat__slider-item-image')}}</a>
+          <div class="chat__slider-item slide" data-fancybox="chat" data-src="{{path}}/{{item.image}}">
+            {{landing.image(item.image, "chat-#{i}", 'chat__slider-item-image')}}
           </div>
         {% endfor %}
       </div>

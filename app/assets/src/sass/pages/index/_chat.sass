@@ -1,13 +1,13 @@
-.experts
+.chat
   +bgc(#fff5ef)
 
   &__slider
     +mx(auto)
     +h(300px)
     +min(sm)
-      +h(350px)
+      +h(450px)
     +min(md)
-      +h(500px)
+      +h(650px)
     &-wrapper
       +r()
 
@@ -43,53 +43,28 @@
         &_next
           right: 0
 
+    &-item
+      +min(md)
+        +w(290px)
+      &-image
+        +size(100%)
+        object-fit: cover
+
   .center-slide
     +d(block)
     -webkit-user-select: none
     z-index: 30
-    left: 50px
-    top: 0
-
-    +max(sm)
-      +w(320px)
-      left: 50%
-      transform: translateX(-50%)
-    +max(xs)
-      +size(200px, 480px)
-    +min(sm)
-      padding: 30px
-      left: 170px
-      +size(400px, 340px)
-    +min(lg)
-      left: 320px
-      +size(500px, 400px)
-
-  .center-slide .experts
-    &__slider
-      &-item
-        &-footer
-          +d(block)
-        +min(md)
-          &-title
-            +fs(22px)
-          &-subtitle
-            +fs(16px)
-            +mb(30px)
-          &-blockquote
-            +fs(14px)
+    left: 50%
+    transform: translateX(-50%)
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.14)
 
   .left-slide,
   .right-slide
     +d(none)
     user-select: none
     z-index: 20
-    +size(400px, 350px)
-    top: 25px
     +min(md)
       +d(block)
-      +size(340px, 300px)
-    +min(lg)
-      +size(400px, 350px)
   .left-slide
     left: 0
     +min(md)
@@ -106,51 +81,15 @@
   .right-hidden-slide
     +d(none)
     z-index: 10
-    top: 45px
+    +h(100%)
     +min(md)
       +d(block)
-      +size(290px, 260px)
-    +min(lg)
-      +size(330px, 280px)
-
-  .left-hidden-slide .experts,
-  .right-hidden-slide .experts
-    &__slider
-      &-item
-        +min(md)
-          &-title
-            +fs(14px)
-          &-subtitle
-            +fs(10px)
-          &-blockquote
-            +fs(9px)
 
   .left-hidden-slide
     left: 0
+
   .right-hidden-slide
     +min(md)
       left: 580px
     +min(lg)
       left: 810px
-
-
-  &__content
-    &-item
-      +d(none)
-      &-block
-        +mb(30px)
-      &-gallery
-        +max(sm)
-          +mt(30px)
-        +min(sm)
-          +d(flex)
-          +jc(center)
-          +mt(45px)
-          &-image
-            +offset('r', 15px)
-            object-fit: cover
-            flex-grow: 1
-            +h(220px)
-      &-title
-        +fw(900)
-        +mb(15px)
