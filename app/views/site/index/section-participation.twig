@@ -1,70 +1,5 @@
 {% import 'macros/macros.landing.twig' as landing %}
-{% import 'macros/macros.form.twig' as form %}
-{%
-  set inputs = [
-    {
-      'name': 'formParams[full_name]',
-      'value': '',
-      'type': 'text',
-      'attributes': {
-        'placeholder': 'Введите ваше имя',
-        'class': 'form__control'
-      }
-    },
-    {
-      'name': 'formParams[email]',
-      'value': '',
-      'type': 'email',
-      'attributes': {
-        'placeholder': 'Введите вашу почту',
-        'class': 'form__control'
-      }
-    },
-    {
-      'name': 'formParams[phone]',
-      'value': '',
-      'type': 'phone',
-      'attributes': {
-        'placeholder': 'Введите ваш телефон',
-        'class': 'form__control'
-      }
-    },
-    {
-      'name': 'formParams[userCustomFields][133909]',
-      'value': '',
-      'type': 'hidden',
-      'attributes': {
-        'id': 'gcid_field'
-      }
-    },
-    {
-        'name': 'formParams[userCustomFields][135167]',
-        'value': '',
-        'type': 'hidden',
-        'attributes': {
-            'id': 'cid_field'
-        }
-    }, {'name': 'formParams[userCustomFields][135106]',
-        'value': '',
-        'type': 'hidden',
-        'value': sid,
-        'attributes': {
-            'id': 'gsid_field'
-        }
-    }, {'name': '__gc__internal__form__helper',
-        'value': '',
-        'type': 'hidden',
-        'attributes': {
-            'class': '__gc__internal__form__helper'
-        }
-    },
-    {
-      'name': 'requestSimpleSign',
-      'value': '282475a232d5660431c66f2fb88390a1',
-      'type': 'hidden'
-    }
-  ]
-%}
+
 <section class="section participation" id="section-participation">
   <div class="container">
     {{
@@ -79,18 +14,7 @@
     <div class="row participation__content">
       <div class="col-12 col-sm-10 col-md-6 col-lg-5">
         {{landing.timer('clock3', 'До повышение цены осталось:', 'participation__timer')}}
-        <form action="https://zozh-i-galka.com/pl/lite/block-public/process-html?id=137358199" class="form form_block participation__form" method="POST">
-          <div class="form__content">
-            {% for input in inputs %}
-              <div class="form__row">
-                {{ form.input(input.name, input.value, input.type, input.attributes) }}
-              </div>
-            {% endfor %}
-            <div class="form__row text-center">
-              {{ form.button('submit', 'form__submit btn btn_brand-2 effect effect_bounce-top', 'Зарегистрироваться') }}
-            </div>
-          </div>
-        </form>
+        {% include 'components/form.twig' %}
         <p class="participation__content info">* Доступ к личному кабинету будет выдан не раньше, чем за неделю до старта марафона.</p>
       </div>
     </div>

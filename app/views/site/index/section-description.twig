@@ -2,19 +2,19 @@
 {% 
   set items = [
     {
-      "image": "img/des-1.png",
-      "number": "15",
-      "text": "чашек кофе <br>в кафе"
+      "image": "img/descr1.png",
+      "number": "1",
+      "text": "персональное<br>занятие по фитнесу"
     },
     {
-      "image": "img/des-2.png",
-      "number": "12",
-      "text": "бургеров <br>в макдоналдс"
+      "image": "img/descr2.png",
+      "number": "1",
+      "text": "футболка"
     },
     {
-      "image": "img/des-3.png",
-      "number": "2",
-      "text": "похода <br>в кинотеатр"
+      "image": "img/descr3.png",
+      "number": "1",
+      "text": "поход<br>на концерт"
     }
   ]
 %}
@@ -40,16 +40,17 @@
       {% endfor %}
     </div>
     <div class="description__footer text-center">
-        {# {{landing.timer('clock2','Спецпредложение действительно еще:', 'description__clock')}} #}
-        {{
-          landing.button(
-            'description__footer-button btn_brand-1', 
-            'Участвовать по спеццене',
-            {
-              "data-scroll-to": "#section-participation"
-            }
-          )
-        }}
-      </div>
+      {# {{landing.timer('clock2','Спецпредложение действительно еще:', 'description__clock')}} #}
+      {{
+        landing.button(
+          'description__footer-button btn_brand-1', 
+          'Участвовать по спеццене',
+          {
+            "data-action": "modal",
+            "data-open": "#modal-form"
+          }
+        )
+      }}
+    </div>
   </div>
 </section>

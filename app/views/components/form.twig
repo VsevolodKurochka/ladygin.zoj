@@ -1,0 +1,85 @@
+{% import 'macros/macros.form.twig' as form %}
+{% set commonInputClass = 'form__control' %}
+{% if border %}
+  {% set commonInputClass = commonInputClass ~ ' form__control_border' %}
+{% endif %}
+{%
+  set inputs = [
+    {
+      'name': 'formParams[full_name]',
+      'value': '',
+      'type': 'text',
+      'attributes': {
+        'required': 'required',
+        'placeholder': 'Введите ваше имя',
+        'class': commonInputClass
+      }
+    },
+    {
+      'name': 'formParams[email]',
+      'value': '',
+      'type': 'email',
+      'attributes': {
+        'required': 'required',
+        'placeholder': 'Введите вашу почту',
+        'class': commonInputClass
+      }
+    },
+    {
+      'name': 'formParams[phone]',
+      'value': '',
+      'type': 'phone',
+      'attributes': {
+        'required': 'required',
+        'placeholder': 'Введите ваш телефон',
+        'class': commonInputClass
+      }
+    },
+    {
+      'name': 'formParams[userCustomFields][133909]',
+      'value': '',
+      'type': 'hidden',
+      'attributes': {
+        'id': 'gcid_field'
+      }
+    },
+    {
+        'name': 'formParams[userCustomFields][135167]',
+        'value': '',
+        'type': 'hidden',
+        'attributes': {
+            'id': 'cid_field'
+        }
+    }, {'name': 'formParams[userCustomFields][135106]',
+        'value': '',
+        'type': 'hidden',
+        'value': sid,
+        'attributes': {
+            'id': 'gsid_field'
+        }
+    }, {'name': '__gc__internal__form__helper',
+        'value': '',
+        'type': 'hidden',
+        'attributes': {
+            'class': '__gc__internal__form__helper'
+        }
+    },
+    {
+      'name': 'requestSimpleSign',
+      'value': '282475a232d5660431c66f2fb88390a1',
+      'type': 'hidden'
+    }
+  ]
+%}
+<form action="https://zozh-i-galka.com/pl/lite/block-public/process-html?id=137358199" class="form form_block participation__form" method="POST">
+  <div class="form__content">
+    {% for input in inputs %}
+      <div class="form__row">
+        {{ form.input(input.name, input.value, input.type, input.attributes) }}
+      </div>
+    {% endfor %}
+    <div class="form__row text-center">
+      {{ form.button('submit', 'form__submit btn btn_brand-2 effect effect_bounce-top', 'Зарегистрироваться') }}
+    </div>
+  </div>
+</form>

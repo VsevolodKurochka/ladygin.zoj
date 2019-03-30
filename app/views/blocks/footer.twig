@@ -45,3 +45,14 @@
     </div>
   </div>
 </footer>
+<div class="modal" id="modal-form">
+  <div class="modal__box modal__box_default">
+    <div class="modal__header">
+      <p class="modal__title">Участвовать по спеццене</p>
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      {% include 'components/form.twig' with {'border': true} %}
+    </div>
+  </div>
+</div>
