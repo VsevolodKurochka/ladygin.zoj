@@ -26,6 +26,6 @@
     {% from _self import input %}
     {{ input(name, value, type, attributes) }}
     <div class="control__indicator"></div>
-    <p class="control__text">{{text}}</p>
+    <p class="control__text">{{text|raw}}</p>
   </label>
 {% endmacro %}

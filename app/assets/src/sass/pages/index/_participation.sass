@@ -18,3 +18,12 @@
 			+fs(16px)
 			br
 				+d(none)
+	
+	.control
+		input[type=checkbox]+.control__indicator
+			border-color: $color-white
+			&:before
+				border-color: $color-white
+		&__text
+			a
+				+c($color-white)

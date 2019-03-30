@@ -221,7 +221,6 @@ $(document).ready(function(){
   
   if(Cookies.get("time")){
     var dateEnd = Cookies.get("time");
-    console.log(difference.hours());
   }else{
   	var dd = 24 - myDate.getHours();
 

@@ -13,12 +13,19 @@
 	&__text
 		+d('inline-block')
 		vertical-align: middle
-		+pl(30px)
-		+fs(18px)
+		+pl(20px)
+		+fs(9px)
+
+		+min(md)
+			+fs(11px)
+
+		a
+			+c($color-general)
+			text-decoration: none
 
 	&__indicator
 		+a(50%, null, null, 0)
-		+size(25px)
+		+size(15px)
 		transform: translateY(-50%)
 		@extend %checkbox-transition
 
@@ -54,11 +61,11 @@
 		border-style: solid
 
 		&:before
-			+t(4px)
-			+l(9px)
-			+size(6px, 13px)
+			+t(2px)
+			+l(5px)
+			+size(4px, 7px)
 			border-style: solid
-			border-width: 0 3px 3px 0
+			border-width: 0 1px 1px 0
 			transform: rotate(0deg) scale(0)
 
 	input[type="checkbox"]:checked + &__indicator

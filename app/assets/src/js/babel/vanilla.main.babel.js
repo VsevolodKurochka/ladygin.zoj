@@ -222,5 +222,19 @@
 	document.addEventListener("DOMContentLoaded", function(){
 		new Modal();
 		new Navigation();
+		var input = document.querySelectorAll("input[type='phone']");
+		for (var i = 0; i < input.length; i++) {
+			window.intlTelInput(input[i], {
+			  initialCountry: "auto",
+			  geoIpLookup: function(callback) {
+			    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+			      var countryCode = (resp && resp.country) ? resp.country : "";
+			      callback(countryCode);
+			    });
+			  },
+			  utilsScript: "utils.js" // just for formatting/placeholders etc
+			});
+		}
+		
 	});
 }());

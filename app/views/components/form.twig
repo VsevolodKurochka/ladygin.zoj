@@ -81,5 +81,17 @@
     <div class="form__row text-center">
       {{ form.button('submit', 'form__submit btn btn_brand-2 effect effect_bounce-top', 'Зарегистрироваться') }}
     </div>
+    <div class="form__row">
+      {{
+        form.control(
+          'checkbox', 
+          '1', 
+          'checkbox', 
+          {'disabled': 'disabled', 'checked': 'checked', 'id': 'label-1'}, 
+          '<a href="https://l.zozh-i-galka.com/terms/">Я согласен на обработку моих персональных данных в соответствии с Условиями</a>', 
+          'control_brand-1'
+        )
+      }}
+    </div>
   </div>
 </form>
