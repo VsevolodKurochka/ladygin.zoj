@@ -19,11 +19,13 @@
 			br
 				+d(none)
 
-	.intl-tel-input 
+	.intl-tel-input
+		.selected-dial-code
+			color: $color-black
 		.country-list 
 			.country
 				font-size: 10px
-				color: #000
+				color: $color-black
 	
 	.control
 		input[type=checkbox]+.control__indicator
@@ -32,4 +34,4 @@
 				border-color: $color-white
 		&__text
 			a
-				+c($color-white)
+				+c($color-general)
