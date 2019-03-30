@@ -221,11 +221,13 @@ $(document).ready(function(){
   
   if(Cookies.get("time")){
     var dateEnd = Cookies.get("time");
+    console.log(difference.hours());
   }else{
   	var dd = 24 - myDate.getHours();
+
     var dateEnd = returnEndDate(0,difference.hours(),difference.minutes());
     var date = new Date();
-    date.setTime(date.getTime() + (32*60 * 60 * 1000));
+    date.setTime(date.getTime() + (difference.hours()*60 * 60 * 1000));
     Cookies.set("time", dateEnd, {expires: date});
   }
 
