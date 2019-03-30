@@ -1,0 +1,64 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+  set items = [
+    {
+      "image": "img/chat1.jpg",
+    },
+    {
+      "image": "img/chat2.jpg",
+    },
+    {
+      "image": "img/chat3.jpg",
+    },
+    {
+      "image": "img/chat4.jpg",
+    },
+    {
+      "image": "img/chat6.jpg",
+    },
+    {
+      "image": "img/chat7.jpg",
+    },
+    {
+      "image": "img/chat8.jpg",
+    },
+    {
+      "image": "img/chat9.jpg",
+    },
+    {
+      "image": "img/chat10.jpg",
+    },
+    {
+      "image": "img/chat11.jpg",
+    },
+    {
+      "image": "img/chat12.jpg",
+    },
+  ]
+%}
+<section class="section chat" id="section-chat">
+  <div class="container">
+    {{
+      landing.header(
+      'chat__header text-center color-brand-2', 
+      {text: 'Чат марафона'}
+      )
+    }}
+    <div class="chat__slider-wrapper">
+      <button class="chat__slider-button chat__slider-button_prev"></button>
+      <button class="chat__slider-button chat__slider-button_next"></button>
+      <div class="chat__slider ui-card-slider" id="chat-slider">
+        {% set i = 0 %}
+        {% for item in items %}
+          {% set i = i + 1 %}
+          <div class="chat__slider-item slide">
+            <a
+              class="chat__slider-item-link"
+              data-fancybox="gallery"
+              href="{{path}}/{{item.image}}">{{landing.image(item.image, "chat-#{i}", 'chat__slider-item-image')}}</a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

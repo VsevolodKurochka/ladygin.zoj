@@ -184,6 +184,19 @@ $(document).ready(function(){
 			.slideUp(0); 
 	});
 
+
+	var chatSlider = $('#chat-slider').cardSlider({
+		slideTag: 'div', 
+		slideClass: 'slide'
+	});
+	$('.chat__slider-button_prev').click(function(){
+		chatSlider.prev();
+	});
+	$('.chat__slider-button_next').click(function(){
+		chatSlider.next();
+	});
+
+
 	// button
 	$('.btn_landing').each(function(){
 		var section = $(this).closest('section').attr('id');

@@ -11,6 +11,7 @@ import {reload} 				from './browserSync';
 
 const concatSrc = [
 	`${folders.assetsSrc}/js/libs/jquery.min.js`,
+	`${folders.assetsSrc}/js/libs/fancybox.min.js`,
 	`${folders.assetsSrc}/js/libs/jquery.card-slider.min.js`,
 	`${folders.assetsSrc}/js/libs/js.cookie.js`,
 	`${folders.assetsSrc}/js/libs/moment.min.js`,
