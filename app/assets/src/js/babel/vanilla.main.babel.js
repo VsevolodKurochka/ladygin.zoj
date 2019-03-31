@@ -222,6 +222,7 @@
 	document.addEventListener("DOMContentLoaded", function(){
 		new Modal();
 		new Navigation();
+		/*
 		var input = document.querySelectorAll("input[type='tel']");
 		for (var i = 0; i < input.length; i++) {
 			window.intlTelInput(input[i], {
@@ -236,6 +237,7 @@
 			  utilsScript: "assets/build/js/utils.js" // just for formatting/placeholders etc
 			});
 		}
+		*/
 		
 	});
 }());
