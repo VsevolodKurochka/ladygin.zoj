@@ -152,10 +152,8 @@ $(document).ready(function(){
 	$('.programm__show').addClass('row');
 	$( ".programm__item_hidden" ).wrapAll( "<div id='programm-hidden' class='programm__hidden'><div class='flex'></div></div>");
 
-
 	$( ".reviews-item_hidden" ).wrapAll( "<div id='reviews-hidden' class='reviews__hidden'><div class='flex'></div></div>");
 
-	
 	var expertsSlider = $('#experts-slider').cardSlider({
 		slideTag: 'div', 
 		slideClass: 'slide'
@@ -184,7 +182,6 @@ $(document).ready(function(){
 			.slideUp(0); 
 	});
 
-
 	var chatSlider = $('#chat-slider').cardSlider({
 		slideTag: 'div', 
 		slideClass: 'slide'
@@ -196,7 +193,6 @@ $(document).ready(function(){
 		chatSlider.next();
 	});
 	$('[data-fancybox="chat"]').fancybox();
-
 
 	// button
 	$('.btn_landing').each(function(){
@@ -447,11 +443,12 @@ $(document).ready(function(){
 	function clientId() {
 		var gcid = extractClientId();
 		console.log(gcid);
-		$('#gcid_field').val('"' + gcid + '"');
-		$('#cid_field').val('"' + gcid + '"');
+		$('.gcid_field').val('"' + gcid + '"');
+		$('.cid_field').val('"' + gcid + '"');
 	}
 
 	setTimeout(clientId, 3000);
 	document.getElementsByClassName("__gc__internal__form__helper")[0].value = window.location.href;
+	document.getElementsByClassName("__gc__internal__form__helper")[1].value = window.location.href;
 
 });	

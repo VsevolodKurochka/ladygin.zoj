@@ -3,27 +3,28 @@
   
   <div class="container win__container">
     {% for i in 1..6 %}
-      {{landing.image('img/win-star.png', 'Самые активные выиграют 10 000 рублей!', "win__bg win__bg_#{i}")}}
+      {{landing.image('img/win-star.png', 'Самые активные выиграют 500 000 рублей!', "win__bg win__bg_#{i}")}}
     {% endfor %}
     {{
       landing.header(
       'win__header text-center', 
-      {text: 'Самые активные<br>выиграют 10 000 рублей!'}
+      {text: 'Самые активные<br>выиграют 500 000 рублей!'}
       )
     }}
     <div class="row win__content">
       <div class="col-12 col-md-10 col-lg-8">
         <p>1. Вы фиксируете свои параметры<br>до и после марафона.</p>
-        <p>2. Пишете рассказ о себе.</p>
-        <p><strong>Автор лучшей истории получит 10 000 рублей</strong></p>
+        <p>2. Выполняете все задания 10-ти дней</p>
+        <p>3. Пишете рассказ о себе.</p>
+        {# <p><strong>Участвуйте в розыгрыше в прямом эфире</strong></p> #}
+        <p><strong>Автор лучшей истории получит 300 000 рублей</strong><br>Второе место: 150 000 рублей<br>Третье место: 50 000 рублей</p>
         <div class="win__content-button-cover text-center">
           {{
             landing.button(
               'win__content-button btn_brand-1', 
               'Хочу победить',
               {
-                "data-action": "modal",
-                "data-open": "#modal-form"
+                "data-scroll-to": "#section-participation"
               }
             )
           }}
