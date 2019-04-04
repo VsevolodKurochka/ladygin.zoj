@@ -37,9 +37,9 @@
       {% for item in items %}
         {% set i = i + 1 %}
         {% if i == itemsLength %}
-        {# <div class="col-12 format__item format__item_fluid">
+        <div class="col-12 format__item format__item_fluid">
           {{ landing.cube(item.title, item.subtitle, 'format__item-cube format__item-cube_3', item.text) }}
-        </div> #}
+        </div>
         {% else %}
          <div class="col-6 col-sm-3 format__item ">
             {{ landing.cube(item.title, item.subtitle, 'format__item-cube format__item-cube_2', item.text) }}
