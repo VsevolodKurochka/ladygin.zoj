@@ -1,4 +1,5 @@
 {% import 'macros/macros.landing.twig' as landing %}
+{% set video = "https://www.youtube.com/embed/RlP2iR30LRM" %}
 <section class="section video" id="section-video">
   <div class="container">
     {{
@@ -9,18 +10,21 @@
     }}
     <div class="video__content">
       <div class="video__item">
-      <div class="video__item-image">
-          <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" src="https://www.youtube.com/embed/RlP2iR30LRM" style="top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-        </div>
-        {# {{landing.image('img/video1.jpg', 'q-1', 'video__item-image')}}
-        <div class="video__item-inner">
-          <p class="video__item-title">Посмотрите<br>видеоприглашение</p>
-          <button 
-            class="video__item-btn" 
-            data-action="modal" 
-            data-open="#modal-section-video" 
-            data-video="https://www.youtube.com/embed/RlP2iR30LRM" />
-        </div> #}
+        <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" src="{{video}}" class="video__item-iframe"></iframe>
+      
+        {# 
+          <div class="video__item-image">
+            {{landing.image('img/video1.jpg', 'q-1', 'video__item-image')}}
+            <div class="video__item-inner">
+              <p class="video__item-title">Посмотрите<br>видеоприглашение</p>
+              <button 
+                class="video__item-btn" 
+                data-action="modal" 
+                data-open="#modal-section-video" 
+                data-video="{{video}}" />
+            </div> 
+          </div>
+        #}
       </div>
     </div>
     <div class="video__footer text-center">
