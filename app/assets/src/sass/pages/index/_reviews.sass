@@ -1,3 +1,10 @@
+=review-icon()
+	+size(20px)
+	object-fit: contain
+	+tr()
+	&:hover
+		opacity: 0.8
+
 .reviews
 	+bgc(#fff5ef)
 
@@ -14,15 +21,57 @@
 			+my(vmax(45))
 
 	&-item
+
 		&__cover
 			+offset('b', 30px)
 			+min(sm)
 				+offset('b', 45px)
 
 		&__header
+			+r()
 			+d(flex)
 			+ai(center)
-			+mb(15px)
+			+jc(space-between)
+			+mb(30px)
+			+pb(25px)
+
+			&:before
+				content: ""
+				+a(null, null, 0, 0)
+				+size(160px, 10px)
+				+bgi('../img/review-divider.png')
+				+min(md)
+					+size(250px, 18px)
+
+			&-item
+				&_flex
+					+d(flex)
+					> *:not(:last-child)
+						+mr(10px)
+
+		&__info
+			+mt(5px)
+			+fs(14px)
+
+		&__social
+			list-style: none
+			&-item
+				+d(inline-block)
+				vertical-align: middle
+				+offset('r', 10px)
+
+				&-image
+					+review-icon()
+
+		&__platform
+			&-image
+				+review-icon()
+
+		&__win
+			+fw(bold)
+			+c($color-brand-1)
+			+min(lg)
+				+fs(20px)
 
 		&__image
 			+d(inline-block)
@@ -39,20 +88,9 @@
 			+fs(20px)
 			+fw(bold)
 			+lh(1)
-			+mb(30px)
-			&:before
-				content: ""
-				+a(null, null, -20px, 0)
-				+size(160px, 10px)
-				+bgi('../img/review-divider.png')
-				+min(md)
-					+size(250px, 18px)
 
 			+min(lg)
 				+fs(26px)
-
-		&__image + &__title
-			+mb(0)
 
 		&__body
 			+fs(12px)

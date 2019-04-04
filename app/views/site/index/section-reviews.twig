@@ -3,7 +3,15 @@
 {%
   set reviews = [
     {
-      "name": "Лана (выиграла 10 000 руб.)",
+      "name": "Лана",
+      "win": "(выиграла 10 000 руб.)",
+      "social": [
+        {
+          "type": "fb",
+          "link": "https://www.facebook.com/profile.php?id=100010229708607"
+        }
+      ],
+      "platform_link": "https://zozh-i-galka.com/pl/36548034",
       "image": "img/review1.png",
       "content": "
         <p>В марафон попала случайно. Понимала, что набрала кг за зиму и нужно возвращаться в форму, но еще никаких действий не предпринимала. И вот листая ленту в фб наткнулась на рекламу. Сразу же оплатила. Честно сказать, даже и не поняла толком, о чем это.</p>
@@ -11,12 +19,11 @@
         <p>Сейчас у меня все еще много вопросов, но лед тронулся. Вы сумели меня растормошить и стимулировали на то, что нужно <b>любой вопрос исследовать всесторонне</b>, прежде чем вставать в позицию отрицания.</p> 
         <p>Для меня марафон это про <b>никогда не говори никогда</b>. Открытия себя, новой информации, своих возможностей.</p>
         <p>Команда марафона очень качественно подготовила контент. Спасибо огромное!</p> 
-        <p>Чувствую себя прекрасно! 10 дней без лекарств от астмы и аллергии - это великолепный результат. Шла за снижением веса, а получила гораздо больше!</p>",
-      "social_link" : "https://www.facebook.com/profile.php?id=100010229708607",
-      "platform_link": "https://zozh-i-galka.com/pl/36548034"
+        <p>Чувствую себя прекрасно! 10 дней без лекарств от астмы и аллергии - это великолепный результат. Шла за снижением веса, а получила гораздо больше!</p>"
     },
     {
-      "name": "Надежда, 32 года",
+      "name": "Надежда",
+      "year": "32 года",
       "image": "img/review1.png",
       "content": "<p>
         Когда прочитала, что будет растительное меню, вообще сразу поняла, что мое! Сама на растительном питании уже год, знаю о всех его плюсах, а на этом марафоне вам так же все расскажут, подкрепят аргументы фактами, все разжуют и красиво упакуют.</p>
@@ -34,7 +41,9 @@
       </p>"
     },
     {
-      "name": "Елена Клочко, 32 года, Мелитополь",
+      "name": "Елена Клочко",
+      "year": "32 года",
+      "city": "Мелитополь",
       "image": "img/review1.png",
       "content": "Интересно было узнать все, что связано с похудением, оздоровлением, поэтому и решила поучаствовать. Спасибо всем огромное за большой вклад в лично мой результат и для всех, кто участвовал! Очень довольна результатом, похудела на 6,7 кг за 10 дней, бедра были 104-сейчас 99, талия была 80- сейчас 74))"
     },
@@ -45,7 +54,9 @@
     },
 
     {
-      "name": "Юлия Лоскутова, 43 года, Краснодар",
+      "name": "Юлия Лоскутова",
+      "year": "43 года",
+      "city": "Краснодар",
       "image": "img/review1.png",
       "content": "<p>
         Я решила участвовать в марафоне, так как хотела изменить отношение к еде в первую очередь. 
@@ -61,7 +72,9 @@
       </p>"
     },
    {
-      "name": "Ольга Карасева, 46 лет, Санкт-Петербург",
+      "name": "Ольга Карасева",
+      "year": "46 лет",
+      "city": "Санкт-Петербург",
       "image": "img/review1.png",
       "content": "
         <p>
@@ -134,7 +147,8 @@
         </p>"
     },
     {
-      "name": "Елизавета (имя изменено из соображений конфиденциальности)",
+      "name": "Елизавета",
+      "year": "(имя изменено из соображений конфиденциальности)",
       "image": "img/review1.png",
       "content": "
         <p>
@@ -203,11 +217,41 @@
           <div class="reviews-item">
             <div class="reviews-item__header">
               {% if showImage %}
-              {{ landing.image(review.image, review.name|striptags, 'reviews-item__image') }}
+                {{ landing.image(review.image, review.name|striptags, 'reviews-item__image') }}
               {% endif %}
-              <p class="reviews-item__title">{{review.name|raw}}</p>
-              <p class="reviews-item__social"><a href="{{review.social_link|raw}}" target="_blank">Соц. сеть</a></p>
-              <p class="reviews-item__platform"><a href="{{review.platform_link|raw}}" target="_blank">Платформа</a></p>
+              <div class="reviews-item__header-item">
+                <p class="reviews-item__title">{{review.name|raw}}</p>
+                
+                {% if review.win %}
+                <p class="reviews-item__win">{{review.win}}</p>
+                {% endif %}
+
+                {% if (review.year or review.city)  %}
+                <p class="reviews-item__info">
+                {% if review.year %} {{review.year}} {% endif %}
+                {% if review.city %}, {{review.city}} {% endif %}
+                </p>
+
+                {% endif %}
+              </div>
+              <div class="reviews-item__header-item reviews-item__header-item_flex">
+                {% if review.social %}
+                  <ul class="reviews-item__social">
+                    {% for item in review.social %}
+                      <li class="reviews-item__social-item">
+                        <a href="{{item.link}}" title="{{review.name|striptags}}">
+                          {{ landing.image('img/icon-' ~ item.type ~ '.svg', review.name|striptags, 'reviews-item__social-item-image') }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                {% if review.platform_link %}
+                  <a href="{{review.platform_link}}" target="_blank" class="reviews-item__platform">
+                    {{ landing.image('img/icon-cap.svg', review.name|striptags, 'reviews-item__platform-image') }}
+                  </a>
+                {% endif %}
+              </div>
             </div>
             <div class="reviews-item__body">{{review.content|raw}}</div>
           </div>
